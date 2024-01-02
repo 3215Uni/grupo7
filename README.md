@@ -27,9 +27,10 @@ __SEBASTIAN__:
     Hola soy estudiante de... 
     
 
-__LEO CONDORI__: 
+__LEONEL CONDORI__: 
 
-    Hola soy estudiante de... 
+    Hola soy estudiante de Ingenieria Informatica en la Facultad de Ingenieria-Unju, me gusta todo lo que tenga que ver con las computadoras desde el hardware hasta el software... 
+    Me gusta jugar juegos en la computadora y hacer deportes... Este curso me emociona mucho por el usa de las tecnologias que implementa   
 
 __EMILIO__: 
 
