@@ -24,7 +24,7 @@ __NATANIEL DOMINGUEZ__
 
 __SEBASTIAN__: 
 
-    Hola soy estudiante de... 
+    Hola soy estudiante de ingenieria en informatica en UCSE-DASS, me gusta mucho la tecnologia y todo lo que tenga que ver con eso,espero aprovechar el curso al maximo para poder introducirme en el mundo laboral del desarrollo!!
     
 
 __LEONEL CONDORI__: 
