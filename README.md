@@ -56,13 +56,13 @@ Nuestra pagina está diseñado para atender las necesidades de diversos perfiles
 **Nuestra plataforma** se adapta a aquellos que buscan productos de calidad para mejorar su productividad, potenciar su experiencia de juego o simplemente mantenerse actualizados con las últimas tendencias tecnológicas.
 
 ## PAGINAS WEB DE REFERNCIAS
-[Meback](https://www.mebac.com.ar/jujuy/)
+[Meback](https://www.mebac.com.ar/jujuy/): Por la cantidad y variedad de productos que ofrece
 
-[Venex](https://www.venex.com.ar)
+[Venex](https://www.venex.com.ar): Por la estetica que presenta y las funcionalidades
 
-[CompraGamer](https://www.compragamer.com/)
+[CompraGamer](https://www.compragamer.com/): por su simpleza y clientes a los que apunta
 
-[Mexx](https://www.mexx.com.ar/)
+[Mexx](https://www.mexx.com.ar/): Por la estetica de la pagina y la interface 
 
 [Gamingcity](https://tienda.gamingcity.com.ar/)
 
