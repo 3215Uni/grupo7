@@ -34,7 +34,7 @@ __LEONEL CONDORI__:
 
 __EMILIO__: 
 
-    Hola soy estudiante de... 
+    Hola soy estudiante de Ingenieria Informatica de la FI-Unju, ,me gusta la tegnologia, jugar, los animales, saliral aire libre y hacer viajes. Espero que el curso me permita aprender lo necesario para insertarme en el mundo laborar.
         
 
 
