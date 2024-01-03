@@ -11,15 +11,15 @@ __David Lescano__
 ## INTEGRANTES
 __ROXANA BENICIO__: 
 
-    Hola soy estudiante del APU de 🏫 UNJU-FI, me encanta la programción y es una gran oportunidad poder hacer este curso de coder house, es muy bueno.
+    Hola soy estudiante del APU de 🏫 UNJU-FI, me encanta la programación y es una gran oportunidad poder hacer este curso de coder house, es muy bueno.
     Soy fan de la napolitana, las pizza🍕 y el asado, uno de mis postre preferido es el helado	🍦 y las frutas🍎🍏🍊🍇🍉🍓🍑🍈🍐🍍.
     Me encanta estar en el aire libre y la pile, sería lindo hacer un día de progrmación al aire libre.
     🎼 Me gusta la música Argentina y el K-pop. OJALÁ este 2024 SEA HERMOSO!!!"
 
 
-__NATANIEL DOMINGUEZ__ 
+__NATANAEL DOMINGUEZ__ 
 
-    Hola soy estudiante de.. 
+    Hola soy estudiante de A.P.U (Analista Programador Universitario) en la facultad de Ingeniería de la UNJu, aparte de la programación me gusta los videojuegos, el arte y la astrofotografía.  
 
 
 __SEBASTIAN__: 
