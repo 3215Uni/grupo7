@@ -34,12 +34,13 @@ __SEBASTIAN__:
     introducirme en el mundo laboral del desarrollo!!
     
 
-__LEONEL CONDORI__: 
+__LEONEL CONDORI __: 
 
     Hola soy estudiante de Ingenieria Informatica en la Facultad de Ingenieria-Unju, me gusta 
     todo lo que tenga que ver con las computadoras desde el hardware hasta el software... 
     Me gusta jugar juegos en la computadora y hacer deportes... Este curso me emociona
-    mucho por el usa de las tecnologias que implementa   
+    mucho por el usa de las tecnologias que implementa 
+    Usuario de github:Leonel1320
 
 __IVAN MERILES__: 
 
