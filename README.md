@@ -23,7 +23,8 @@ __ROXANA BENICIO__:
 __NATANAEL DOMINGUEZ__ 
 
     Hola soy estudiante de A.P.U (Analista Programador Universitario) en la facultad de Ingeniería de
-     la UNJu, aparte de la programación me gusta los videojuegos, el arte y la astrofotografía.  
+     la UNJu, aparte de la programación me gusta los videojuegos, el arte y la astrofotografía. 
+     Mi usuario de github es natanaelDominguez28.
 
 
 __SEBASTIAN__: 
