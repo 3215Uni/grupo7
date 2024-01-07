@@ -11,38 +11,42 @@ __David Lescano__
 ## INTEGRANTES
 __ROXANA BENICIO__: 
 
-    Hola soy estudiante del APU de 🏫 UNJU-FI, me encanta la programación y es una gran oportunidad poder hacer este curso de coder house, es muy bueno.
-    Soy fan de la napolitana, las pizza🍕 y el asado, uno de mis postre preferido es el helado	🍦 y las frutas🍎🍏🍊🍇🍉🍓🍑🍈🍐🍍.
-    Me encanta estar en el aire libre y la pile, sería lindo hacer un día de progrmación al aire libre.
+    Hola mi usuario de GitHub:es 3215Uni, soy estudiante del APU de 🏫 UNJU-FI, me encanta la 
+    programación y es una gran oportunidad poder hacer este curso de coder house, es muy bueno.
+    Soy fan de la napolitana, las pizza🍕 y el asado, uno de mis postre preferido es el helado🍦 
+    y las frutas🍎🍏🍊🍇🍉🍓🍑🍈🍐🍍.
+    Me encanta estar en el aire libre y la pile, sería lindo hacer un día de 
+    progrmación al aire libre.
     🎼 Me gusta la música Argentina y el K-pop. OJALÁ este 2024 SEA HERMOSO!!!"
 
 
 __NATANAEL DOMINGUEZ__ 
 
-    Hola soy estudiante de A.P.U (Analista Programador Universitario) en la facultad de Ingeniería de la UNJu, aparte de la programación me gusta los videojuegos, el arte y la astrofotografía.  
+    Hola soy estudiante de A.P.U (Analista Programador Universitario) en la facultad de Ingeniería de
+     la UNJu, aparte de la programación me gusta los videojuegos, el arte y la astrofotografía.  
 
 
 __SEBASTIAN__: 
 
-    Hola soy estudiante de ingenieria en informatica en UCSE-DASS, me gusta mucho la tecnologia y todo lo que tenga que ver con eso,espero aprovechar el curso al maximo para poder introducirme en el mundo laboral del desarrollo!!
+    Hola soy estudiante de ingenieria en informatica en UCSE-DASS, me gusta mucho la tecnologia
+    y todo lo que tenga que ver con eso,espero aprovechar el curso al maximo para poder 
+    introducirme en el mundo laboral del desarrollo!!
     
 
 __LEONEL CONDORI__: 
 
-    Hola soy estudiante de Ingenieria Informatica en la Facultad de Ingenieria-Unju, me gusta todo lo que tenga que ver con las computadoras desde el hardware hasta el software... 
-    Me gusta jugar juegos en la computadora y hacer deportes... Este curso me emociona mucho por el usa de las tecnologias que implementa   
+    Hola soy estudiante de Ingenieria Informatica en la Facultad de Ingenieria-Unju, me gusta 
+    todo lo que tenga que ver con las computadoras desde el hardware hasta el software... 
+    Me gusta jugar juegos en la computadora y hacer deportes... Este curso me emociona
+    mucho por el usa de las tecnologias que implementa   
 
 __EMILIO__: 
 
-    Hola soy estudiante de Ingenieria Informatica de la FI-Unju, ,me gusta la tegnologia, jugar, los animales, saliral aire libre y hacer viajes. Espero que el curso me permita aprender lo necesario para insertarme en el mundo laborar.
-        
-
-
-
-
-
-
-                          🚧PROYECTO EN CONSTRUCCIÓN🚧
+    Hola soy estudiante de Ingenieria Informatica de la FI-Unju, ,me gusta la tegnologia,
+     jugar, los animales, saliral aire libre y hacer viajes. Espero que el curso me 
+     permita aprender lo necesario para insertarme en el mundo laborar.
+                           
+                            🚧PROYECTO EN CONSTRUCCIÓN🚧
 
 # Descripción de la Oferta:
 ## Nombre de la pagina web 💻: TecnoJuy
