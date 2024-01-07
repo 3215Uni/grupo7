@@ -41,9 +41,9 @@ __LEONEL CONDORI__:
     Me gusta jugar juegos en la computadora y hacer deportes... Este curso me emociona
     mucho por el usa de las tecnologias que implementa   
 
-__EMILIO__: 
+__IVAN MERILES__: 
 
-    Hola soy estudiante de Ingenieria Informatica de la FI-Unju, ,me gusta la tegnologia,
+    Hola mi usuario de GitHub:es IvanMeriles, soy estudiante de Ingenieria Informatica de la FI-Unju, ,me gusta la tegnologia,
      jugar, los animales, saliral aire libre y hacer viajes. Espero que el curso me 
      permita aprender lo necesario para insertarme en el mundo laborar.
                            
