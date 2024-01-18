@@ -1,0 +1,27 @@
+{
+  "name": "grupo_7_tecnojuy",
+  "version": "1.0.0",
+  "description": "e-commerce",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3215Uni/grupo_7_tecnoJuy.git"
+  },
+  "author": "Grupo 7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3215Uni/grupo_7_tecnoJuy/issues"
+  },
+  "homepage": "https://github.com/3215Uni/grupo_7_tecnoJuy#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
