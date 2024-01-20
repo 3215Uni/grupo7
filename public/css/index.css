@@ -91,6 +91,54 @@ body {
     border-color: #FFFF;
 }
 
+/* Estilos del main*/
+
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    
+}
+
+section article {
+    background-color: #fff;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: auto;
+    padding: 20px;
+    
+}
+section article div{
+    border:dotted 2px red;
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+section article div img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin: 0;
+}
+
+
+
+
+.promo{
+    width: 100%;
+    height: 130px;
+}
+
+/* estilos del Footer*/
+
 footer{
     background-color: #ffff;
 }
