@@ -1,0 +1,56 @@
+.formulario{
+    text-align: center;
+    margin: 20px 30px;
+}
+
+h3{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+h4{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+label{
+    display: block;
+    text-align: unset;
+}
+
+input{
+    display: inline;
+    padding: 10px 100px;
+    border-radius: 8px;
+    margin: 5px 15px;
+}
+
+.btn-login{
+    background-color: dodgerblue;
+    display: flexbox ;
+    padding: 10px 135px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    margin: 10px 15px;
+}
+
+.btn-facebook{
+    background-color: blue;
+    display: inline;
+    padding: 5px 42px;
+    border-radius: 8px;
+    text-align: left;
+    color: white;
+    font-size: 15px;
+}
+
+.btn-google{
+    background-color: dodgerblue;
+    display: inline;
+    padding: 5px 42px;
+    border-radius: 8px;
+    text-align: left;
+    color: white;
+    font-size: 15px;
+}
