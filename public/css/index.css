@@ -127,6 +127,7 @@ article {
     height: 450px;
     padding: 20px;
     margin: 15px;
+    position: relative;
 }
 
 main h2{
@@ -144,19 +145,20 @@ article img {
 
 
 /* Estilos específicos para el ícono de envío y precios */
-article i {
+
+article #favorite{
+    color: red;
+    font-size: 25px;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+
+article #cart{
     display: block;
     margin-right: 5px;
     color: #39b54a; 
-    width: 35px; /* Ajusta el tamaño del círculo según tus necesidades */
-    height: 35px; /* Ajusta el tamaño del círculo según tus necesidades */
-    border-radius: 50%;
-    background-color: #fff; 
-    border: 1px solid #39b54a; 
     padding: 7px;
-   
-    
-    
 }
 
 section article h4{
@@ -171,13 +173,59 @@ article .precios {
 
 article .descuento {
     color: #39b54a; 
+    position: absolute;
+    top: 290px;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 article h3 {
-    font-size: 16px;
+    font-size: 20px;
     margin-top: 20px;
     margin-bottom: 0;
 }
+.contenedor h3 {
+    background: linear-gradient(to right, #ffcc00, #ff6600); /* Cambia los colores según tu preferencia */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.contenedor h3:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.contenedor .precios {
+    font-size: 18px; /* Tamaño de fuente */
+    color: #007bff; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    margin-bottom: 10px;
+    font-weight: bold; /* Grosor de la fuente */
+    text-decoration: line-through;
+}
+
+.contenedor .precios {
+    color: #007bff; /* Cambia el color para el precio con descuento */
+}
+
+
+/* Animación de cambio de color al pasar el cursor */
+.contenedor .precios:hover {
+    color: #ff6600; /* Cambia el color al pasar el cursor */
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+
+
+
+#cart{
+    position: absolute;
+    right: 10px;
+    top: 400px;
+    font-size: 25px;
+}
+
 
 .cartel{
     background-color: #fff;
@@ -264,6 +312,8 @@ article h3 {
     margin-top: 100px; /* Espacio entre el círculo y el título */
     color: #333; /* Color del texto */
     font-size: 30px; 
+    background: linear-gradient(to right, #007bff, #00cc66); /* Cambia los colores según tu preferencia */
+
   }
 
 
