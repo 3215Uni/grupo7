@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ebebeb;;
+    font-family: 'Roboto', sans-serif;
+}
+
+.barra-navegacion {
+    background-color: #000;
+    padding: 20px;
+    margin: 0;
+    display: block;
+}
+
+.imagen{
+    text-align: center;
+}
+.logo{
+    width: 150px;
+    /*border:dotted 2px red;*/
+    display: block;
+    margin: 0 auto;
+}
+.form-search{
+    display: flex;
+}
+
+.form-search input{
+    flex-grow: 1;
+    width: 200px;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.form-search button {
+    background-color: #3e3e3e;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 15px;
+    cursor: pointer;
+    
+}
+
+.hamburguer-button{
+    background-color: #FFFFFF;
+    color: #03264C;
+    display: block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+
+.main-navbar{
+    display: none;
+}
+.main-navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.main-navbar ul a{
+    text-decoration: none;
+    color: #FFFF;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 540;
+}
+.button-register{
+    margin: 20px;
+
+}
+.button-register button{
+    background-color: #A774EB;
+    display: inline;
+    padding: 5px 5px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+    border-color: #FFFF;
+    text-decoration: none;
+}
+
+
+/* estilos del Footer*/
+
+footer{
+    background-color: #353A40;
+}
+
+footer div{
+    text-align: center;
+    padding: 35px;
+    color: #e4e4e4;
+    
+}
+
+footer div i{
+    color: #87CEEB;
+    font-size: 30px;
+    margin: 10px;
+    
+}
+footer p{
+    color: #fff;
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+    body {
+        
+    }
+    /* Estilos para el header-barra de navegacion*/
+    .logo{
+        width: 100px;
+
+    }
+    .form-search{
+        display: flex;
+        height: 40px;
+    }
+    .form-search input{
+        width: 200px;
+        height: 40px;
+    }
+   
+    .main-header-top-bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .copy-header{
+        max-width: 250px;
+        text-align: right;
+        font-size: 15px;
+    }
+    .hamburguer-button{
+        display: none;
+    }
+
+    .main-navbar{
+        display: flex;
+        justify-content: flex-end;
+        
+        text-align: center;
+
+    }
+    .main-navbar ul{
+        display: flex;
+       
+        
+    }
+    .main-navbar li{
+        margin: 0 5px; 
+        margin-left: 20px;
+         
+    }
+    .main-navbar ul li a{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+    .main-navbar ul li a:hover {
+        color: #60f3ab; 
+    }
+    .main-navbar ul li:not(:last-child):after {
+        content: '|'; /* Contenido de la línea de separación */
+        margin-left: 10px; 
+        color: #fff; /* Color de la línea */
+    }
+    header div button:hover {
+        background-color: #f869ea;
+    }
+
+    /* Estilos para el main*/
+    
+    
+
+
+
+
+}
+
+
+@media (min-width: 1024px) {
+    body {
+        margin: 0;
+    }
+    /* Estilos para el header-barra de navegacion*/
+    .logo{
+        width: 100px;
+    }
+
+    .form-search{
+        display: flex;
+        height: 40px;
+    }
+    .form-search input{
+        width:500px;
+        height: 50px;
+    }
+    .form-search button{
+        height: 50px;
+        font-size: 20px;
+    }
+    .button-register button{
+        background-color: #A774EB;
+        display: inline;
+        padding: 9px 9px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 18px;
+        border-color: #FFFF;
+    }
+    header div button:hover {
+        background-color: #f869ea;
+    }
+
+
+    .button-register button i{
+        font-size: 22px;
+    }
+
+    .main-navbar ul li a{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 600;
+        transition: color 0.3s;
+        font-size: 18px;
+    }
+    
+    
+    /*Estilos para el main*/
+
+   
+
+    /* Estilos para el footer*/
+    .footer-text{
+        display: flex;
+    }
+    
+}
+
+

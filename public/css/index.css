@@ -292,28 +292,29 @@ article h3 {
 
   #fondo {
     width: 100%;
-    height: 50%; /* La imagen de fondo ocupa la mitad de la tarjeta */
+    height: 70%; /* La imagen de fondo ocupa la mitad de la tarjeta */
     object-fit: cover; /* Ajusta la imagen de fondo para cubrir el contenedor */
   }
 
   #empresa {
     position: absolute;
-    top: 50%;
+    top: 250px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 120px; /* Ancho del círculo */
     height: 120px; /* Altura del círculo */
     border-radius: 50%; /* Forma de círculo */
-    object-fit: contain; /* Ajusta la imagen para cubrir el círculo */
-  }
+    object-fit: contain; 
+    border: 2px solid #87CEEB;
+}
 
   h4 {
     text-align: center;
-    margin-top: 100px; /* Espacio entre el círculo y el título */
-    color: #333; /* Color del texto */
+    margin-top: 30px; /* Espacio entre el círculo y el título */
+    color: #000; /* Color del texto */
     font-size: 30px; 
     background: linear-gradient(to right, #007bff, #00cc66); /* Cambia los colores según tu preferencia */
-
+    
   }
 
 
