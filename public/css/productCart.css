@@ -91,7 +91,93 @@ body {
     border-color: #FFFF;
     text-decoration: none;
 }
+/* estilos para el main */
 
+
+h2 {
+    color: #007BFF;
+}
+
+.producto {
+    background-color: #fff;
+    border: 1px solid #007BFF;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.producto a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.precio, .cantidad, .subtotal {
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.precio strong, .subtotal strong {
+    color: #e44d26; /* Naranja */
+}
+
+.cantidad input {
+    width: 40px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.cantidad{
+    display: flex;
+}
+.abajo ,.arriba {
+    background-color: #e44d26; /* Naranja */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.total {
+    background-color: #fff;
+    border: 1px solid #007BFF;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.total h3 {
+    color: #007BFF;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.total button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
 
 /* estilos del Footer*/
 
@@ -189,8 +275,12 @@ footer p{
 
     /* Estilos para el main*/
     
+    .producto {
+        width: 60%;
+        margin: auto;
+        
+    }
     
-
 
 
 
@@ -247,6 +337,32 @@ footer p{
     /*Estilos para el main*/
 
    
+    .producto {
+        width: 40%;
+        margin: auto;
+        
+    }
+
+    .container{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    .total {
+        width: 50%;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+
+
+    }
+    .total button {
+        width: 50%;
+
+
+    }
 
     /* Estilos para el footer*/
     .footer-text{
