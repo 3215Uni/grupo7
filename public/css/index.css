@@ -89,6 +89,7 @@ body {
     text-align: center;
     font-size: 15px;
     border-color: #FFFF;
+    text-decoration: none;
 }
 
 /* Estilos del main*/
@@ -140,20 +141,24 @@ section article div img{
 /* estilos del Footer*/
 
 footer{
-    background-color: #ffff;
+    background-color: #353A40;
 }
 
 footer div{
     text-align: center;
     padding: 35px;
-    color: #666;
+    color: #e4e4e4;
+    
 }
 
 footer div i{
-    color: #03264C;
+    color: #87CEEB;
     font-size: 30px;
     margin: 10px;
     
+}
+footer p{
+    color: #fff;
 }
 
 
@@ -234,6 +239,9 @@ footer div i{
         margin-left: 10px; 
         color: #fff; /* Color de la línea */
     }
+    header div button:hover {
+        background-color: #f869ea;
+    }
 }
 
 
@@ -267,6 +275,11 @@ footer div i{
         font-size: 18px;
         border-color: #FFFF;
     }
+    header div button:hover {
+        background-color: #f869ea;
+    }
+
+
     .button-register button i{
         font-size: 22px;
     }
