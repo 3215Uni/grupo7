@@ -61,6 +61,10 @@ Nuestra pagina está diseñado para atender las necesidades de diversos perfiles
 
 **Nuestra plataforma** se adapta a aquellos que buscan productos de calidad para mejorar su productividad, potenciar su experiencia de juego o simplemente mantenerse actualizados con las últimas tendencias tecnológicas.
 
+## TABLERO DE TRABAJO
+
+https://trello.com/b/0FhM0bJE/tecnojuy
+
 ## PAGINAS WEB DE REFERNCIAS
 [Meback](https://www.mebac.com.ar/jujuy/): Por la cantidad y variedad de productos que ofrece
 
