@@ -1,4 +1,5 @@
 .formulario{
+    width: 100%;
     text-align: center;
     margin: 20px 30px;
 }
@@ -15,42 +16,46 @@ h4{
 
 label{
     display: block;
-    text-align: unset;
+    text-align: center;
 }
 
 input{
+    width: 50%;
     display: inline;
-    padding: 10px 100px;
+    padding: 10px;
     border-radius: 8px;
     margin: 5px 15px;
 }
 
 .btn-login{
+    width: 50%;
     background-color: dodgerblue;
-    display: flexbox ;
-    padding: 10px 135px;
+    display: inline ;
+    padding: 10px;
     border-radius: 8px;
-    text-align: center;
+    text-align: auto;
     color: white;
     margin: 10px 15px;
 }
 
 .btn-facebook{
     background-color: blue;
+    width: 25%;
     display: inline;
-    padding: 5px 42px;
+    padding: 10px;
     border-radius: 8px;
-    text-align: left;
+    text-align: center;
     color: white;
     font-size: 15px;
 }
 
 .btn-google{
     background-color: dodgerblue;
+    width: 25%;
     display: inline;
-    padding: 5px 42px;
+    padding: 10px;
     border-radius: 8px;
-    text-align: left;
+    text-align: center;
     color: white;
     font-size: 15px;
 }
