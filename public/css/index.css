@@ -94,49 +94,178 @@ body {
 
 /* Estilos del main*/
 
+.promo{
+    width: 100%;
+    height: auto;
+}
+
 
 section {
-    width: 100%;
+    /*width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: left;
+    text-align: left;*/
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
     
 }
 
-section article {
+
+/* Estilos para cada artículo */
+article {
     background-color: #fff;
     border-radius: 2px;
     margin-bottom: 20px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 250px;
-    height: auto;
+    height: 450px;
     padding: 20px;
+    margin: 15px;
+}
+
+main h2{
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin: 35px;
+}
+
+/* Estilos para la imagen dentro del artículo */
+article img {
+    width: 95%;
+    height: 300px;
+}
+
+
+/* Estilos específicos para el ícono de envío y precios */
+article i {
+    display: block;
+    margin-right: 5px;
+    color: #39b54a; 
+    width: 35px; /* Ajusta el tamaño del círculo según tus necesidades */
+    height: 35px; /* Ajusta el tamaño del círculo según tus necesidades */
+    border-radius: 50%;
+    background-color: #fff; 
+    border: 1px solid #39b54a; 
+    padding: 7px;
+   
+    
     
 }
-section article div{
-    border:dotted 2px red;
-    width: 100%;
-    height: 300px;
-    box-sizing: border-box;
-    padding: 0;
+
+section article h4{
+    display: inline;
 }
 
-section article div img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    margin: 0;
+article .precios {
+    font-size: 18px;
+    font-weight: normal;
+    color: #222;
 }
 
-
-
-
-.promo{
-    width: 100%;
-    height: 130px;
+article .descuento {
+    color: #39b54a; 
 }
+
+article h3 {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.cartel{
+    background-color: #fff;
+    width: 90%;
+    display: flex;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 2%;
+}
+.cartel img{
+    width: 50%;
+    height: auto;
+}
+.cartel .mensaje{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 15px;    
+}
+.cartel .mensaje button{
+    background-color: #3498db; /* Color de fondo del botón */
+      color: #fff; /* Color del texto del botón */
+      border: none;
+      padding: 8px 15px; /* Espaciado interno del botón */
+      font-size: 14px; /* Tamaño del texto */
+      border-radius: 5px; /* Bordes redondeados */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+}
+#perifericos-img{
+    width: 100%;
+    height: auto;
+}
+
+#gpu-cpu-promo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#perifericos-img{
+    width: 100%;
+}
+
+.marcas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tarjeta {
+    position: relative;
+    width: 300px; /* Ancho de la tarjeta */
+    height: 400px; /* Altura de la tarjeta */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    margin: 20px;
+  }
+
+  #fondo {
+    width: 100%;
+    height: 50%; /* La imagen de fondo ocupa la mitad de la tarjeta */
+    object-fit: cover; /* Ajusta la imagen de fondo para cubrir el contenedor */
+  }
+
+  #empresa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px; /* Ancho del círculo */
+    height: 120px; /* Altura del círculo */
+    border-radius: 50%; /* Forma de círculo */
+    object-fit: contain; /* Ajusta la imagen para cubrir el círculo */
+  }
+
+  h4 {
+    text-align: center;
+    margin-top: 100px; /* Espacio entre el círculo y el título */
+    color: #333; /* Color del texto */
+    font-size: 30px; 
+  }
+
 
 /* estilos del Footer*/
 
@@ -242,6 +371,37 @@ footer p{
     header div button:hover {
         background-color: #f869ea;
     }
+
+    /* Estilos para el main*/
+    
+    #gpu-cpu-promo {
+        display: flex;
+         
+    }
+    #perifericos-img{
+        width: 49%;
+        height: 230px;
+        
+    }
+    #gpu-promo{
+        width: 25%;
+        order: -1;
+
+    }
+    #mother-promo{
+        width: 25%;
+    }
+
+
+    .anucio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
 }
 
 
@@ -294,6 +454,28 @@ footer p{
     
     /*Estilos para el main*/
 
+   #gpu-cpu-promo #perifericos-img{
+        height: 430px;
+    }
+   
+    
+    .cartel{
+        width: 400px;
+    }
+    
+    .cartel img{
+        width: 200px;
+        height: 200px;
+    }
+    .cartel .mensaje{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+            
+    }
+    .cartel .mensaje h3{
+        font-size: 22px;
+    }
 
     /* Estilos para el footer*/
     .footer-text{
