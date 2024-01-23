@@ -88,3 +88,8 @@ _NODE_: versión 20.10
 
 
 
+____________________________________________________________________________________________
+# NOVEDADES DEL 22/01/2023
+
+## FIGMAN
+https://www.figma.com/file/tOQ4LUlPL5pvScteilmJHl/CODERHOUSE?type=design&node-id=0%3A1&mode=design&t=KBIDovamLRTT3OTV-1
