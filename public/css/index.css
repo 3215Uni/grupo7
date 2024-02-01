@@ -138,9 +138,20 @@ main h2{
 }
 
 /* Estilos para la imagen dentro del artículo */
+.imgProduct{
+    width: 100%;
+    height: 300px;
+    overflow: hidden; /* Evitar que la imagen sobresalga si es más grande que el contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
+}
+
 article img {
     width: 95%;
-    height: 300px;
+    height: auto;
+    display: block;
 }
 
 
@@ -169,6 +180,9 @@ article .precios {
     font-size: 18px;
     font-weight: normal;
     color: #222;
+    position: absolute;
+    top: 400px;
+    right: 90px;
 }
 
 article .descuento {
@@ -176,7 +190,9 @@ article .descuento {
     position: absolute;
     top: 290px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 
 article h3 {
@@ -186,7 +202,7 @@ article h3 {
 }
 .contenedor h3 {
     background: linear-gradient(to right, #ffcc00, #ff6600); /* Cambia los colores según tu preferencia */
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
 
@@ -501,9 +517,28 @@ footer p{
         transition: color 0.3s;
         font-size: 18px;
     }
-    
+    #cart{
+        cursor: pointer;
+
+    }
+    .contenedor article h3{
+        cursor: pointer;
+
+    }
     
     /*Estilos para el main*/
+
+    .imgPromo{
+        text-align: center;
+    }
+    .promo{
+        width: 90%;
+        height: 500px;
+    }
+
+    .contenedor article:hover{
+        transform: scale(1.1);
+    }
 
    #gpu-cpu-promo #perifericos-img{
         height: 430px;
