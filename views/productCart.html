@@ -59,39 +59,60 @@
     <main>
 
         <h2>Carrito de Compras</h2>
+        <br>
         <div class="container">
-            <div class="producto">
-                <h3 class="titulo">Producto 1</h3>
-                <div class="imagen">
-                    <img src="/img/mouseLogitech.webp" alt="Producto 1">
-                </div>
-                <a href="#"><strong>Logitech Serie G Lightspeed G305</strong></a>
-                <h3 class="titulo">Precio: $52.499</h3>
-                <h3 class="titulo">Cantidad</h3>
-                <div class="cantidad">
-                    <input type="text" class="form-con">
-                    <div class="btns">
-                        <span>
-                            <button class="arriba"  type="button">
-                                <i class="fa fa-angle-up" aria-hidden="true"></i>
-                            </button>
-                        </span>
-                        <span>
-                            <button class="abajo" type="button">
-                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </button>
-                        </span>
+            <div class="articulos">
+                <div class="producto">
+                    
+                    <div class="imagen">
+                        <h3 class="titulo">Producto 1</h3>
+                        <img src="/img/impresora.webp" alt="Producto 1">
                     </div>
+                    <h2 class="nameProduct">Impresora Epson</h2>
+                    <div class="precio">
+                        <h3 class="titulo">Precio:</h3>
+                        <h4>$573.999</h4>
+                    </div>
+                    <div class="cant">
+                        <h3 class="titulo">Cantidad:</h3>
+                        <div class="cantidad">
+                            <input type="text" class="form-con">
+                            <div class="btns">
+                                <span>
+                                    <button class="arriba"  type="button">
+                                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                                <span>
+                                    <button class="abajo" type="button">
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <i class="fa-solid fa-trash-can" id="delete"></i> 
                 </div>
-                <h3 class="titulo">Subtotal: $50.00</h3>
-                <div><button><i class="fa-solid fa-trash-can"></i> Eliminar</button></div>
+
+
+
             </div>
-        
+                
+                
             <!-- Otros productos pueden seguir aquí -->
         
             <div class="total">
-                <h3>Total: $50.00</h3>
-                <button type="submit">Finalizar Compra</button>
+                <h2><small>Ingresa un cupon de descuento</small></h2>
+                <input type="text" id="cupon" name="">
+                <button type="submit" class="cuponDesc">Aplicar descuento</button>
+
+
+
+                <h3 class="subTotal">Subtotal: $573.999</h3>
+
+                <h2>Total: $573.999</h2>
+                <button type="submit" class="comprar">Finalizar Compra</button>
             </div>
         </div>
        

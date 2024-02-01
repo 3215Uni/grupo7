@@ -94,19 +94,28 @@ body {
 /* estilos para el main */
 
 
-h2 {
-    color: #007BFF;
+main{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
 }
 
 .producto {
+    
+    margin-top: 40px;
+    margin-bottom: 40px;
     background-color: #fff;
-    border: 1px solid #007BFF;
+    border: 1px solid #03264C;
     border-radius: 8px;
     margin: 10px;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    position: relative;
 
+}
+.nameProduct{
+    color: #03264C;
+}
 .imagen img {
     max-width: 100%;
     height: auto;
@@ -140,9 +149,7 @@ h2 {
     margin-right: 5px;
 }
 
-.cantidad{
-    display: flex;
-}
+
 .abajo ,.arriba {
     background-color: #e44d26; /* Naranja */
     color: #fff;
@@ -154,11 +161,16 @@ h2 {
 
 .total {
     background-color: #fff;
-    border: 1px solid #007BFF;
+    border: 1px solid #03264C;
     border-radius: 8px;
     margin: 10px;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.cantidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .total h3 {
@@ -170,13 +182,21 @@ h2 {
 .total button {
     width: 100%;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: #A774EB;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 18px;
     margin-top: 10px;
+}
+
+#delete{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+    color: red;
 }
 
 /* estilos del Footer*/
@@ -335,33 +355,87 @@ footer p{
     
     
     /*Estilos para el main*/
-
-   
-    .producto {
-        width: 40%;
-        margin: auto;
-        
+    main{
+        margin: 25px;
     }
-
+   
     .container{
+        margin: 100px;
         margin-top: 40px;
         margin-bottom: 40px;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;   
     }
-    .total {
-        width: 50%;
-        margin: auto;
+    .articulos{
+        width: 70%;
+    }
+    .producto {
+        width: 100%;
+        height: 180px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+        border-radius: 5px;
+        overflow: hidden;
+        display: flex;
+        position: relative;
+        gap: 10px; /* Agregar un espacio entre los elementos internos */
+        
+    }
+
+    .imagen{
+        display: flex;
+        flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-top: 40px;
+    }
+    .imagen img{
+        max-width: 100%; /* Asegura que la imagen no sobrepase el ancho de su contenedor */
+        height: 130px; /* Mantiene la proporción original de la imagen */
+        margin-top: 10px;
+    }
 
+    .nameProduct{
+        margin-right: 20px;
 
     }
-    .total button {
+    .cant{
+        text-align: center; /* Centra el contenido horizontalmente */
+        margin: 5px 10px; 
+       
+    }
+    
+
+    .total {
+        width: 20%;
+        height: 60vh;
+        margin: auto;
+        text-align: center;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cupon{
+    width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+
+    .total .comprar {
         width: 50%;
 
-
+    }
+    #delete{
+        right: 30px;
+        top: 140px;
     }
 
     /* Estilos para el footer*/
