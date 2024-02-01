@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TecnoJuy - Company</title>
     <link rel="stylesheet" href="/css/register.css">
-    <link rel="stylesheet" href="/css/index.css">
     <script src="https://kit.fontawesome.com/9507f12580.js" crossorigin="anonymous"></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,52 +52,70 @@
     <main>
         <br>
     <!-- Contenido específico de la página principal -->
-    <div id="container">
-        <h2 class="titulo">REGISTRO</h2>
-        <form class="form-registrosDatos">            
-            <input class="formC" placeholder="Tu nombre" type="text" id="nombre" name="nombre" required>
-            <input class="formC" placeholder="Tu apellido" type="text" id="apellido" name="apellido" required>
-            <input class="formC" placeholder="tu email" type="email" id="email" name="email" required>
-            <input class="formC" placeholder="Tu número de celular" type="tel" id="celular" name="celular" required>
-            <input class="formC" placeholder="Tu nombre de usuario" type="text" id="nomUsuario" name="nomUsuario" required>
-            <input class="formC" placeholder="Tu contraseña" type="password" id="contrasena" name="contrasena" required>
-            <input class="formC" placeholder="Repite tu contraseña contrasña" type="password" id="repitContrasena" name="repitContrasena" required>
-            <label>
-                <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
-                Acepta Términos y Condiciones
-            </label>
-            <button class="btn-form-registrar" type="submit">Registrar</button>
-        </form>
-    </div>
-    <br>
-</main>
+        <div class="container">
+            <h2 class="titulo">REGISTRO</h2>
+            <form class="form-registrosDatos"> 
+                <label for="nombre" class="textoCampo">Nombre: </label>           
+                <input class="formC" type="text" id="nombre" name="nombre" required>
+                
+                <label for="nombre" class="textoCampo">Apellido: </label>           
+                <input class="formC" type="text" id="apellido" name="apellido" required>
+                
+                <label for="fechaNacimiento" class="textoCampo">Fecha de Nacimiento</label>
+                <input class="formC" type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                
+                <label for="nombre" class="textoCampo">Email: </label>           
+                <input class="formC" type="email" id="email" name="email" required>
+                
+                <label for="nombre" class="textoCampo">Numero de Telefono: </label>           
+                <input class="formC" placeholder="Tu número de celular" type="tel" id="celular" name="celular" required>
+                
+                <label for="nombre" class="textoCampo">Nombre de Usuario: </label>           
+                <input class="formC" type="text" id="nomUsuario" name="nomUsuario" required>
+                
+                <label for="nombre" class="textoCampo">Contraseña: </label>           
+                <input class="formC" placeholder="Tu contraseña" type="password" id="contrasena" name="contrasena" required>
+                
+                <label for="nombre" class="textoCampo">Repetir Contraseña: </label>           
+                <input class="formC" placeholder="Repite tu contraseña contrasña" type="password" id="repitContrasena" name="repitContrasena" required>
+                
+                <label class="condiciones">
+                    <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+                    Acepta Términos y Condiciones
+                </label>
+                
+                <button class="btn-form-registrar" type="submit">Registrar</button>
+            </form>
+        </div>
+        <br>
+    </main>
 
     <!-- FOOTER -->
-<footer>
+    <footer>
 
-    <div class="footer-text">
-        <div>
-            <i class="fas fa-credit-card" id="icono"></i>
-            <p><strong>Pagá con tarjeta o en efectivo</strong></p>
-            <p>En TecnoJuy, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+        <div class="footer-text">
+            <div>
+                <i class="fas fa-credit-card" id="icono"></i>
+                <p><strong>Pagá con tarjeta o en efectivo</strong></p>
+                <p>En TecnoJuy, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+            </div>
+            
+            <div>
+                <a href="#"><i class="fa-brands fa-facebook" id="face"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube" id="youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram" id="insta"></i></a>
+                <p><strong>Acerca de Nosotros</strong></p>
+                <p>Descubre TecnoJuy: Conoce nuestra historia y valores. Estamos comprometidos a proporcionar productos de calidad y una experiencia de compra excepcional.</p>
+            </div>
+            <div>
+                <i class="fas fa-user-shield" id="icono"></i>
+                <p><strong>Políticas y términos</strong></p>
+                <p>Términos y condiciones: Lee nuestras políticas de compra, envío y devoluciones para garantizar una experiencia de compra transparente y satisfactoria.</p>
+            </div>
         </div>
         
-        <div>
-            <a href="#"><i class="fa-brands fa-facebook" id="face"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube" id="youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram" id="insta"></i></a>
-            <p><strong>Acerca de Nosotros</strong></p>
-            <p>Descubre TecnoJuy: Conoce nuestra historia y valores. Estamos comprometidos a proporcionar productos de calidad y una experiencia de compra excepcional.</p>
-        </div>
-        <div>
-            <i class="fas fa-user-shield" id="icono"></i>
-            <p><strong>Políticas y términos</strong></p>
-            <p>Términos y condiciones: Lee nuestras políticas de compra, envío y devoluciones para garantizar una experiencia de compra transparente y satisfactoria.</p>
-        </div>
-    </div>
-    
-    <p><small>Copyright © 2024 - Grupo7 TecnoJuy! © 2024. Hecho con <b id="corazon">♥</b> por G7</small></p>
+        <p><small>Copyright © 2024 - Grupo7 TecnoJuy! © 2024. Hecho con <b id="corazon">♥</b> por G7</small></p>
 
-</footer>
+    </footer>
 </body>
 </html>

@@ -1,66 +1,255 @@
-/* Estilos base para todas las pantallas */
-#container {
-    margin: 10% auto;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ebebeb;;
+    font-family: 'Roboto', sans-serif;
+}
+
+.barra-navegacion {
     background-color: #000;
     padding: 20px;
-    border-radius: 10px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%; /* Ajustar el ancho según sea necesario */
-    max-width: 400px; /* Ancho máximo del contenedor */
+    margin: 0;
+    display: block;
 }
 
-.titulo {
+.imagen{
     text-align: center;
-    font-size: 2em;
 }
-.form-registrosDatos{
+.logo{
+    width: 150px;
+    /*border:dotted 2px red;*/
+    display: block;
+    margin: 0 auto;
+}
+.form-search{
+    display: flex;
+}
+
+.form-search input{
+    flex-grow: 1;
+    width: 200px;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+}
+.form-search button {
+    background-color: #3e3e3e;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 15px;
+    cursor: pointer;
+    
+}
+
+.hamburguer-button{
+    background-color: #FFFFFF;
+    color: #03264C;
+    display: block;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+
+.main-navbar{
+    display: none;
+}
+.main-navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+.main-navbar ul a{
+    text-decoration: none;
+    color: #FFFF;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 540;
+}
+.button-register{
+    margin: 20px;
+
+}
+.button-register button{
+    background-color: #A774EB;
+    display: inline;
+    padding: 5px 5px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+    border-color: #FFFF;
+    text-decoration: none;
+}
+
+/* Estilos para el main*/
+
+.container {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    width: 90%;
+    /*text-align: center;*/
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  .titulo {
+    color: #fff;
+    font-weight: normal;
+  }
+
+  .textoCampo{
+    color: #dddddd;
+  }
+  .form-registrosDatos {
     display: flex;
     flex-direction: column;
-}
-
-label {
-    display: flex;
     align-items: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 10px;
-}
+    text-align: center;
 
-.formC {
+  }
+
+  label {
+    margin: 10px 0;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .formC {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    
-    background-color: #000;
-    border: 1px solid black;
-    color: white;
-    margin-left: 5%;
-    margin-right: 5%;
-}
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+  }
 
-label input {
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.btn-form-registrar {
+  .btn-form-registrar {
+    background-color: #3498db;
+    color: #ffffff;
     padding: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
-    background-color: #A774EB;
-    color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .btn-form-registrar:hover {
+    background-color: #2980b9;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  /* estilos del Footer*/
+
+footer{
+    background-color: #353A40;
 }
 
-.btn-form-registrar:hover {
-    background-color: #45a049;
+footer div{
+    text-align: center;
+    padding: 35px;
+    color: #e4e4e4;
+    
 }
+
+footer div i{
+    color: #87CEEB;
+    font-size: 30px;
+    margin: 10px;
+    
+}
+footer p{
+    color: #fff;
+}
+
+
+
+
 
 /* Consulta de medios para pantallas de 768px o más grandes */
 @media (min-width: 768px) {
-    #container {
+
+    /* Estilos para el header-barra de navegacion*/
+    .logo{
+        width: 100px;
+
+    }
+    .form-search{
+        display: flex;
+        height: 40px;
+    }
+    .form-search input{
+        width: 200px;
+        height: 40px;
+    }
+   
+    .main-header-top-bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .copy-header{
+        max-width: 250px;
+        text-align: right;
+        font-size: 15px;
+    }
+    .hamburguer-button{
+        display: none;
+    }
+
+    .main-navbar{
+        display: flex;
+        justify-content: flex-end;
+        
+        text-align: center;
+
+    }
+    .main-navbar ul{
+        display: flex;
+       
+        
+    }
+    .main-navbar li{
+        margin: 0 5px; 
+        margin-left: 20px;
+         
+    }
+    .main-navbar ul li a{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 600;
+        transition: color 0.3s;
+    }
+    .main-navbar ul li a:hover {
+        color: #60f3ab; 
+    }
+    .main-navbar ul li:not(:last-child):after {
+        content: '|'; /* Contenido de la línea de separación */
+        margin-left: 10px; 
+        color: #fff; /* Color de la línea */
+    }
+    header div button:hover {
+        background-color: #f869ea;
+    }
+
+
+    /* Estilos para el main*/
+    .container {
         width: 60%; /* Ajustar el ancho según sea necesario */
     }
 
@@ -72,7 +261,76 @@ label input {
 
 /* Consulta de medios para pantallas de 1024px o más grandes */
 @media (min-width: 1024px) {
-    #container {
-        width: 50%; /* Ajustar el ancho según sea necesario */
+
+     /* Estilos para el header-barra de navegacion*/
+     .logo{
+        width: 100px;
+    }
+
+    .form-search{
+        display: flex;
+        height: 40px;
+    }
+    .form-search input{
+        width:500px;
+        height: 50px;
+    }
+    .form-search button{
+        height: 50px;
+        font-size: 20px;
+    }
+    .button-register button{
+        background-color: #A774EB;
+        display: inline;
+        padding: 9px 9px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 18px;
+        border-color: #FFFF;
+    }
+    header div button:hover {
+        background-color: #f869ea;
+    }
+
+
+    .button-register button i{
+        font-size: 22px;
+    }
+
+    .main-navbar ul li a{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 600;
+        transition: color 0.3s;
+        font-size: 18px;
+    }
+    #cart{
+        cursor: pointer;
+
+    }
+    .contenedor article h3{
+        cursor: pointer;
+
+    }
+
+    /*Estilos para el main*/
+
+
+    .container {
+        width: 35%; /* Ajustar el ancho según sea necesario */
+    }
+
+
+    .btn-form-registrar{
+        cursor: pointer;
+        width: 30%;
+    }
+    
+    .btn-form-registrar:hover {
+        background-color: #A774EB; /* Cambiar el color al pasar el mouse */
+    }
+
+     /* Estilos para el footer*/
+     .footer-text{
+        display: flex;
     }
 }
