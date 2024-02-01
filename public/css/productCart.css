@@ -239,9 +239,7 @@ footer p{
 
 
 @media (min-width: 768px) {
-    body {
-        
-    }
+    
     /* Estilos para el header-barra de navegacion*/
     .logo{
         width: 100px;
