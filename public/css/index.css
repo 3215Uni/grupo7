@@ -85,11 +85,12 @@ body {
     background-color: #A774EB;
     display: inline;
     padding: 5px 5px;
-    border-radius: 8px;
+    border-radius: 12px;
     text-align: center;
     font-size: 15px;
     border-color: #FFFF;
     text-decoration: none;
+    outline: none;
 }
 
 /* Estilos del main*/
@@ -500,6 +501,9 @@ footer p{
         font-size: 18px;
         border-color: #FFFF;
     }
+
+
+    
     header div button:hover {
         background-color: #f869ea;
     }
