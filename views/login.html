@@ -56,19 +56,24 @@
     </header>
     <hr>
     <main>
+        <!--formulario-->
         <div class="formulario">
-            <form action="">
-                <h3>Acceder</h3>
+            <form action="post">
+                <h3 class="formTitulo">Acceder</h3>
                 <label for="txtUsername">Usuario o email *</label>
                 <input type="text" id="txtUsername" required="true">
                 <label for="txtPassword">Contraseña *</label>
                 <input type="password" id="txtPassword" required="true">
-                <br/>
-                <button class="btn-login">CONECTARSE</button>
                 <br>
-                <h4>O INICIE SESIÓN CON </h4>
-                <button class="btn-facebook"><i class="fa-brands fa-facebook"></i> FACEBOOK</button>
-                <button class="btn-google"><i class="fa-brands fa-google"></i> GOOGLE</button>
+                <button type="submit" class="btn-login">CONECTARSE</button>
+                <label><input type="checkbox">Recuérdame</label>
+                <a href="#">Olvidaste tu contraseña?</a>
+                <h5 class="formSubtitulo">O INICIE SESIÓN CON </h5>
+                <button type="submit" class="btn-facebook"><i class="fa-brands fa-facebook"></i> FACEBOOK</button>
+                <button type="submit" class="btn-google"><i class="fa-brands fa-google"></i> GOOGLE</button>
+                <div class="crear_cuenta">
+                    <label>No tienes cuenta? <a href="register.html">Regístrate</a></label>
+                </div>
             </form>
         </div>
     </main>
