@@ -1,17 +1,27 @@
-.formulario{
-    width: 100%;
-    text-align: center;
-    margin: 20px 30px;
+main {
+    margin: 30px;
+    display: flex;
 }
 
-h3{
+.formulario{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    border: 1px solid black ;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+}
+
+.formTitulo{
     font-size: 40px;
     margin-bottom: 15px;
 }
 
-h4{
-    font-size: 20px;
-    margin-bottom: 15px;
+.formSubtitulo {
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 label{
@@ -20,27 +30,28 @@ label{
 }
 
 input{
-    width: 50%;
-    display: inline;
+    margin: auto;
     padding: 10px;
     border-radius: 8px;
-    margin: 5px 15px;
+    width: 100%;
+    box-sizing:border-box;
 }
 
 .btn-login{
-    width: 50%;
+    width: 100%;
+    margin: auto;
     background-color: dodgerblue;
     display: inline ;
     padding: 10px;
     border-radius: 8px;
     text-align: auto;
     color: white;
-    margin: 10px 15px;
 }
 
 .btn-facebook{
+    width: 45%;
     background-color: blue;
-    width: 25%;
+    margin: auto;
     display: inline;
     padding: 10px;
     border-radius: 8px;
@@ -50,12 +61,85 @@ input{
 }
 
 .btn-google{
+    width: 45%;
     background-color: dodgerblue;
-    width: 25%;
+    margin: auto;
     display: inline;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
     color: white;
     font-size: 15px;
+}
+
+.crear_cuenta{
+    padding-top: 10px;
+}
+
+@media(min-width: 768px){
+    .formulario{
+        text-align: center;
+        width: 30%;
+        margin: auto;
+        background-color: white;
+        border: 1px solid black ;
+        border-radius: 10px;
+        padding: 20px;
+        align-items: center;
+    }   
+
+    label{
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+
+    input{
+        margin: auto;
+        display: inline;
+        padding: 10px;
+        border-radius: 8px;
+        margin: 5px 15px;
+    }
+
+    .btn-login{
+        margin: auto;
+        background-color: dodgerblue;
+        display: inline ;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: auto;
+        color: white;
+        margin: 10px 15px;
+    }
+
+    .btn-login:hover{
+        background-color: ;
+    }
+
+    .btn-facebook{
+        background-color: blue;
+        margin: auto;
+        display: inline;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+    }
+    
+    .btn-google{
+        background-color: dodgerblue;
+        margin: auto;
+        display: inline;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+    }
+}
+
+@media(min-width: 1024px){
+    
 }
