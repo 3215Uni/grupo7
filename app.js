@@ -18,7 +18,7 @@ app.get('/productCart', ( req, res ) =>{
     res.sendFile(pathHome);
 })
 app.get('/productDetail', ( req, res ) =>{
-    const pathHome = path.join(__dirname, 'views/productDetail.html')
+    const pathHome = path.join(__dirname, 'views/products/productDetail.html')
     res.sendFile(pathHome);
 })
 app.get('/register', ( req, res ) =>{
