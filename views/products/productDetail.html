@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de productos</title>
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <script src="https://kit.fontawesome.com/9507f12580.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="barra-navegacion">
+        <!-- Encabezado -->
+        <div class="main-header-top-bar">
+            <div  class="imagen">
+                <img src="img/Tecnojuy (3).png" alt="TecnoJuy" class="logo">
+            </div>
+            
+            <!-- Barra de busqueda -->
+            <br>
+            <form action="/" id="busqueda" class="form-search">
+                <input type="text" placeholder="Buscar productos, marcas ..." >
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+            <div  class="button-register">
+                <a href="/login"><button class="login"><i class="fa-solid fa-circle-user"></i> Ingresar</button></a>
+                <a href="/register"><button class="register" ><i class="fa-regular fa-address-card"></i> Registrarme</i></button></a>
+            </div>
+            
+        </div>    
+        <!-- Navbar -->
+        
+        <a href="#" class="hamburguer-button">
+            <i class="fas fa-bars"></i>
+        </a>
+        
+        <nav class="main-navbar">
+            <h1 hidden class="left-navbar"> TecnoJuy</h1>
+
+            <ul class="rigth-navbar">
+                <li><a href="#"><i class="fa-solid fa-house"></i> Inicio</a>
+                <li><a href="#"><i class="fa-solid fa-hand-holding-medical"></i> Productos</a>
+                <li><a href="#"><i class="fa-solid fa-info"></i> Acerca de</a>
+                <li><a href="/productCart"><i class="fa-solid fa-cart-plus"></i> Mis Compras</a>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section class="container">
+            
+
+            <div class="producto">
+            <img class="izquierda" src="/img/kingstonram.png" alt="Producto">               
+
+                <div class="info"> 
+                    <aside>
+                    <h3 class="nombre-producto">Kingston Fury Beast DDR4 RGB 16gb</h3>
+                    </aside>
+                    <br>
+                    <aside class="precio">PRECIO ESPECIAL </aside>
+                    <aside class="precio">$67.700</aside>
+                    <br>               
+                    <aside class="precio">HASTA 12 CUOTAS DE</aside>
+                    <aside class="precio">$6770</aside>
+                    <br>
+                    <aside class="precio-lista">PRECIO DE LISTA</aside>
+                    <aside class="precio-lista">$81.240</aside>
+                    
+                    <div class="agregar-carrito">
+                        <button class="boton-agregar">AGREGAR AL CARRITO</button>
+                    </div>
+
+                    <div class="garantia">
+                         <i class="fa-solid fa-user-shield"></i>
+                        <div>  GARANTIA OFICIAL 12 MESES</div>
+                    </div>
+                    <br>
+                    <div class="stock">
+                        <i class="fa-solid fa-check"></i>
+                        <div>STOCK DISPONIBLE</div>
+                    </div>
+                </div> 
+                
+                
+            </div>
+            
+            <div class="vistas">
+                <img class="vista1" src="/img/kingstonram.png" alt="Producto">               
+                <img class="vista2" src="/img/kingstonram.png" alt="Producto">               
+                <img class="vista3" src="/img/kingstonram.png" alt="Producto">    
+                <!-- <div>
+                    <button class="agregar-carrito">AGREGAR AL CARRITO</button>
+                </div>            -->
+            </div>
+            <br>
+            <h3 class="descripcion">DESCRIPCION GENERAL</h3> 
+            <P class="text">La Memoria RAM Fury Beast DDR4 RGB cuenta con un diseño elegante en color negro y una iluminación RGB que le dará un toque único a tu equipo. Su formato UDIMM y sus 288 pines aseguran una fácil instalación y compatibilidad con procesadores AMD Ryzen e Intel.
+
+                Gracias a su latencia CAS de 16 y su tasa de transferencia de 25600 MB/s, podrás disfrutar de una rápida respuesta en tus aplicaciones y juegos. Además, su voltaje de alimentación de 1.35V garantiza un funcionamiento estable y seguro.
+                
+                Esta memoria RAM es compatible con Intel XMP, lo que te permitirá optimizar su rendimiento y ajustarla a tus necesidades específicas. No esperes más para llevar tu experiencia de juego al siguiente nivel con la Memoria RAM Fury Beast DDR4 RGB de Kingston.
+            </P>   
+        </section>
+    </main>
+
+    <footer>
+
+        <div class="footer-text">
+            <div>
+                <i class="fas fa-credit-card" id="icono"></i>
+                <p><strong>Pagá con tarjeta o en efectivo</strong></p>
+                <p>En TecnoJuy, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+            </div>
+            
+            <div>
+                <a href="#"><i class="fa-brands fa-facebook" id="face"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube" id="youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram" id="insta"></i></a>
+                <p><strong>Acerca de Nosotros</strong></p>
+                <p>Descubre TecnoJuy: Conoce nuestra historia y valores. Estamos comprometidos a proporcionar productos de calidad y una experiencia de compra excepcional.</p>
+            </div>
+            <div>
+                <i class="fas fa-user-shield" id="icono"></i>
+                <p><strong>Políticas y términos</strong></p>
+                <p>Términos y condiciones: Lee nuestras políticas de compra, envío y devoluciones para garantizar una experiencia de compra transparente y satisfactoria.</p>
+            </div>
+        </div>
+        
+        <p><small>Copyright © 2024 - Grupo7 TecnoJuy! © 2024. Hecho con <b id="corazon">♥</b> por G7</small></p>
+
+    </footer>
+
+
+</body>
+</html>
