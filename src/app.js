@@ -23,22 +23,17 @@ app.use('/', homeRoute);
 
 
 const userRouter = require('./routers/userRoutes.js')
-app.use('/login', userRouter);
+app.use('/users', userRouter);
 
 
 
-app.get('/productCart', ( req, res ) =>{
-    const pathHome = path.join(__dirname, 'views/productCart.html')
-    res.sendFile(pathHome);
-})
-app.get('/productDetail', ( req, res ) =>{
-    const pathHome = path.join(__dirname, 'views/products/productDetail.html')
-    res.sendFile(pathHome);
-})
-app.get('/register', ( req, res ) =>{
-    const pathHome = path.join(__dirname, 'views/register.html')
-    res.sendFile(pathHome);
-})
+const productRouter=require('./routers/productsRoutes.js');
+app.use('/product', productRouter);
+
+
+
+
+
 
 
 
