@@ -1,0 +1,316 @@
+/* Estilos del main*/
+
+.promo{
+    width: 100%;
+    height: auto;
+}
+
+
+section {
+    /*width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;*/
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+    
+}
+
+
+/* Estilos para cada artículo */
+article {
+    background-color: #fff;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 450px;
+    padding: 20px;
+    margin: 15px;
+    position: relative;
+}
+
+main h2{
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin: 35px;
+}
+
+/* Estilos para la imagen dentro del artículo */
+.imgProduct{
+    width: 100%;
+    height: 300px;
+    overflow: hidden; /* Evitar que la imagen sobresalga si es más grande que el contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
+}
+
+article img {
+    width: 95%;
+    height: auto;
+    display: block;
+}
+
+
+/* Estilos específicos para el ícono de envío y precios */
+
+article #favorite{
+    color: red;
+    font-size: 25px;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+
+article #cart{
+    display: block;
+    margin-right: 5px;
+    color: #39b54a; 
+    padding: 7px;
+}
+
+section article h4{
+    display: inline;
+}
+
+article .precios {
+    font-size: 18px;
+    font-weight: normal;
+    color: #222;
+    position: absolute;
+    top: 400px;
+    right: 90px;
+}
+
+article .descuento {
+    color: #39b54a; 
+    position: absolute;
+    top: 290px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+article h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.contenedor h3 {
+    background: linear-gradient(to right, #ffcc00, #ff6600); /* Cambia los colores según tu preferencia */
+    background-clip: text;
+    color: transparent;
+}
+
+.contenedor h3:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.contenedor .precios {
+    font-size: 18px; /* Tamaño de fuente */
+    color: #007bff; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    margin-bottom: 10px;
+    font-weight: bold; /* Grosor de la fuente */
+    text-decoration: line-through;
+}
+
+.contenedor .precios {
+    color: #007bff; /* Cambia el color para el precio con descuento */
+}
+
+
+/* Animación de cambio de color al pasar el cursor */
+.contenedor .precios:hover {
+    color: #ff6600; /* Cambia el color al pasar el cursor */
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+
+
+
+#cart{
+    position: absolute;
+    right: 10px;
+    top: 400px;
+    font-size: 25px;
+}
+
+
+.cartel{
+    background-color: #fff;
+    width: 90%;
+    display: flex;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 2%;
+}
+.cartel img{
+    width: 50%;
+    height: auto;
+}
+.cartel .mensaje{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 15px;    
+}
+.cartel .mensaje button{
+    background-color: #3498db; /* Color de fondo del botón */
+      color: #fff; /* Color del texto del botón */
+      border: none;
+      padding: 8px 15px; /* Espaciado interno del botón */
+      font-size: 14px; /* Tamaño del texto */
+      border-radius: 5px; /* Bordes redondeados */
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+}
+#perifericos-img{
+    width: 100%;
+    height: auto;
+}
+
+#gpu-cpu-promo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#perifericos-img{
+    width: 100%;
+}
+
+.marcas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tarjeta {
+    position: relative;
+    width: 300px; /* Ancho de la tarjeta */
+    height: 400px; /* Altura de la tarjeta */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    margin: 20px;
+  }
+
+  #fondo {
+    width: 100%;
+    height: 70%; /* La imagen de fondo ocupa la mitad de la tarjeta */
+    object-fit: cover; /* Ajusta la imagen de fondo para cubrir el contenedor */
+  }
+
+  #empresa {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px; /* Ancho del círculo */
+    height: 120px; /* Altura del círculo */
+    border-radius: 50%; /* Forma de círculo */
+    object-fit: contain; 
+    border: 2px solid #87CEEB;
+}
+
+  h4 {
+    text-align: center;
+    margin-top: 30px; /* Espacio entre el círculo y el título */
+    color: #000; /* Color del texto */
+    font-size: 30px; 
+    background: linear-gradient(to right, #007bff, #00cc66); /* Cambia los colores según tu preferencia */
+    
+  }
+
+
+
+
+@media (min-width: 768px) {
+
+    /* Estilos para el main*/
+    
+    #gpu-cpu-promo {
+        display: flex;
+         
+    }
+    #perifericos-img{
+        width: 49%;
+        height: 230px;
+        
+    }
+    #gpu-promo{
+        width: 25%;
+        order: -1;
+
+    }
+    #mother-promo{
+        width: 25%;
+    }
+
+
+    .anucio{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+}
+
+
+@media (min-width: 1024px) {
+    /*Estilos para el main*/
+
+    .imgPromo{
+        text-align: center;
+    }
+    .promo{
+        width: 90%;
+        height: 500px;
+    }
+
+    .contenedor article:hover{
+        transform: scale(1.1);
+    }
+
+   #gpu-cpu-promo #perifericos-img{
+        height: 430px;
+    }
+   
+    
+    .cartel{
+        width: 400px;
+    }
+    
+    .cartel img{
+        width: 200px;
+        height: 200px;
+    }
+    .cartel .mensaje{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+            
+    }
+    .cartel .mensaje h3{
+        font-size: 22px;
+    }
+}

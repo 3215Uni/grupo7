@@ -4,8 +4,8 @@ const path = require('node:path');
 
 const controller = {
     renderLogin: (req, res) =>{
-        res.render('login')
-       
+        res.render('users/login.ejs');
+        
     }
 }
 

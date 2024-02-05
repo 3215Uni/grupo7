@@ -21,6 +21,7 @@ app.set('views', path.join(__dirname, 'views'));
 const homeRoute = require('./routers/homeRoutes.js')
 app.use('/', homeRoute);
 
+
 const userRouter = require('./routers/userRoutes.js')
 app.use('/login', userRouter);
 
