@@ -90,7 +90,7 @@ main .lista-categoria .cat{
     }
     main .lista-categoria{
         display: flex;
-        gap: 20px;
+        gap: 30px;
     }
     main .lista-categoria .cat{
         display: flex;
@@ -156,7 +156,7 @@ main .lista-categoria .cat{
 
 
     main .lista-categoria .articulos-venta .product{
-        width: 600px;
+        width: 900px;
         height: 200px;
         position: relative;
     }
@@ -192,6 +192,17 @@ main .lista-categoria .cat{
 
     .articulos-venta .product .contenido .prec .descuento{
         font-size: 16px;
+    }
+
+    .lista-categoria .cat{
+        margin-left: -80px;
+    }
+
+    .lista-categoria .cat .sub-cat{
+        font-size: 24px;
+    }
+    .lista-categoria .cat ul li{
+        margin-bottom: 7px;
     }
 
 }
