@@ -17,6 +17,11 @@ const controller = {
         res.render('products/registerProduct', {
             title: 'Añadir Producto - TecnoJuy',
         })
+    },
+    renderList:( req, res ) =>{
+        res.render('products/productList', {
+            title: 'Lista de Productos - TecnoJuy',
+        })
     }
 }
 
