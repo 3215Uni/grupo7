@@ -18,6 +18,11 @@ const controller = {
             title: 'Añadir Producto - TecnoJuy',
         })
     },
+    renderEdit: ( req, res ) =>{
+        res.render('products/editProduct', {
+            title: 'Editar Producto - TecnoJuy',
+        })
+    },
     renderList:( req, res ) =>{
         res.render('products/productList', {
             title: 'Lista de Productos - TecnoJuy',
