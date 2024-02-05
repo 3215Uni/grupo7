@@ -12,49 +12,77 @@
         <main>
         <br>
     <!-- Contenido específico de la página principal -->
-        <div class="container">
-            <h2 class="titulo">REGISTRO DE PRODUCTO</h2>        
-            <!--CARGA DE PRODUCTOS-->
+        <section class="container-form">
+            <div class="formP">
+                <h2 class="titulo">Añadir Producto</h2>        
+                <!--CARGA DE PRODUCTOS-->
+        
+                <form action="/crear-producto" method="POST" class="form-Product">
+
+                    <div class="subir">
+                        <div class="para-img">
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        
+                        <label class="textoCampo" for="image">Subir Imagen:</label>
+                        <input type="file" id="image" name="image" accept="image/*" required>
+                    </div>
+                    <div class="cont">
+                        <div class="contenido">
+                            <label for="image">URL de la Imagen:</label>
+                            <input type="url" id="image" name="image" required>
+                        </div>
     
-            <form action="/crear-producto" method="POST">
-                <label for="name">Nombre del Producto:</label>
-                <input type="text" id="name" name="name" required>
+    
+                        <div class="contenido">
+                            <label for="name">Nombre del Producto:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
         
-                <label for="description">Descripción:</label>
-                <textarea id="description" name="description" required></textarea>
+                        <div class="contenido">
+                            <label for="price">Cantidad:</label>
+                            <input type="number" id="cantidad" name="price" min="1" required>
+                        </div>
+                        
+                        <div class="contenido">
+                            <label for="category">Categoría:</label>
+                            <select class="formC" id="category" name="category" required>
+                                <option value="notebook">Notebook</option>
+                                <option value="tablet">Tablet</option>
+                                <option value="celulares">Celulares</option>
+                                <option value="PC">PC de Escritorio</option>
+                                <option value="PC">Perifericos</option>
+                                <option value="PC">Consolas</option>
+                            </select> 
+                        </div>
         
-                <label for="image">URL de la Imagen:</label>
-                <input type="url" id="image" name="image" required>
         
-                <label for="category">Categoría:</label>
-                <input type="text" id="category" name="category" required>
-        
-        
-                <label class="textoCampo" for="image">Subir Imagen:</label>
-                <input type="file" id="image" name="image" accept="image/*" required>
-                
-                <label for="price">Cantidad:</label>
-                <input type="number" id="cantidad" name="price" min="1" required>
+                        <div class="contenido">
+                            <label for="price">Precio:</label>
+                            <input type="number" id="price" name="price" min="0" step="0.01" required>
+                        </div>
+    
+                        <div class="desc">
+                            <label for="description">Descripción:</label>
+                            <textarea id="description" name="description" required></textarea>
+                        </div>
 
-                
-                <label for="category">Categoría:</label>
-                <select class="formC" id="category" name="category" required>
-                    <option value="notebook">Notebook</option>
-                    <option value="tablet">Tablet</option>
-                    <option value="celulares">Celulares</option>
-                    <option value="PC">PC de Escritorio</option>
-                </select>        
+                        <div class="btnDeForm">
+                            <button type="submit" class="sub">Crear Producto</button>
+                            <button type="reset" class="res">Borrar datos</button>
+                        </div>
+                    
+        
+                    </div>
+                    
+                    
+                    
+                </form>
 
-                <label for="price">Precio:</label>
-                <input type="number" id="price" name="price" min="0" step="0.01" required>
-
-                <div class="btnDeForm">
-                    <button type="submit">Crear Producto</button>
-                    <button type="reset">Borrar datos</button>
-                </div>
-            
-            </form>
-        </div>
+            </div>
+           
+        </section>
         <br>
     
     </main>
