@@ -51,7 +51,12 @@ main h2{
     display: flex;
     justify-content: center;
     align-items: center;
-      
+    
+}
+
+.img-mouse{
+    /*height: 200px;*/
+    aspect-ratio: 0.7;
 }
 
 article img {
