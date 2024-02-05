@@ -1,51 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de productos</title>
+    <%- include('./partials/head.ejs') %>
     <link rel="stylesheet" href="/css/productDetail.css">
-    <script src="https://kit.fontawesome.com/9507f12580.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="barra-navegacion">
-        <!-- Encabezado -->
-        <div class="main-header-top-bar">
-            <div  class="imagen">
-                <img src="img/Tecnojuy (3).png" alt="TecnoJuy" class="logo">
-            </div>
-            
-            <!-- Barra de busqueda -->
-            <br>
-            <form action="/" id="busqueda" class="form-search">
-                <input type="text" placeholder="Buscar productos, marcas ..." >
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
+    
 
-            <div  class="button-register">
-                <a href="/login"><button class="login"><i class="fa-solid fa-circle-user"></i> Ingresar</button></a>
-                <a href="/register"><button class="register" ><i class="fa-regular fa-address-card"></i> Registrarme</i></button></a>
-            </div>
-            
-        </div>    
-        <!-- Navbar -->
-        
-        <a href="#" class="hamburguer-button">
-            <i class="fas fa-bars"></i>
-        </a>
-        
-        <nav class="main-navbar">
-            <h1 hidden class="left-navbar"> TecnoJuy</h1>
-
-            <ul class="rigth-navbar">
-                <li><a href="#"><i class="fa-solid fa-house"></i> Inicio</a>
-                <li><a href="#"><i class="fa-solid fa-hand-holding-medical"></i> Productos</a>
-                <li><a href="#"><i class="fa-solid fa-info"></i> Acerca de</a>
-                <li><a href="/productCart"><i class="fa-solid fa-cart-plus"></i> Mis Compras</a>
-            </ul>
-        </nav>
-        
-    </header>
+    <%- include('./partials/header.ejs') %>
 
     <main>
         <section>
@@ -149,42 +111,8 @@
         </section>
 
 
-        
-
-
-
-
-
-
     </main>
 
-    <footer>
-
-        <div class="footer-text">
-            <div>
-                <i class="fas fa-credit-card" id="icono"></i>
-                <p><strong>Pagá con tarjeta o en efectivo</strong></p>
-                <p>En TecnoJuy, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
-            </div>
-            
-            <div>
-                <a href="#"><i class="fa-brands fa-facebook" id="face"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube" id="youtube"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram" id="insta"></i></a>
-                <p><strong>Acerca de Nosotros</strong></p>
-                <p>Descubre TecnoJuy: Conoce nuestra historia y valores. Estamos comprometidos a proporcionar productos de calidad y una experiencia de compra excepcional.</p>
-            </div>
-            <div>
-                <i class="fas fa-user-shield" id="icono"></i>
-                <p><strong>Políticas y términos</strong></p>
-                <p>Términos y condiciones: Lee nuestras políticas de compra, envío y devoluciones para garantizar una experiencia de compra transparente y satisfactoria.</p>
-            </div>
-        </div>
-        
-        <p><small>Copyright © 2024 - Grupo7 TecnoJuy! © 2024. Hecho con <b id="corazon">♥</b> por G7</small></p>
-
-    </footer>
-
-
+    <%- include('./partials/footer') %>
 </body>
 </html>
