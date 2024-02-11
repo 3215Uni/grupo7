@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "name": "Laptop Dell XPS 13",
+      "description": "Laptop ultradelgada con pantalla InfinityEdge y procesador Intel Core de 11ª generación.",
+      "image": "imagen1.jpg",
+      "category": "Laptops",
+      "colors": ["Plata", "Negro"],
+      "price": 1299.99
+    },
+    {
+      "id": 2,
+      "name": "PC de escritorio HP Pavilion",
+      "description": "PC de escritorio potente con procesador Intel Core i7 y tarjeta gráfica NVIDIA GeForce RTX 3060.",
+      "image": "imagen2.jpg",
+      "category": "PC de escritorio",
+      "colors": ["Negro"],
+      "price": 1499.99
+    },
+    {
+      "id": 3,
+      "name": "Monitor ASUS ROG Strix",
+      "description": "Monitor de gaming de 27 pulgadas con resolución QHD y frecuencia de actualización de 165Hz.",
+      "image": "imagen3.jpg",
+      "category": "Monitores",
+      "colors": ["Negro"],
+      "price": 499.99
+    },
+    {
+      "id": 4,
+      "name": "Teclado mecánico Razer BlackWidow",
+      "description": "Teclado mecánico para gaming con interruptores Razer Green y retroiluminación personalizable.",
+      "image": "imagen4.jpg",
+      "category": "Periféricos",
+      "colors": ["Negro"],
+      "price": 129.99
+    },
+    {
+      "id": 5,
+      "name": "Mouse inalámbrico Logitech MX Master 3",
+      "description": "Mouse inalámbrico ergonómico con tecnología de seguimiento de alta precisión y botón para gestos personalizables.",
+      "image": "imagen5.jpg",
+      "category": "Periféricos",
+      "colors": ["Gris"],
+      "price": 99.99
+    },
+    {
+      "id": 6,
+      "name": "Auriculares Bluetooth Sony WH-1000XM4",
+      "description": "Auriculares con cancelación de ruido líder en la industria y hasta 30 horas de duración de la batería.",
+      "image": "imagen6.jpg",
+      "category": "Auriculares",
+      "colors": ["Negro", "Plata"],
+      "price": 349.99
+    },
+    {
+      "id": 7,
+      "name": "SSD Samsung 970 EVO Plus",
+      "description": "Unidad de estado sólido NVMe PCIe M.2 con velocidades de lectura y escritura ultrarrápidas.",
+      "image": "imagen7.jpg",
+      "category": "Almacenamiento",
+      "colors": ["Negro"],
+      "price": 129.99
+    },
+    {
+      "id": 8,
+      "name": "Tarjeta gráfica NVIDIA GeForce RTX 3080",
+      "description": "Tarjeta gráfica de última generación con arquitectura Ampere para un rendimiento de gaming excepcional.",
+      "image": "imagen8.jpg",
+      "category": "Componentes",
+      "colors": ["Negro"],
+      "price": 699.99
+    },
+    {
+      "id": 9,
+      "name": "Placa base ASUS ROG Strix Z590-E",
+      "description": "Placa base ATX con socket LGA 1200 y soporte para procesadores Intel Core de 11ª generación.",
+      "image": "imagen9.jpg",
+      "category": "Componentes",
+      "colors": ["Negro"],
+      "price": 329.99
+    },
+    {
+      "id": 10,
+      "name": "Impresora multifunción HP OfficeJet Pro 9015",
+      "description": "Impresora multifunción con impresión a doble cara y conectividad Wi-Fi.",
+      "image": "imagen10.jpg",
+      "category": "Impresoras",
+      "colors": ["Blanco"],
+      "price": 229.99
+    }
+  ]
