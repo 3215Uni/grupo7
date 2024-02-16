@@ -15,7 +15,7 @@ const controller = {
     },
     renderRegister: ( req, res ) =>{
         res.render('products/registerProduct', {
-            title: 'Añadir Producto - TecnoJuy',
+            title: 'Añadir Producto - TecnoJuy'
         })
     },
     renderEdit: ( req, res ) =>{
@@ -27,7 +27,13 @@ const controller = {
         res.render('products/productList', {
             title: 'Lista de Productos - TecnoJuy',
         })
+    },
+    renderSearch:(req, res) =>{
+        res.render('products/productSearch',{
+            title: 'Busqueda - TecnoJuy'
+        })
     }
+
 }
 
 

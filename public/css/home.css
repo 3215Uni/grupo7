@@ -83,6 +83,7 @@ article #cart{
     padding: 7px;
 }
 
+
 section article h4{
     display: inline;
 }
@@ -110,11 +111,14 @@ article h3 {
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 0;
+    text-decoration: none;  
+    
 }
 .contenedor h3 {
     background: linear-gradient(to right, #ffcc00, #ff6600); /* Cambia los colores según tu preferencia */
     background-clip: text;
     color: transparent;
+    text-decoration: none;
 }
 
 .contenedor h3:hover {
@@ -232,7 +236,7 @@ article h3 {
     height: 120px; /* Altura del círculo */
     border-radius: 50%; /* Forma de círculo */
     object-fit: contain; 
-    border: 2px solid #87CEEB;
+    border: 2px solid #000;
 }
 
   h4 {
@@ -294,7 +298,18 @@ article h3 {
 
     .contenedor article:hover{
         transform: scale(1.1);
+        cursor: pointer;
     }
+    #cart{
+        transition: 300ms;
+
+    }
+    #cart:hover {
+        transform: rotate(360deg);
+        box-shadow: 0 0 5px var(--green);
+        
+    }
+    
 
    #gpu-cpu-promo #perifericos-img{
         height: 430px;

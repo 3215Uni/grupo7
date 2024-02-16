@@ -5,8 +5,10 @@
       "description": "Laptop ultradelgada con pantalla InfinityEdge y procesador Intel Core de 11ª generación.",
       "image": "imagen1.jpg",
       "category": "Laptops",
+      "price": "$199.999",
       "colors": ["Plata", "Negro"],
-      "price": 1299.99
+      "descuento": "20%",
+      "favorito": false
     },
     {
       "id": 2,
@@ -14,8 +16,11 @@
       "description": "PC de escritorio potente con procesador Intel Core i7 y tarjeta gráfica NVIDIA GeForce RTX 3060.",
       "image": "imagen2.jpg",
       "category": "PC de escritorio",
+      "price": "$499.999",
       "colors": ["Negro"],
-      "price": 1499.99
+      "descuento": "20%",
+      "favorito": false
+      
     },
     {
       "id": 3,
@@ -23,8 +28,10 @@
       "description": "Monitor de gaming de 27 pulgadas con resolución QHD y frecuencia de actualización de 165Hz.",
       "image": "imagen3.jpg",
       "category": "Monitores",
+      "price": "$199.999",
       "colors": ["Negro"],
-      "price": 499.99
+      "descuento": "20%",
+      "favorito": false
     },
     {
       "id": 4,
@@ -32,8 +39,11 @@
       "description": "Teclado mecánico para gaming con interruptores Razer Green y retroiluminación personalizable.",
       "image": "imagen4.jpg",
       "category": "Periféricos",
+      "price": "$79.999",
       "colors": ["Negro"],
-      "price": 129.99
+      "descuento": "20%",
+      "favorito": false
+      
     },
     {
       "id": 5,
@@ -41,8 +51,10 @@
       "description": "Mouse inalámbrico ergonómico con tecnología de seguimiento de alta precisión y botón para gestos personalizables.",
       "image": "imagen5.jpg",
       "category": "Periféricos",
+      "price": "$99.990",
       "colors": ["Gris"],
-      "price": 99.99
+      "descuento": "20%",
+      "favorito": false
     },
     {
       "id": 6,
@@ -50,8 +62,11 @@
       "description": "Auriculares con cancelación de ruido líder en la industria y hasta 30 horas de duración de la batería.",
       "image": "imagen6.jpg",
       "category": "Auriculares",
+      "price": "$34.999",
       "colors": ["Negro", "Plata"],
-      "price": 349.99
+      "descuento": "20%",
+      "favorito": false
+      
     },
     {
       "id": 7,
@@ -59,8 +74,10 @@
       "description": "Unidad de estado sólido NVMe PCIe M.2 con velocidades de lectura y escritura ultrarrápidas.",
       "image": "imagen7.jpg",
       "category": "Almacenamiento",
+      "price": 129.990,
       "colors": ["Negro"],
-      "price": 129.99
+      "descuento": "20%",
+      "favorito": false
     },
     {
       "id": 8,
@@ -68,8 +85,11 @@
       "description": "Tarjeta gráfica de última generación con arquitectura Ampere para un rendimiento de gaming excepcional.",
       "image": "imagen8.jpg",
       "category": "Componentes",
+      "price": "$699.990",
       "colors": ["Negro"],
-      "price": 699.99
+      "descuento": "20% OFF",
+      "favorito": false
+
     },
     {
       "id": 9,
@@ -77,8 +97,11 @@
       "description": "Placa base ATX con socket LGA 1200 y soporte para procesadores Intel Core de 11ª generación.",
       "image": "imagen9.jpg",
       "category": "Componentes",
+      "price": "$329.990",
       "colors": ["Negro"],
-      "price": 329.99
+      "descuento": "20%",
+      "favorito": false
+
     },
     {
       "id": 10,
@@ -86,7 +109,125 @@
       "description": "Impresora multifunción con impresión a doble cara y conectividad Wi-Fi.",
       "image": "imagen10.jpg",
       "category": "Impresoras",
+      "price": "$229.990",
       "colors": ["Blanco"],
-      "price": 229.99
-    }
-  ]
+      "descuento": "20%",
+      "favorito": false
+      
+    },
+    {
+      "id":11,
+      "nombre": "Kingston Fury Beast DDR4 RGB 16gb",
+      "descripcion": "La Memoria RAM Fury Beast DDR4 RGB cuenta con un diseño elegante en color negro...",
+      "imagen": "kingstonram.png",
+      "category": "visited",
+      "precio": "$67.700",
+      "colors": [" "],
+      "descuento": "20% ",
+      "favorito": false
+  },
+  {
+    "id":12,
+    "nombre": "Disco sólido interno Kingston 240gb",
+    "descripcion": "La unidad en estado sólido A400 de Kingston está diseñada para las personas más exigentes...",
+    "imagen": "discoSolido.webp",
+    "category": "visited",
+    "precio": "$30.099",
+    "colors": [" "],
+    "descuento": "10% ",
+    "favorito": false
+  },
+  {
+    "id":13,
+    "nombre": "Gabinete Solarmax 5920 Blanco",
+    "descripcion": "El Gabinete Solarmax 5920 Blanco 6 Fan Rgb Vidrio Templado 1 es la elección perfecta para los gamers...",
+    "imagen": "D_NQ_NP_815458-MLU71621421091_092023-O.webp",
+    "category": "visited",
+    "precio": "$89.990",
+    "colors": [" "],
+    "descuento": "5% ",
+    "favorito": false
+  },
+  {
+    "id":14,
+    "nombre": "GPU AMD ASRock RX 550 2gb",
+    "descripcion": "AMD es un fabricante estadounidense de placas de video, por su tecnología se ha destacado en crear procesadores de alta gama...",
+    "imagen": "/img/gpu-asrock2gb.webp",
+    "category": "visited",
+    "precio": "$54.999",
+    "colors": [" "],
+    "descuento": "12% ",
+    "favorito": false
+  },
+  {
+    "id":15,
+    "nombre": "Procesador AMD Ryzen 5 5600G",
+    "descripcion": "Ryzen 5 5600G, diseñado para brindarte un rendimiento excepcional en tus juegos favoritos...",
+    "imagen": "/img/rayzen5g.webp",
+    "category": "visited",
+    "precio": "$222.999",
+    "colors": [" "],
+    "descuento": "",
+    "favorito": false
+  },
+  {
+    "id": 16,
+    "nombre": "Impresora Epson Ecotank L3250",
+    "descripcion": "Epson busca que sus clientes obtengan el máximo provecho de sus productos. Por ello, brinda soluciones de impresión con una amplia gama de dispositivos que cubren todos los usos y necesidades, tanto en casa como en el trabajo. Eficiencia y calidad Imprime archivos, escanea documentos y haz todas las fotocopias que necesites con esta impresora multifunción Epson, siempre lista para facilitar tu rutina de trabajo o estudio.  Perfecta para tu hogar o la oficina Al ser a tinta te permitirá lograr impresiones de gran calidad con colores vivos y degradados suaves. Ocupa poco espacio y es fácil de manejar lo que la convierte en la opción ideal para cuestiones laborales, tareas escolares y requerimientos de la vida diaria.",
+    "imagen": "impresora.webp",
+    "category": "in-sale",
+    "precio": "$573.999",
+    "colors": [" "],
+    "descuento": "5%",
+    "favorito": false
+  },
+  {
+    "id": 17,
+    "nombre": "Logitech Serie G Lightspeed G305",
+    "descripcion": "la unidad en estado sólido A400 de Kingston está diseñada para las personas más exigentes. Mejora de forma notable la capacidad de respuesta de su sistema, ya que alcanza velocidades de lectura/escritura de hasta 500MB/seg y 450MB/seg. Por ende, es 10 veces más rápido que un disco duro tradicional. Al estar compuesta por una memoria flash es silenciosa y posee pocas probabilidades de tener fallas.",
+    "imagen": "mouseLogitech.webp",
+    "category": "in-sale",
+    "precio": "$52.499",
+    "colors": [" "],
+    "descuento": "10%",
+    "favorito": false
+  },
+  {
+    "id":18 ,
+    "nombre": "Redragon Shiva K512w",
+    "descripcion": "El Gabinete Solarmax 5920 Blanco 6 Fan Rgb Vidrio Templado 1 es la elección perfecta para los gamers que buscan un diseño moderno y funcional. Con su estructura tipo Mid tower y su color blanco, este gabinete se adapta a cualquier estilo de decoración. Cuenta con dos bahías para discos de 2.5 y 3.5, ofreciendo amplio espacio de almacenamiento para tus juegos y archivos. Además, su panel frontal incluye puertos USB para facilitar la conexión de tus dispositivos. Con su sistema de iluminación RGB, este gabinete te permite personalizar el ambiente de tu espacio de juego. Los 6 ventiladores incluidos garantizan una excelente refrigeración, manteniendo tus componentes en óptimas condiciones durante largas sesiones de juego. El Gabinete So  larmax 5920 Blanco 6 Fan Rgb Vidrio Templado 1 es una opción de calidad y rendimiento para los gamers más exigentes. Su diseño elegante y sus características avanzadas lo convierten en una elección segura para mejorar tu experiencia de juego. ¡No pierdas la oportunidad de adquirirlo y llevar tu setup al siguiente nivel!",
+    "imagen": "tecladoShiva.webp",
+    "category": "in-sale",
+    "precio": "$39.999",
+    "colors": [" "],
+    "descuento": "5%",
+    "favorito": false
+  },
+  {
+    "id": 19,
+    "nombre": "",
+    "descripcion": " ",
+    "imagen": "",
+    "category": "in-sale",
+    "precio": "$",
+    "colors": [" "],
+    "descuento": "",
+    "favorito": false
+  },
+  {
+    "id": 20,
+    "nombre": "Notebook Lenovo IdeaPad",
+    "descripcion": "La notebook Lenovo 81X700FVUS Intel I5 1135g7 Ram 8gb Ssd 256gb Full hd Windows 11 es una solución tanto para trabajar y estudiar como para entretenerte. Al ser portátil, el escritorio dejará de ser tu único espacio de uso para abrirte las puertas a otros ambientes ya sea en tu casa o en la oficina. Pantalla con gran impacto visual Su pantalla de 14 te brindará colores más vivos y definidos. La pantalla de la computadora portátil, tiene una impresionante relación pantalla-cuerpo del 88 %, gracias a sus biseles angostos de cuatro lados. Su pantalla antirreflejo FHD (1920 x 1080) de 14 está disponible en hasta 300 nits, para una experiencia de visualización brillante. Eficiencia a tu alcanceSu procesador Intel Core i5 te permitirá ejecutar programas variados y procesos indispensables para desenvolverte en el día a día, ya sea en tu trabajo o en los momentos de ocio en tu hogar. Windows 11 ofrece una potente seguridad integrada, que incluye aislamiento basado en hardware, cifrado y protección contra malware. Aviso legal La duración de la batería depende del uso que se le dé al producto.",
+    "imagen": "D_NQ_NP_899021-MLA71605614798_092023-O.webp",
+    "category": "in-sale",
+    "precio": "$735.555",
+    "colors": [" "],
+    "descuento": "12%",
+    "favorito": false
+  }
+
+
+
+  
+
+]
