@@ -17,7 +17,7 @@
                 <h2 class="titulo">Añadir Producto</h2>        
                 <!--CARGA DE PRODUCTOS-->
         
-                <form action="/product/list" method="POST" class="form-Product">
+                <form action="/product/registerProduct" method="POST" class="form-Product">
 
                     <div class="subir">
                         <div class="para-img">
@@ -25,12 +25,12 @@
                         </div>
                         
                         <label class="textoCampo" for="image">Subir Imagen:</label>
-                        <input type="file" id="image" name="image" accept="image/*" required>
+                        <input type="file" id="image" name="image" accept="image/*">
                     </div>
                     <div class="cont">
                         <div class="contenido">
                             <label for="image">URL de la Imagen:</label>
-                            <input type="url" id="image" name="image" required>
+                            <input type="url" id="image" name="url">
                         </div>
     
     
@@ -42,7 +42,7 @@
         
                         <div class="contenido">
                             <label for="price">Cantidad:</label>
-                            <input type="number" id="cantidad" name="price" min="1" required>
+                            <input type="number" id="cantidad" name="cantidad" min="1" required>
                         </div>
                         
                         <div class="contenido">
@@ -54,6 +54,8 @@
                                 <option value="PC">PC de Escritorio</option>
                                 <option value="PC">Perifericos</option>
                                 <option value="PC">Consolas</option>
+                                <option value="PC">in-sale</option>
+                                <option value="PC">visited</option>
                             </select> 
                         </div>
         
@@ -61,6 +63,10 @@
                         <div class="contenido">
                             <label for="price">Precio:</label>
                             <input type="number" id="price" name="price" min="0" step="0.01" required>
+                        </div>
+                        <div class="contenido">
+                            <label for="price">Descuento:</label>
+                            <input type="number" id="price" name="discount">
                         </div>
     
                         <div class="desc">

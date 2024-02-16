@@ -10,6 +10,7 @@ router.get('/cart', productController.renderCart);
 router.get('/detail',productController.renderDetail);
 
 router.get('/registerProduct',productController.renderRegister);
+router.post('/registerProduct', productController.renderCreate);
 
 router.get('/editProduct',productController.renderEdit);
 
