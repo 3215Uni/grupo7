@@ -1,208 +1,192 @@
-main{
+section {
+    /*width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-main .lista-categoria {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-
-main .lista-categoria .cat{
-    display: none;
-}
-
-.articulos-venta{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-self: center;
-}
-.articulos-venta .product{
-    margin-bottom: 2px;
-    position: relative;
-    gap: 10px;
-}
-
-.articulos-venta .product{
-    background-color: #fff;
-    width: 90%;
-    display: flex;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.articulos-venta .product .caja-imagen{
-    width: 220px;
-    height: 100px;
+    text-align: left;*/
     
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+    
 }
 
-.articulos-venta .product .caja-imagen img{
-    width: auto;
-    height: 100%;
- 
+
+/* Estilos para cada artículo */
+article {
+    background-color: #fff;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 450px;
+    padding: 20px;
+    margin: 15px;
+    position: relative;
 }
 
-.articulos-venta .product .contenido .nom-product{
-    font-size: 18px;
-    color: darkslategray;
-    margin-bottom: 10px;
+main h2{
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin: 35px;
 }
 
-.articulos-venta .product .contenido .prec{
+/* Estilos para la imagen dentro del artículo */
+.imgProduct{
+    width: 100%;
+    height: 300px;
+    overflow: hidden; /* Evitar que la imagen sobresalga si es más grande que el contenedor */
     display: flex;
-    gap: 6px;
-}
-.articulos-venta .product .contenido .prec .monto{
-    font-size: 15px;
-    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-.articulos-venta .product .contenido .prec .descuento{
-    color: green;
-    font-size: 14px;
+.img-mouse{
+    /*height: 200px;*/
+    aspect-ratio: 0.7;
 }
 
-.articulos-venta .product #favorite{
+article img {
+    width: 95%;
+    height: auto;
+    display: block;
+}
+
+
+/* Estilos específicos para el ícono de envío y precios */
+
+article #favorite{
     color: red;
+    font-size: 25px;
     position: absolute;
-    left: 115px;
-    top: 10px;
+    top: 8px;
+    right: 10px;
 }
 
-.articulos-venta .product #cart{
-    color: #00bd00;
-    position: absolute;
-    top: 78px;
-    right: 15px;
+article #cart{
+    display: block;
+    margin-right: 5px;
+    color: #39b54a; 
+    padding: 7px;
 }
+
+
+section article h4{
+    display: inline;
+}
+
+article .precios {
+    font-size: 18px;
+    font-weight: normal;
+    color: #222;
+    position: absolute;
+    top: 400px;
+    right: 90px;
+}
+
+article .descuento {
+    color: #39b54a; 
+    position: absolute;
+    top: 290px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+article h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-decoration: none;  
+    
+}
+.contenedor article a{
+    text-decoration: none;
+}
+.contenedor article a h3 {
+    background: linear-gradient(to right, #ffcc00, #ff6600); /* Cambia los colores según tu preferencia */
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+}
+
+.contenedor h3:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.contenedor .precios {
+    font-size: 18px; /* Tamaño de fuente */
+    color: #007bff; /* Color del texto */
+    text-align: center; /* Alineación del texto */
+    margin-bottom: 10px;
+    font-weight: bold; /* Grosor de la fuente */
+    text-decoration: line-through;
+}
+
+.contenedor .precios {
+    color: #007bff; /* Cambia el color para el precio con descuento */
+}
+
+
+/* Animación de cambio de color al pasar el cursor */
+.contenedor .precios:hover {
+    color: #ff6600; /* Cambia el color al pasar el cursor */
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+
+
+
+#cart{
+    position: absolute;
+    right: 10px;
+    top: 400px;
+    font-size: 25px;
+}
+
+
 
 
 @media (min-width: 768px) {
 
-    main{
-        padding: 60px;
-    }
-    main .lista-categoria{
-        display: flex;
-        gap: 30px;
-    }
-    main .lista-categoria .cat{
-        display: flex;
-        flex-direction: column;
-    }
-    main .lista-categoria .cat ul{
-        list-style: none;
+    /* Estilos para el main*/
+    
+   
 
-    }
-    main .lista-categoria .cat .sub-cat{
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-    main .lista-categoria .cat ul li a{
-        text-decoration: none;
-        color: #555555;
-        list-style: none;
-        margin: 10px;
-        font-size: 16px;
-        
-    }
-    main .lista-categoria .articulos-venta .product{
-        height: 180px;
-        position: relative;
-    }
-    main .lista-categoria .articulos-venta .product .caja-imagen{
-      
-        height: 100%;
-        max-width: 100%;  
-        overflow: hidden;
-    }
-    main .lista-categoria .articulos-venta .product .caja-imagen img{
-        width: 100px;
-        height: auto;   
-    }
-
-    .articulos-venta .product .contenido .nom-product{
-        font-size: 25px;
-    }
-
-    .articulos-venta .product #favorite{
-        position: absolute;
-        left: 30%;
-        top: 10%;
-        font-size: 20px;
-    }
-
-    .articulos-venta .product #cart{
-        position: absolute;
-        left: 90%;
-        top: 80%;
-        font-size: 20px;
-    }
 }
 
 
-
-
-
-
 @media (min-width: 1024px) {
+    /*Estilos para el main*/
 
 
-
-    main .lista-categoria .articulos-venta .product{
-        width: 900px;
-        height: 200px;
-        position: relative;
+    .contenedor article:hover{
+        transform: scale(1.06);
+        cursor: pointer;
     }
+    #cart{
+        transition: 300ms;
 
-    main .lista-categoria .articulos-venta .product .caja-imagen{
-        width: 30%;
     }
+    #cart:hover {
+        transform: rotate(360deg);
+        box-shadow: 0 0 5px var(--green);
+        
+    }
+    
 
-    .articulos-venta .product .contenido .nom-product{
-        font-size: 26px;
-        margin-top: 16px;
-        margin-bottom: 20px;
+   #gpu-cpu-promo #perifericos-img{
+        height: 430px;
     }
-
-    .articulos-venta .product #favorite{
-        position: absolute;
-        left: 25%;
-        top: 15px;
-        font-size: 22px;
-    }
-
-    .articulos-venta .product #cart{
-        position: absolute;
-        left: 90%;
-        top: 150px;
-        font-size: 26px;
-    }
-
-    .articulos-venta .product .contenido .prec .monto{
-        font-size: 24px;
-        font-weight: 800;
-    }
-
-    .articulos-venta .product .contenido .prec .descuento{
-        font-size: 16px;
-    }
-
-    .lista-categoria .cat{
-        margin-left: -80px;
-    }
-
-    .lista-categoria .cat .sub-cat{
-        font-size: 24px;
-    }
-    .lista-categoria .cat ul li{
-        margin-bottom: 7px;
-    }
-
+   
+    
+    
 }
