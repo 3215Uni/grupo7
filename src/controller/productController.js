@@ -36,7 +36,7 @@ const controller = {
             category: req.body.category,
             price: req.body.price,
             colors: [],
-            descuento: req.body.discount+'%',
+            discount: req.body.discount+'%',
             favorito: false
         }
         products.push(newProd);
@@ -54,10 +54,12 @@ const controller = {
     renderList:( req, res ) =>{
         res.render('products/productList', {
             title: 'Lista de Productos - TecnoJuy',
+            products: products
         });
     },
 
     renderSearch:(req, res) =>{
+
         res.render('products/productSearch',{
             title: 'Busqueda - TecnoJuy'
         });
