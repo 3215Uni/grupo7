@@ -1,3 +1,27 @@
+# Retrospectiva del Cuarto Sprint: 
+
+#### "Maximizando la Eficiencia con Reuniones Cortas y Comunicación Ágil"
+
+### 1. Comenzar a hacer:
+Explorar aún más técnicas individuales de gestión del tiempo y productividad para mejorar nuestra eficiencia, aprovechando al máximo nuestras reuniones cortas y la comunicación a través del chat.
+
+### 2. Hacer más:
+Continuar fomentando la comunicación ágil a través del chat, donde los mensajes cortos y directos nos permiten avanzar rápidamente y resolver problemas de manera eficiente. Mejor aún si los mensajes son individuales y enchat personal adémas de pocos mensajes grupales.
+
+### 3. Continuar haciendo:
+Reconocer y aprovechar las fortalezas individuales de cada miembro del equipo, ya que esta práctica sigue siendo esencial para nuestro éxito conjunto.
+
+### 4. Hacer menos:
+Reducir la necesidad de reuniones prolongadas. Las reuniones cortas han sido efectivas para nosotros, así que evitemos la sobrecarga de reuniones y enfoquémonos en aspectos clave de manera más eficiente.
+
+### 5. Dejar de hacer:
+Dejar de lado la comunicación transparente y la colaboración en el chat. Sigamos compartiendo información y problemas de manera clara y oportuna para mantenernos en sintonía.
+
+Recomendación Adicional:
+Considerar la implementación de herramientas de gestión de proyectos que faciliten aún más la comunicación y colaboración en tiempo real, lo que podría aumentar aún más nuestra eficiencia.
+_________________________________________________________________________________________________________________
+__________________________________________________________________________________________________________________
+
 # Retrospectiva del Tercer Sprint:
 
 ### 1. Comenzar a hacer:
