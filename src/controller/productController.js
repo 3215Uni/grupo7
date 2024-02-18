@@ -16,8 +16,13 @@ const controller = {
     },
 
     renderDetail: ( req, res ) =>{
+
+        const id=req.params.id;
+        const productDetail=products.find((prod)=>prod.id==id);
+
         res.render('products/productDetail', {
             title: 'Detalle de Producto - TecnoJuy',
+            productDetail:productDetail
         });
     },
 
@@ -29,7 +34,7 @@ const controller = {
 
     renderCreate: ( req, res ) =>{
         const newProd={
-            id: cryto.randomUUID(),
+            id: products.length+1,
             name: req.body.name,
             description: req.body.description,
             image: req.body.image,

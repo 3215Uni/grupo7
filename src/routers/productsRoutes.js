@@ -7,7 +7,7 @@ const productController=require('../controller/productController');
 
 router.get('/cart', productController.renderCart);
 
-router.get('/detail',productController.renderDetail);
+router.get('/detail/:id',productController.renderDetail);
 
 router.get('/registerProduct',productController.renderRegister);
 router.post('/registerProduct', productController.renderCreate);

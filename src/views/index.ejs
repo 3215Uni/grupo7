@@ -18,7 +18,7 @@
         <section class="contenedor">
             <% visitedProducts.map(prod=> { %>
                 <article>
-                    <a href="#">
+                    <a href="/product/detail/<%=prod.id%>">
                         <div class="imgProduct">
                             <img src="/img/<%=prod.image%>" alt="product">
                         </div>
@@ -66,7 +66,7 @@
         <section class="contenedor">
             <% inSale.map(producto=> { %>
                 <article>
-                    <a href="#">
+                    <a href="/product/detail/<%=producto.id%>">
                         <div class="imgProduct">
                             <img src="/img/<%=producto.image%>" alt="product">
                         </div>

@@ -17,7 +17,7 @@
                     
                     <<% products.map(producto=> { %>
                         <article>
-                            <a href="#">
+                            <a href="/product/detail/<%=producto.id%>">
                                 <div class="imgProduct">
                                     <img src="/img/<%=producto.image%>" alt="product">
                                 </div>
