@@ -11,6 +11,33 @@ main{
     width: 100%;
     height: auto;
 }
+.producto .centrar .acciones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.producto .centrar .acciones button{
+    width: 80%;
+    height: 50px;
+    
+    color: #fff; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    border: none; /* Elimina el borde predeterminado del botón */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+.producto .centrar .acciones .delete{
+    background-color: #8B0000;
+}
+.producto .centrar .acciones .edit{
+    background-color: #3498db;
+}
+
+
 .producto .vistas{
     max-width: 100%; /* Establece el ancho máximo al 100% del contenedor padre */
     overflow: auto; /* Agrega desplazamiento horizontal si el contenido es demasiado ancho */
@@ -136,8 +163,13 @@ main{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: -100px;
+        
+        
     }
+    .producto .centrar .acciones button{
+        width: 130px;
+    }
+   
 
     .izquierda{
         width: 50%;
@@ -187,30 +219,47 @@ main{
         display: flex;
          /* Permite que los elementos se muevan a la siguiente línea cuando no haya suficiente espacio */
         justify-content: space-between;
+        height: 700px;
+        
     
     }
+
+    
+
     .imagenes{
         
         /* Ocupa el espacio disponible */
-        width: 40%;
+        width: 45%;
         height: auto;
         margin-left: 60px;
-        border-radius: 10px; /* Radio de las esquinas para un borde redondeado */
+        border-radius: 5px; /* Radio de las esquinas para un borde redondeado */
         transition: border-color 0.3s ease;
+        border: 2px dotted #000;
     }
 
 
     .atributos{
-        flex: 1; /* Ocupa el espacio disponible */
-        max-width: 400px;
-        max-width: calc(50% - 10px); /* Ajusta el ancho y considera el margen entre elementos */
-        box-sizing: border-box;
-        margin-right: 60px;
+        display: flex; 
+        height: auto;
+        margin-right: 100px;
+        border: 2px dotted #000;
         
     }
-   
+    
+    .producto .centrar .acciones button{
+        cursor: pointer;
+        transition: transform 0.3s, background-color 0.3s;
+        
+    }
+    .producto .centrar .imagenes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .producto .centrar .imagenes .izquierda{
-        width: 100%;
+        width: 80%;
+             
     }
 
     .vistas img{
@@ -247,7 +296,13 @@ main{
         transform: scale(1.1);
         color: #000;
     }
-    
+
+    .acciones button:hover{
+        
+        transform: scale(1.1);
+       
+    }
+   
 
 
     .descripcion {
