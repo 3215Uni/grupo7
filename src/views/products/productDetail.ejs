@@ -83,6 +83,19 @@
                     <div class="boton">
                         <button class="agregar-carrito"><i class="fa-regular fa-money-bill-1"></i> COMPRAR</button>
                         <button class="agregar-carrito"><i class="fa-solid fa-cart-plus"></i> AGREGAR AL CARRITO</button>
+                        <button class="agregar-carrito" onclick="fetch(`/products/<%= productDetail.id %>`, { method: 'DELETE' })
+                            .then(response => {
+                                if (response.ok) {
+                                    window.location.href = '/';
+                                } else {
+                                    console.error('Error al eliminar el producto');
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                            })">
+                        <i class="fa-regular fa-money-bill-1"></i> ELIMINAR
+                        </button>
                     </div>
                     
                     

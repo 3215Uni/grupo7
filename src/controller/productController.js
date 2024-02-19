@@ -50,9 +50,9 @@ const controller = {
         res.redirect('/product/list');
     },
 
-    /**********************/
-    //Delete: borra 1 producto de la base de datos
-/*    detroy: (req, res) => {
+    
+    //codigo para eliminar
+    /*detroy: (req, res) => {
         const {id} = req.params;
         // Filtrar la lista de productos para excluir el producto que se desea eliminar
         const indexProduct = products.findIndex(product => product.id ==id);
@@ -60,9 +60,9 @@ const controller = {
         // Sobrescribe el archivo con la lista actualizada de productos
         fs.writeFileSync(productFilePath, JSON.stringify(products, null, 2));
         // Redirecciona a la lista de productos después de eliminar
-        res.redirect('/products/:id');
+        res.redirect('/');
     },
-    /*********************/
+*/
 
     renderEdit: ( req, res ) =>{
         res.render('products/editProduct', {

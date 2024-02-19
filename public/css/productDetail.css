@@ -91,7 +91,7 @@ main{
 }
 
 .producto .boton .agregar-carrito{
-    width: 90%;
+    width: 80%;
     height: 50px;
     margin-bottom: 14px; 
     background-color: #03264C;
@@ -101,9 +101,10 @@ main{
     border: none; /* Elimina el borde predeterminado del botón */
     border-radius: 8px; /* Esquinas redondeadas */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block; /* Hacer que los botones se muestren en línea */
+    margin-right: 10px; 
 }
 .producto .descripcion{
-    
     display: flex;
     flex-direction: column;
     padding: 40px 20px 20px 20px;
@@ -236,6 +237,7 @@ main{
         height: 15%;
     }
     .boton button {  
+        
         cursor: pointer;
         transition: transform 0.3s, background-color 0.3s;
     }
