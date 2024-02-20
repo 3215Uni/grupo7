@@ -77,11 +77,14 @@ const controller = {
     },
     Update: ( req, res ) =>{
         const id=req.params.id;
-        const {name, image , category, price, discount}=req.body;
+        const {name, image, brand, stock, category, price, discount, description}=req.body;
         products.forEach(e => {
             if(e.id==id){
                 e.name=name;
                 e.image=image;
+                e.brand=brand;
+                e.stock=stock,
+                e.description=description;
                 e.category=category;
                 e.price=price;
                 e.discount=discount;

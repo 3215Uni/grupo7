@@ -304,17 +304,13 @@
   {
     "id": 21,
     "name": "Gtx 1650 4gb Gddr5",
-    "brand": "",
-    "stock": 1,
-    "description": "agasdf",
+    "brand": "YuGiOh",
+    "stock": "1",
+    "description": "  agasdfsfadafs2000",
     "image": "",
     "price": "$2000",
     "colors": [],
-    "discount": "15",
-    "favorito": false,
-    "category": [
-      "Consolas",
-      "in-sale"
-    ]
+    "discount": "20",
+    "favorito": false
   }
 ]
