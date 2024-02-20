@@ -38,35 +38,73 @@
                             <label for="name">Nombre del Producto:</label>
                             <input type="text" id="name" name="name" required>
                         </div>
+                        <div class="contenido">
+                            <label for="name">Marca:</label>
+                            <input type="text" id="brand" name="brand" >
+                        </div>
                         
         
                         <div class="contenido">
                             <label for="price">Cantidad:</label>
-                            <input type="number" id="cantidad" name="cantidad" min="1" required>
+                            <input type="number" id="stock" name="stock" min="1" required>
                         </div>
                         
                         <div class="contenido">
-                            <label for="category">Categoría:</label>
-                            <select class="formC" id="category" name="category" required>
-                                <option value="notebook">Notebook</option>
-                                <option value="tablet">Tablet</option>
-                                <option value="celulares">Celulares</option>
-                                <option value="PC">PC de Escritorio</option>
-                                <option value="PC">Perifericos</option>
-                                <option value="PC">Consolas</option>
-                                <option value="PC">in-sale</option>
-                                <option value="PC">visited</option>
-                            </select> 
+                            <div class="contenido">
+                                <label>Categoría:</label>
+                                <div class="checkbox-group">
+                                    <div class="chek-caja">
+                                        <input type="checkbox" id="notebook" name="category" value="notebook">
+                                        <label for="notebook">Notebook</label>
+                                    </div>
+                                    
+                                    <div class="chek-caja">
+                                        <input type="checkbox" id="tablet" name="category" value="tablet">
+                                        <label for="tablet">Tablet</label>
+                                    </div>
+                                    
+                                    <div class="chek-caja">
+                                        <input type="checkbox" id="celulares" name="category" value="celulares">
+                                        <label for="celulares">Celulares</label>
+                                    </div>
+                                    
+                                    <div class="chek-caja">
+                                        <input type="checkbox" id="PC-desktop" name="category" value="PC de Escritorio">
+                                        <label for="PC-desktop">PC de Escritorio</label>
+                                    </div>
+                                    
+                                    <div class="chek-caja">
+                                        <input type="checkbox" id="perifericos" name="category" value="Perifericos">
+                                        <label for="perifericos">Periféricos</label>
+                                    </div>
+                                    
+                                    <div class="chek-caja">
+                                        <input type="checkbox" id="consolas" name="category" value="Consolas">
+                                        <label for="consolas">Consolas</label>
+                                    </div>
+                                    
+                                    <div class="chek-caja">
+                                        <input type="checkbox" id="in-sale" name="category" value="in-sale">
+                                        <label for="in-sale">in-sale</label>
+                                    </div>
+                            
+                                    <div class="chek-caja">
+                                        <input type="checkbox" id="visited" name="category" value="visited">
+                                        <label for="visited">visited</label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
                         </div>
-        
         
                         <div class="contenido">
                             <label for="price">Precio:</label>
-                            <input type="number" id="price" name="price" min="0" step="0.01" required>
+                            <input type="text" id="price" name="price" min="0" step="0.01" required>
                         </div>
                         <div class="contenido">
                             <label for="price">Descuento:</label>
-                            <input type="number" id="price" name="discount">
+                            <input type="text" id="price" name="discount">
                         </div>
     
                         <div class="desc">

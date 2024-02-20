@@ -36,12 +36,18 @@ main{
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    width: 90%;
-    height: 100px;
+    width: 210px;
+    height: 200px;
     color: #3498db;
     border: 2px dashed #3498db;
     margin-bottom: 10px;
 }
+
+.form-Product .subir .para-img img{
+    width: 100%;
+    height: auto;
+}
+
 .form-Product .subir #image{
     width: 90%;
     margin-bottom: 10px;
@@ -58,16 +64,60 @@ main{
     font-size: 16px;
 }
 
-.form-Product .cont .contenido select{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-    background-color: white
+
+
+.contenido {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
 }
+
+.checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .chek-caja {
+        flex: 0 0 50%; /* Dos checkboxes por fila */
+        box-sizing: border-box;
+        padding: 5px;
+    }
+
+    .checkbox-group label {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: flex;
+        align-items: center;
+        width: 100%; /* Ocupa todo el ancho del contenedor padre */
+    }
+
+    .checkbox-group label:hover {
+        background-color: #2980b9;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+        display: none;
+        margin-right: 8px;
+    }
+
+    .checkbox-group input[type="checkbox"]:checked + label {
+        background-color: #2ecc71;
+    }
+
+.checkbox-group .chek-caja label{
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
 .form-Product .cont .desc textarea{
     width: 100%;
     padding: 10px;
@@ -107,6 +157,10 @@ main{
 @media (min-width: 768px) {
 
     /* Estilos para el main*/
+    .form-Product .subir .para-img{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
     
 }
 
@@ -115,17 +169,22 @@ main{
 
 
     /*Estilos para el main*/
-
+    .container-form{
+        width: 1000px;
+    }
     .titulo{
         margin-bottom: 30px;
     }
     .form-Product .subir{
         justify-content: flex-start;
+        margin-left: 50px;
+        margin-right: 10px;
     }
 
     .form-Product .subir .para-img{
-        
-        height: 180px;
+        width: 260px;
+        height: 300px;
+       
     }
     .form-Product{
         display: flex;
@@ -135,7 +194,17 @@ main{
     .form-Product .cont .desc textarea{
         height: 150px;
     }
+    .checkbox-group input[type="checkbox"] {
+        display: none; /* Oculta los checkboxes nativos */
+    }
+    
+    .checkbox-group label:hover {
+        background-color: #2980b9;
+    }
 
-   
+    .checkbox-group input[type="checkbox"]:checked + label {
+        background-color: #2ecc71;
+    }
+    
 
 }

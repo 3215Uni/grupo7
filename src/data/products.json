@@ -2,6 +2,8 @@
   {
     "id": 1,
     "name": "Laptop Dell XPS 13",
+    "brand": "",
+    "stock": 1,
     "description": "Laptop ultradelgada con pantalla InfinityEdge y procesador Intel Core de 11ª generación.",
     "image": "imagen1.jpg",
     "category": "Laptops",
@@ -10,12 +12,14 @@
       "Plata",
       "Negro"
     ],
-    "discount": "20%",
+    "discount": "20",
     "favorito": false
   },
   {
     "id": 2,
     "name": "PC de escritorio HP Pavilion",
+    "brand": "",
+    "stock": 1,
     "description": "PC de escritorio potente con procesador Intel Core i7 y tarjeta gráfica NVIDIA GeForce RTX 3060.",
     "image": "imagen2.jpg",
     "category": "PC de escritorio",
@@ -23,12 +27,14 @@
     "colors": [
       "Negro"
     ],
-    "discount": "20%",
+    "discount": "20",
     "favorito": false
   },
   {
     "id": 3,
     "name": "Monitor ASUS ROG Strix",
+    "brand": "",
+    "stock": 1,
     "description": "Monitor de gaming de 27 pulgadas con resolución QHD y frecuencia de actualización de 165Hz.",
     "image": "imagen3.jpg",
     "category": "Monitores",
@@ -36,12 +42,14 @@
     "colors": [
       "Negro"
     ],
-    "discount": "20%",
+    "discount": "20",
     "favorito": false
   },
   {
     "id": 4,
     "name": "Teclado mecánico Razer BlackWidow",
+    "brand": "",
+    "stock": 1,
     "description": "Teclado mecánico para gaming con interruptores Razer Green y retroiluminación personalizable.",
     "image": "imagen4.jpg",
     "category": "Periféricos",
@@ -49,12 +57,14 @@
     "colors": [
       "Negro"
     ],
-    "discount": "20%",
+    "discount": "20",
     "favorito": false
   },
   {
     "id": 5,
     "name": "Mouse inalámbrico Logitech MX Master 3",
+    "brand": "",
+    "stock": 1,
     "description": "Mouse inalámbrico ergonómico con tecnología de seguimiento de alta precisión y botón para gestos personalizables.",
     "image": "imagen5.jpg",
     "category": "Periféricos",
@@ -62,12 +72,14 @@
     "colors": [
       "Gris"
     ],
-    "discount": "20%",
+    "discount": "20",
     "favorito": false
   },
   {
     "id": 6,
     "name": "Auriculares Bluetooth Sony WH-1000XM4",
+    "brand": "",
+    "stock": 1,
     "description": "Auriculares con cancelación de ruido líder en la industria y hasta 30 horas de duración de la batería.",
     "image": "imagen6.jpg",
     "category": "Auriculares",
@@ -76,12 +88,14 @@
       "Negro",
       "Plata"
     ],
-    "discount": "20%",
+    "discount": "20",
     "favorito": false
   },
   {
     "id": 7,
     "name": "SSD Samsung 970 EVO Plus",
+    "brand": "",
+    "stock": 1,
     "description": "Unidad de estado sólido NVMe PCIe M.2 con velocidades de lectura y escritura ultrarrápidas.",
     "image": "imagen7.jpg",
     "category": "Almacenamiento",
@@ -89,12 +103,14 @@
     "colors": [
       "Negro"
     ],
-    "discount": "20%",
+    "discount": "20",
     "favorito": false
   },
   {
     "id": 8,
     "name": "Tarjeta gráfica NVIDIA GeForce RTX 3080",
+    "brand": "",
+    "stock": 1,
     "description": "Tarjeta gráfica de última generación con arquitectura Ampere para un rendimiento de gaming excepcional.",
     "image": "imagen8.jpg",
     "category": "Componentes",
@@ -102,12 +118,14 @@
     "colors": [
       "Negro"
     ],
-    "discount": "20% OFF",
+    "discount": "20",
     "favorito": false
   },
   {
     "id": 9,
     "name": "Placa base ASUS ROG Strix Z590-E",
+    "brand": "",
+    "stock": 1,
     "description": "Placa base ATX con socket LGA 1200 y soporte para procesadores Intel Core de 11ª generación.",
     "image": "imagen9.jpg",
     "category": "Componentes",
@@ -115,12 +133,14 @@
     "colors": [
       "Negro"
     ],
-    "discount": "20%",
+    "discount": "20",
     "favorito": false
   },
   {
     "id": 10,
     "name": "Impresora multifunción HP OfficeJet Pro 9015",
+    "brand": "",
+    "stock": 1,
     "description": "Impresora multifunción con impresión a doble cara y conectividad Wi-Fi.",
     "image": "imagen10.jpg",
     "category": "Impresoras",
@@ -128,12 +148,14 @@
     "colors": [
       "Blanco"
     ],
-    "discount": "20%",
+    "discount": "20",
     "favorito": false
   },
   {
     "id": 11,
     "name": "Kingston Fury Beast DDR4 RGB 16gb",
+    "brand": "",
+    "stock": 1,
     "description": "La Memoria RAM Fury Beast DDR4 RGB cuenta con un diseño elegante en color negro...",
     "image": "kingstonram.png",
     "category": "visited",
@@ -141,12 +163,14 @@
     "colors": [
       " "
     ],
-    "discount": "20% ",
+    "discount": "20",
     "favorito": false
   },
   {
     "id": 12,
     "name": "Disco sólido interno Kingston 240gb",
+    "brand": "",
+    "stock": 1,
     "description": "La unidad en estado sólido A400 de Kingston está diseñada para las personas más exigentes...",
     "image": "discoSolido.webp",
     "category": "visited",
@@ -154,12 +178,14 @@
     "colors": [
       " "
     ],
-    "discount": "10% ",
+    "discount": "10",
     "favorito": false
   },
   {
     "id": 13,
     "name": "Gabinete Solarmax 5920 Blanco",
+    "brand": "",
+    "stock": 1,
     "description": "El Gabinete Solarmax 5920 Blanco 6 Fan Rgb Vidrio Templado 1 es la elección perfecta para los gamers...",
     "image": "D_NQ_NP_815458-MLU71621421091_092023-O.webp",
     "category": "visited",
@@ -167,12 +193,14 @@
     "colors": [
       " "
     ],
-    "discount": "5% ",
+    "discount": "5",
     "favorito": false
   },
   {
     "id": 14,
     "name": "GPU AMD ASRock RX 550 2gb",
+    "brand": "",
+    "stock": 1,
     "description": "AMD es un fabricante estadounidense de placas de video, por su tecnología se ha destacado en crear procesadores de alta gama...",
     "image": "gpu-asrock2gb.webp",
     "category": "visited",
@@ -180,12 +208,14 @@
     "colors": [
       " "
     ],
-    "discount": "12% ",
+    "discount": "12",
     "favorito": false
   },
   {
     "id": 15,
     "name": "Procesador AMD Ryzen 5 5600G",
+    "brand": "",
+    "stock": 1,
     "description": "Ryzen 5 5600G, diseñado para brindarte un rendimiento excepcional en tus juegos favoritos...",
     "image": "rayzen5g.webp",
     "category": "visited",
@@ -199,6 +229,8 @@
   {
     "id": 16,
     "name": "Impresora Epson Ecotank L3250",
+    "brand": "",
+    "stock": 1,
     "description": "Epson busca que sus clientes obtengan el máximo provecho de sus productos. Por ello, brinda soluciones de impresión con una amplia gama de dispositivos que cubren todos los usos y necesidades, tanto en casa como en el trabajo. Eficiencia y calidad Imprime archivos, escanea documentos y haz todas las fotocopias que necesites con esta impresora multifunción Epson, siempre lista para facilitar tu rutina de trabajo o estudio.  Perfecta para tu hogar o la oficina Al ser a tinta te permitirá lograr impresiones de gran calidad con colores vivos y degradados suaves. Ocupa poco espacio y es fácil de manejar lo que la convierte en la opción ideal para cuestiones laborales, tareas escolares y requerimientos de la vida diaria.",
     "image": "impresora.webp",
     "category": "in-sale",
@@ -206,12 +238,14 @@
     "colors": [
       " "
     ],
-    "discount": "5%",
+    "discount": "5",
     "favorito": false
   },
   {
     "id": 17,
     "name": "Logitech Serie G Lightspeed G305",
+    "brand": "",
+    "stock": 1,
     "description": "la unidad en estado sólido A400 de Kingston está diseñada para las personas más exigentes. Mejora de forma notable la capacidad de respuesta de su sistema, ya que alcanza velocidades de lectura/escritura de hasta 500MB/seg y 450MB/seg. Por ende, es 10 veces más rápido que un disco duro tradicional. Al estar compuesta por una memoria flash es silenciosa y posee pocas probabilidades de tener fallas.",
     "image": "mouseLogitech.webp",
     "category": "in-sale",
@@ -219,12 +253,14 @@
     "colors": [
       " "
     ],
-    "discount": "10%",
+    "discount": "10",
     "favorito": false
   },
   {
     "id": 18,
     "name": "Redragon Shiva K512w",
+    "brand": "",
+    "stock": 1,
     "description": "El Gabinete Solarmax 5920 Blanco 6 Fan Rgb Vidrio Templado 1 es la elección perfecta para los gamers que buscan un diseño moderno y funcional. Con su estructura tipo Mid tower y su color blanco, este gabinete se adapta a cualquier estilo de decoración. Cuenta con dos bahías para discos de 2.5 y 3.5, ofreciendo amplio espacio de almacenamiento para tus juegos y archivos. Además, su panel frontal incluye puertos USB para facilitar la conexión de tus dispositivos. Con su sistema de iluminación RGB, este gabinete te permite personalizar el ambiente de tu espacio de juego. Los 6 ventiladores incluidos garantizan una excelente refrigeración, manteniendo tus componentes en óptimas condiciones durante largas sesiones de juego. El Gabinete So  larmax 5920 Blanco 6 Fan Rgb Vidrio Templado 1 es una opción de calidad y rendimiento para los gamers más exigentes. Su diseño elegante y sus características avanzadas lo convierten en una elección segura para mejorar tu experiencia de juego. ¡No pierdas la oportunidad de adquirirlo y llevar tu setup al siguiente nivel!",
     "image": "tecladoShiva.webp",
     "category": "in-sale",
@@ -232,12 +268,14 @@
     "colors": [
       " "
     ],
-    "discount": "5%",
+    "discount": "5",
     "favorito": false
   },
   {
     "id": 19,
     "name": "Notebook Lenovo IdeaPad",
+    "brand": "",
+    "stock": 1,
     "description": "La notebook Lenovo 81X700FVUS Intel I5 1135g7 Ram 8gb Ssd 256gb Full hd Windows 11 es una solución tanto para trabajar y estudiar como para entretenerte. Al ser portátil, el escritorio dejará de ser tu único espacio de uso para abrirte las puertas a otros ambientes ya sea en tu casa o en la oficina. Pantalla con gran impacto visual Su pantalla de 14 te brindará colores más vivos y definidos. La pantalla de la computadora portátil, tiene una impresionante relación pantalla-cuerpo del 88 %, gracias a sus biseles angostos de cuatro lados. Su pantalla antirreflejo FHD (1920 x 1080) de 14 está disponible en hasta 300 nits, para una experiencia de visualización brillante. Eficiencia a tu alcanceSu procesador Intel Core i5 te permitirá ejecutar programas variados y procesos indispensables para desenvolverte en el día a día, ya sea en tu trabajo o en los momentos de ocio en tu hogar. Windows 11 ofrece una potente seguridad integrada, que incluye aislamiento basado en hardware, cifrado y protección contra malware. Aviso legal La duración de la batería depende del uso que se le dé al producto.",
     "image": "D_NQ_NP_899021-MLA71605614798_092023-O.webp",
     "category": "in-sale",
@@ -245,12 +283,14 @@
     "colors": [
       " "
     ],
-    "discount": "12%",
+    "discount": "12",
     "favorito": false
   },
   {
     "id": 20,
     "name": "Intel Core i5 i5-10400F",
+    "brand": "",
+    "stock": 1,
     "description": "Mejora tu experiencia de juego con el Procesador gamer Intel Core i5-10400F, diseñado para brindarte un rendimiento óptimo en tus partidas. Con sus 6 núcleos y 12 hilos de CPU, este procesador te permitirá disfrutar de tus juegos favoritos sin interrupciones ni demoras. Gracias a su arquitectura x86-64 y su frecuencia máxima de reloj de 4.3 GHz, podrás ejecutar múltiples aplicaciones y juegos de manera fluida y eficiente. Además, su compatibilidad con memoria RAM DDR4 y su capacidad para soportar hasta 128 GB de memoria, te aseguran una experiencia de juego inigualable. La tecnología hyper-threading te brinda un rendimiento aún más rápido y eficiente en tus tareas diarias. Con una litografía de 14 nm y una potencia de diseño térmico de 65 W, este procesador es una opción ideal para aquellos que buscan un rendimiento excepcional sin sacrificar la eficiencia energética. No esperes más y lleva tu experiencia de juego al siguiente nivel con el Procesador gamer Intel Core i5-10400F.",
     "image": "inteli5.webp",
     "category": "in-sale",
@@ -258,18 +298,23 @@
     "colors": [
       " "
     ],
-    "discount": "10%",
+    "discount": "10",
     "favorito": false
   },
   {
     "id": 21,
-    "name": "Gtx 1650 4gb",
+    "name": "Gtx 1650 4gb Gddr5",
+    "brand": "",
+    "stock": 1,
     "description": "agasdf",
-    "image": "Captura de pantalla 2024-02-14 213122.png",
-    "category": "PC",
-    "price": "150000",
+    "image": "",
+    "price": "$2000",
     "colors": [],
-    "discount": "10%",
-    "favorito": false
+    "discount": "15",
+    "favorito": false,
+    "category": [
+      "Consolas",
+      "in-sale"
+    ]
   }
 ]

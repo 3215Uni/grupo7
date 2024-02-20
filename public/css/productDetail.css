@@ -234,7 +234,7 @@ main{
         margin-left: 60px;
         border-radius: 5px; /* Radio de las esquinas para un borde redondeado */
         transition: border-color 0.3s ease;
-        border: 2px dotted #000;
+        
     }
 
 
@@ -242,7 +242,7 @@ main{
         display: flex; 
         height: auto;
         margin-right: 100px;
-        border: 2px dotted #000;
+       
         
     }
     

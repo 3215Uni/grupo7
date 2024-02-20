@@ -5,18 +5,19 @@ const router = express.Router();
 const productController=require('../controller/productController');
 
 
-router.get('/cart', productController.renderCart);
+router.get('/cart', productController.Cart);
 
-router.get('/detail/:id',productController.renderDetail);
+router.get('/detail/:id',productController.Detail);
 
-router.get('/registerProduct',productController.renderRegister);
-router.post('/registerProduct', productController.renderCreate);
+router.get('/registerProduct',productController.Register);
+router.post('/registerProduct', productController.Create);
 
-router.get('/editProduct',productController.renderEdit);
+router.get('/edit/:id',productController.Edit);
+router.put('/edit/:id',productController.Update);
 
-router.get('/list', productController.renderList);
+router.get('/list', productController.List);
 
-router.get('/search', productController.renderSearch)
+router.get('/search', productController.Search)
 
 
 

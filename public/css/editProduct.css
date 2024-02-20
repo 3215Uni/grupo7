@@ -1,0 +1,210 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.formP{
+    background-color: #fff;
+    width: 90%;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.form-Product .subir{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.form-Product .subir .para-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 210px;
+    height: 200px;
+    color: #3498db;
+    border: 2px dashed #3498db;
+    margin-bottom: 10px;
+}
+
+.form-Product .subir .para-img img{
+    width: 100%;
+    height: auto;
+}
+
+.form-Product .subir #image{
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+
+.form-Product .cont .contenido input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+
+.contenido {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .chek-caja {
+        flex: 0 0 50%; /* Dos checkboxes por fila */
+        box-sizing: border-box;
+        padding: 5px;
+    }
+
+    .checkbox-group label {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: flex;
+        align-items: center;
+        width: 100%; /* Ocupa todo el ancho del contenedor padre */
+    }
+
+    .checkbox-group label:hover {
+        background-color: #2980b9;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+        display: none;
+        margin-right: 8px;
+    }
+
+    .checkbox-group input[type="checkbox"]:checked + label {
+        background-color: #2ecc71;
+    }
+
+.checkbox-group .chek-caja label{
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-Product .cont .desc textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.form-Product .cont .btnDeForm{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+
+}
+.form-Product .cont .btnDeForm button{
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-Product .cont .btnDeForm .sub{
+    background-color: #3498db;
+    
+}
+
+.form-Product .cont .btnDeForm .res{
+    background-color: crimson;
+}
+
+
+/* Consulta de medios para pantallas de 768px o más grandes */
+@media (min-width: 768px) {
+
+    /* Estilos para el main*/
+    .form-Product .subir .para-img{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+}
+
+/* Consulta de medios para pantallas de 1024px o más grandes */
+@media (min-width: 1024px) {
+
+
+    /*Estilos para el main*/
+    .container-form{
+        width: 1000px;
+    }
+    .titulo{
+        margin-bottom: 30px;
+    }
+    .form-Product .subir{
+        justify-content: flex-start;
+        margin-left: 50px;
+        margin-right: 10px;
+    }
+
+    .form-Product .subir .para-img{
+        width: 260px;
+        height: 300px;
+       
+    }
+    .form-Product{
+        display: flex;
+        gap: 30px;
+    }
+
+    .form-Product .cont .desc textarea{
+        height: 150px;
+    }
+    .checkbox-group input[type="checkbox"] {
+        display: none; /* Oculta los checkboxes nativos */
+    }
+    
+    .checkbox-group label:hover {
+        background-color: #2980b9;
+    }
+
+    .checkbox-group input[type="checkbox"]:checked + label {
+        background-color: #2ecc71;
+    }
+    
+
+}
