@@ -52,9 +52,9 @@ const controller = {
         res.redirect('/product/list');
     },
 
-    
-    //codigo para eliminar
-    detroy: (req, res) => {
+    /**********************/
+    //Delete: borra 1 producto de la base de datos
+/*    detroy: (req, res) => {
         const {id} = req.params;
         // Filtrar la lista de productos para excluir el producto que se desea eliminar
         const indexProduct = products.findIndex(product => product.id ==id);
@@ -64,7 +64,7 @@ const controller = {
         // Redirecciona a la lista de productos después de eliminar
         res.redirect('/');
     },
-
+    /*********************/
 
     Edit: ( req, res ) =>{
         const id=req.params.id;
