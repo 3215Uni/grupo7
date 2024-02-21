@@ -51,23 +51,18 @@
                         </div>
 
                         <div class="acciones">
-                            <a href=""><button class="delete" onclick="fetch(`/products/<%= productDetail.id %>`, { method: 'DELETE' })
-                                    .then(response => {
-                                        if (response.ok) {
-                                            window.location.href = '/';
-                                        } else {
-                                            console.error('Error al eliminar el producto');
-                                        }
-                                    })
-                                    .catch(error => {
-                                        console.error('Error:', error);
-                                    })">
-                                <i class="fa-solid fa-trash-can"></i> ELIMINAR
+                            <form action="/product/delete/<%= productDetail.id %>?_method=DELETE" method="post">
+                                <button type="submit" class="delete">
+                                    <i class="fa-solid fa-trash-can"></i> ELIMINAR
                                 </button>
-                            </a>
+                            </form>
+
+                                
 
                             <a href="/product/edit/<%=productDetail.id%>"><button class="edit"><i class="fa-solid fa-file-pen"></i> EDITAR</button></a>
                         </div>
+
+
 
                     </div>
                     
