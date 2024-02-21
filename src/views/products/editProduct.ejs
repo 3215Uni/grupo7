@@ -17,7 +17,7 @@
                 <h2 class="titulo">Editar Producto: <%=producto.name%></h2>        
                 <!--CARGA DE PRODUCTOS-->
         
-                <form action="/product/edit/<%=producto.id%>?_method=PUT" method="POST" class="form-Product">
+                <form action="/product/edit/<%=producto.id%>?_method=PUT" method="POST" class="form-Product" enctype="multipart/form-data">
 
                     <div class="subir">
                         <div class="para-img">

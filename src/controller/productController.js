@@ -40,13 +40,16 @@ const controller = {
             brand: req.body.brand,
             stock: req.body.stock,
             description: req.body.description,
-            image: req.body.image,
+            
             category: req.body.category,
             price: "$"+req.body.price,
             colors: [],
             discount: req.body.discount+'%',
             favorito: false
         }
+
+
+        newProd.image= req.file?.filename || "default-image.png"
         products.push(newProd);
         //Sobrescribe el archivo
         fs.writeFileSync(productFilePath, JSON.stringify(products,null,2));
