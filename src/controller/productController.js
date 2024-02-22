@@ -101,6 +101,7 @@ const controller = {
     //Delete: borra 1 producto de la base de datos
 
     /*********************/
+    /*
     delete: (req, res) => {
         let idProduct = req.params.id;
         // Filtrar la lista de productos para excluir el producto que se desea eliminar
@@ -109,6 +110,31 @@ const controller = {
         // Sobrescribe el archivo con la lista actualizada de productos
         fs.writeFileSync(productFilePath, JSON.stringify(products, null, 2));
         // Redirecciona a la lista de productos después de eliminar un producto
+        return res.redirect('/product/list');
+    }
+    */
+    delete: (req, res) => {
+        let idProduct = req.params.id;
+        console.log("ID del producto a eliminar:", idProduct);
+        
+        // Buscar el índice del producto a eliminar
+        let indexDelete = products.findIndex(product => product.id === parseInt(idProduct));
+        console.log("Índice del producto a eliminar:", indexDelete);
+    
+        // Verificar si se encontró el producto
+        if (indexDelete === -1) {
+            console.log("El producto con el ID proporcionado no existe en la lista.");
+            // Redireccionar a la lista de productos con un mensaje de error
+            return res.redirect('/product/list');
+        }
+    
+        // Eliminar el producto de la lista
+        products.splice(indexDelete, 1);
+    
+        // Sobrescribir el archivo con la lista actualizada de productos
+        fs.writeFileSync(productFilePath, JSON.stringify(products, null, 2));
+    
+        // Redireccionar a la lista de productos después de eliminar un producto
         return res.redirect('/product/list');
     }
     
