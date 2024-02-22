@@ -300,5 +300,31 @@
     ],
     "discount": "10",
     "favorito": false
+  },
+  {
+    "id": 21,
+    "name": "Cooler Cpu Pc Gamer Id Cooling Se-224-xts Black ",
+    "brand": "Id-Cooling",
+    "stock": "2",
+    "description": "gsfdhfgh",
+    "category": "PC de Escritorio",
+    "price": "$1600",
+    "colors": [],
+    "discount": "1%",
+    "favorito": false,
+    "image": "AR1708607039433.webp"
+  },
+  {
+    "id": 22,
+    "name": "Gtx 1650 4gb Gddr5",
+    "brand": "YuGiOh",
+    "stock": "2",
+    "description": "sdfa",
+    "category": "notebook",
+    "price": "$15000",
+    "colors": [],
+    "discount": "1%",
+    "favorito": false,
+    "image": "AR1708607534418.jpg"
   }
 ]
