@@ -9,4 +9,7 @@ const homeController = require('../controller/homeController');
 router.get('/', homeController.renderHome);
 
 
+router.get('/search', homeController.Search)
+
+
 module.exports = router;

@@ -17,7 +17,20 @@ const controller = {
             inSale: inSale
         })
         
+    },
+
+    Search:(req, res) =>{
+        const busqueda = req.query.keywords;
+        // console.log(busqueda)
+        const productSearch=products.filter((prod)=>prod.name.toLowerCase().includes(busqueda.toLowerCase()));
+        // console.log(productSearch)
+        res.render('productSearch',{
+            title: 'Busqueda - TecnoJuy',
+            productSearch: productSearch,
+            busqueda: busqueda
+        });
     }
+
 }
 
 module.exports = controller;

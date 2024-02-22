@@ -38,7 +38,6 @@ router.put('/edit/:id',productController.Update);
 
 router.get('/list', productController.List);
 
-router.get('/search', productController.Search)
 
 router.delete('/delete/:id', productController.delete);
 module.exports=router;

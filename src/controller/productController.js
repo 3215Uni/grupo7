@@ -1,7 +1,7 @@
 
 const cryto=require('crypto');
 const fs=require('fs');
-
+const path = require('node:path');
 const productFilePath=path.join(__dirname,'../data/products.json');
 const products=JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
 
@@ -89,13 +89,6 @@ const controller = {
         res.render('products/productList', {
             title: 'Lista de Productos - TecnoJuy',
             products: products
-        });
-    },
-
-    Search:(req, res) =>{
-
-        res.render('products/productSearch',{
-            title: 'Busqueda - TecnoJuy'
         });
     },
 
