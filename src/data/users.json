@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "firstName": "Ted",
+        "lastName": "Whooley",
+        "email": "twhooley0@disqus.com",
+        "password": "gP5%8ZROh$",
+        "category": "Vendedor",
+        "image": "user1.jpg"
+    },
+    {
+        "id": 2,
+        "firstName": "Carr",
+        "lastName": "Hauxby",
+        "email": "chauxby1@timesonline.co.uk",
+        "password": "cT8\"<1rRZ`",
+        "category": "Vendedor",
+        "image": "user2.jpg"
+    },
+    {
+        "id": 3,
+        "firstName": "Massimiliano",
+        "lastName": "Morstatt",
+        "email": "mmorstatt2@mozilla.com",
+        "password": "pK1@Zy0li>6Fh",
+        "category": "Vendedor",
+        "image": "user3.jpg"
+    },
+    {
+        "id": 4,
+        "firstName": "Gustaf",
+        "lastName": "Delhay",
+        "email": "gdelhay3@comsenz.com",
+        "password": "zZ2/o4'ZwG",
+        "category": "Vendedor",
+        "image": "user4.jpg"
+    },
+    {
+        "id": 5,
+        "firstName": "Junette",
+        "lastName": "Taffley",
+        "email": "jtaffley4@angelfire.com",
+        "password": "mU8<k=4KT<g~",
+        "category": "Vendedor",
+        "image": "user5.jpg"
+    },
+    {
+        "id": 6,
+        "firstName": "Wilden",
+        "lastName": "Dormer",
+        "email": "wdormer5@theatlantic.com",
+        "password": "iN5'MlNdq3yxg",
+        "category": "Comprador",
+        "image": "user6.jpg"
+    },
+    {
+        "id": 7,
+        "firstName": "Jaquelyn",
+        "lastName": "Burbudge",
+        "email": "jburbudge6@cnbc.com",
+        "password": "wF7!L0W~G`4F",
+        "category": "Vendedor",
+        "image": "user7.jpg"
+    },
+    {
+        "id": 8,
+        "firstName": "Daveta",
+        "lastName": "Vibert",
+        "email": "dvibert7@tinypic.com",
+        "password": "xD4}lbwPqj/E))",
+        "category": "Comprador",
+        "image": "user8.jpg"
+    },
+    {
+        "id": 9,
+        "firstName": "Lorianna",
+        "lastName": "Bum",
+        "email": "lbum8@hatena.ne.jp",
+        "password": "tN1\\#Ei0'm",
+        "category": "Vendedor",
+        "image": "user9.jpg"
+    },
+    {
+        "id": 10,
+        "firstName": "Huntlee",
+        "lastName": "Sinson",
+        "email": "hsinson9@netvibes.com",
+        "password": "xF6`)p)%L>",
+        "category": "Comprador",
+        "image": "user10.jpg"
+    }
+]
