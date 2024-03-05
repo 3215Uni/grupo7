@@ -24,16 +24,16 @@ app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la 
 
 
 
-const homeRoute = require('./routers/homeRoutes.js')
+const homeRoute = require('./routers/home.routes.js')
 app.use('/', homeRoute);
 
 
-const userRouter = require('./routers/userRoutes.js')
+const userRouter = require('./routers/user.routes.js')
 app.use('/users', userRouter);
 
 
 
-const productRouter=require('./routers/productsRoutes.js');
+const productRouter=require('./routers/products.routes.js');
 app.use('/product', productRouter);
 
 

@@ -12,7 +12,11 @@ const controller = {
         res.render('users/register', {
             title: 'Registro - TecnoJuy',
         })
+    },
+    processRegister: ( req, res ) =>{
+        return res.send(req.body);
     }
+
 }
 
 module.exports = controller;

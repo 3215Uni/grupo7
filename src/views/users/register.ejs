@@ -14,33 +14,33 @@
     <!-- Contenido específico de la página principal -->
         <div class="container">
             <h2 class="titulo">REGISTRO</h2>
-            <form class="form-registrosDatos"> 
+            <form class="form-registrosDatos" action="/users/register" method="POST"> 
                 <label for="nombre" class="textoCampo">Nombre: </label>           
-                <input class="formC" type="text" id="nombre" name="nombre" required>
+                <input class="formC" type="text" id="nombre" name="nombre" >
                 
                 <label for="nombre" class="textoCampo">Apellido: </label>           
-                <input class="formC" type="text" id="apellido" name="apellido" required>
+                <input class="formC" type="text" id="apellido" name="apellido" >
                 
                 <label for="fechaNacimiento" class="textoCampo">Fecha de Nacimiento</label>
-                <input class="formC" type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                <input class="formC" type="date" id="fechaNacimiento" name="fechaNacimiento">
                 
                 <label for="nombre" class="textoCampo">Email: </label>           
-                <input class="formC" type="email" id="email" name="email" required>
+                <input class="formC" type="email" id="email" name="email" >
                 
                 <label for="nombre" class="textoCampo">Numero de Telefono: </label>           
-                <input class="formC" placeholder="Tu número de celular" type="tel" id="celular" name="celular" required>
+                <input class="formC" placeholder="Tu número de celular" type="tel" id="celular" name="celular" >
                 
                 <label for="nombre" class="textoCampo">Nombre de Usuario: </label>           
-                <input class="formC" type="text" id="nomUsuario" name="nomUsuario" required>
+                <input class="formC" type="text" id="nomUsuario" name="nomUsuario" >
                 
                 <label for="nombre" class="textoCampo">Contraseña: </label>           
-                <input class="formC" placeholder="Tu contraseña" type="password" id="contrasena" name="contrasena" required>
+                <input class="formC" placeholder="Tu contraseña" type="password" id="contrasena" name="contrasena" >
                 
                 <label for="nombre" class="textoCampo">Repetir Contraseña: </label>           
-                <input class="formC" placeholder="Repite tu contraseña contrasña" type="password" id="repitContrasena" name="repitContrasena" required>
+                <input class="formC" placeholder="Repite tu contraseña contrasña" type="password" id="repitContrasena" name="repitContrasena" >
                 
                 <label class="condiciones">
-                    <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+                    <input type="checkbox" id="acceptTerms" name="acceptTerms" >
                     Acepta Términos y Condiciones
                 </label>
                 
