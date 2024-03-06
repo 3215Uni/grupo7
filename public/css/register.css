@@ -18,9 +18,7 @@
     font-weight: normal;
   }
 
-  .textoCampo{
-    color: #dddddd;
-  }
+
   .form-registrosDatos {
     display: flex;
     flex-direction: column;
@@ -34,6 +32,28 @@
     color: #fff;
     font-size: 14px;
   }
+.textoCampo {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+    display: block;
+}
+.campo{
+  width: 80%;
+}
+#image {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fff;
+    width: 100%;
+}
+.text-danger{
+  text-align: start;
+  color: red;
+}
 
   .formC {
     width: 100%;
@@ -85,7 +105,9 @@
     .container {
         width: 35%; /* Ajustar el ancho según sea necesario */
     }
-
+    #image{
+      width: 50%;
+    }
 
     .btn-form-registrar{
         cursor: pointer;

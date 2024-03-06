@@ -12,32 +12,101 @@
         <main>
         <br>
     <!-- Contenido específico de la página principal -->
+       
+        
         <div class="container">
             <h2 class="titulo">REGISTRO</h2>
-            <form class="form-registrosDatos" action="/users/register" method="POST"> 
-                <label for="nombre" class="textoCampo">Nombre: </label>           
-                <input class="formC" type="text" id="nombre" name="nombre" >
+            <form class="form-registrosDatos" action="/users/register" method="POST" enctype="multipart/form-data"> 
+                <div class="campo">
+                    <label class="textoCampo" for="image">Subir Imagen:</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+                    <% if (locals.errors && errors.avatar) { %>
+                        <div class="text-danger">
+                            <%=errors.avatar.msg  %>
+                        </div>
+                    <% } %>
+                </div>
                 
-                <label for="nombre" class="textoCampo">Apellido: </label>           
-                <input class="formC" type="text" id="apellido" name="apellido" >
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Nombre: </label>           
+                    <input class="formC" type="text" id="nombre" name="nombre" value="<%=locals.oldDate ? oldDate.nombre : null %>">
+                    <% if (locals.errors && errors.nombre) { %>
+                        <div class="text-danger">
+                            <%=errors.nombre.msg  %>
+                        </div>
+                    <% } %>
+                    
+                </div>
                 
-                <label for="fechaNacimiento" class="textoCampo">Fecha de Nacimiento</label>
-                <input class="formC" type="date" id="fechaNacimiento" name="fechaNacimiento">
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Apellido: </label>           
+                    <input class="formC" type="text" id="apellido" name="apellido" value="<%=locals.oldDate ? oldDate.apellido : null %>">
+                    <% if (locals.errors && errors.apellido) { %>
+                        <div class="text-danger">
+                            <%=errors.apellido.msg  %>
+                        </div>
+                    <% } %>
+                </div>
                 
-                <label for="nombre" class="textoCampo">Email: </label>           
-                <input class="formC" type="email" id="email" name="email" >
+                <div class="campo">
+                    <label for="fechaNacimiento" class="textoCampo">Fecha de Nacimiento</label>
+                    <input class="formC" type="date" id="fechaNacimiento" name="fechaNacimiento" value="<%=locals.oldDate ? oldDate.fechaNacimiento : null %>">
+                    <% if (locals.errors && errors.fechaNacimiento) { %>
+                        <div class="text-danger">
+                            <%=errors.fechaNacimiento.msg  %>
+                        </div>
+                    <% } %>
+                </div>
                 
-                <label for="nombre" class="textoCampo">Numero de Telefono: </label>           
-                <input class="formC" placeholder="Tu número de celular" type="tel" id="celular" name="celular" >
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Email: </label>           
+                    <input class="formC" type="text" id="email" name="email" value="<%=locals.oldDate ? oldDate.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%=errors.email.msg  %>
+                        </div>
+                    <% } %>
+                </div>
                 
-                <label for="nombre" class="textoCampo">Nombre de Usuario: </label>           
-                <input class="formC" type="text" id="nomUsuario" name="nomUsuario" >
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Numero de Telefono: </label>           
+                    <input class="formC" placeholder="Tu número de celular" type="tel" id="celular" name="celular" value="<%=locals.oldDate ? oldDate.celular : null %>">
+                    <% if (locals.errors && errors.celular) { %>
+                        <div class="text-danger">
+                            <%=errors.celular.msg  %>
+                        </div>
+                    <% } %>
+                </div>
                 
-                <label for="nombre" class="textoCampo">Contraseña: </label>           
-                <input class="formC" placeholder="Tu contraseña" type="password" id="contrasena" name="contrasena" >
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Nombre de Usuario: </label>           
+                    <input class="formC" type="text" id="nomUsuario" name="nomUsuario" value="<%=locals.oldDate ? oldDate.nomUsuario : null %>">
+                    <% if (locals.errors && errors.nomUsuario) { %>
+                        <div class="text-danger">
+                            <%=errors.nomUsuario.msg  %>
+                        </div>
+                    <% } %>
+                </div>
                 
-                <label for="nombre" class="textoCampo">Repetir Contraseña: </label>           
-                <input class="formC" placeholder="Repite tu contraseña contrasña" type="password" id="repitContrasena" name="repitContrasena" >
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Contraseña: </label>           
+                    <input class="formC" placeholder="Tu contraseña" type="password" id="contrasena" name="contrasena" value="<%=locals.oldDate ? oldDate.contrasena : null %>">
+                    <% if (locals.errors && errors.contrasena) { %>
+                        <div class="text-danger">
+                            <%=errors.contrasena.msg  %>
+                        </div>
+                    <% } %>
+                </div>
+                
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Repetir Contraseña: </label>           
+                    <input class="formC" placeholder="Repite tu contraseña contrasña" type="password" id="repitContrasena" name="repitContrasena" value="<%=locals.oldDate ? oldDate.repitContrasena : null %>">
+                    <% if (locals.errors && errors.repitContrasena) { %>
+                        <div class="text-danger">
+                            <%=errors.repitContrasena.msg  %>
+                        </div>
+                    <% } %>
+                </div>
                 
                 <label class="condiciones">
                     <input type="checkbox" id="acceptTerms" name="acceptTerms" >

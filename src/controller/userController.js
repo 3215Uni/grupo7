@@ -1,4 +1,5 @@
 const path = require('node:path');
+const {validationResult}=require('express-validator');
 
 
 
@@ -14,7 +15,17 @@ const controller = {
         })
     },
     processRegister: ( req, res ) =>{
-        return res.send(req.body);
+        const resultValidation=validationResult(req);
+        if(resultValidation.errors.length > 0){
+            return res.render('users/register', {
+                errors: resultValidation.mapped(),
+                title: 'Registro - TecnoJuy',
+                oldDate: req.body,
+            });
+        }
+        res.render('users/register', {
+            title: 'Registro - TecnoJuy'
+        });
     }
 
 }
