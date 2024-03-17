@@ -4,8 +4,14 @@ const router = express.Router();
 const path = require('node:path');
 const {body}=require('express-validator');
 const upload = require('../middlewares/multerUser.js');
+const validateNumericPhone=require('../middlewares/validateNumberPhone.js');
+const validatePasswordConfirmation=require('../middlewares/validatePasswordConfirmation.js');
 
 const userController = require('../controller/userController.js');
+
+
+
+
 
 
 const validation= [
@@ -14,10 +20,10 @@ const validation= [
     body('fechaNacimiento').notEmpty().withMessage('Tienes que ingresar tu Fecha de Nacimiento'),
     body('email').notEmpty().withMessage('Tienes que escribir un Email').bail()
     .isEmail().withMessage('Debes escribir un formato de correo valido'),
-    body('celular').notEmpty().withMessage('Tienes que escribir un numero de Celular'),
+    body('celular').notEmpty().withMessage('Tienes que escribir un numero de Celular').custom(validateNumericPhone),
     body('nomUsuario').notEmpty().withMessage('Tienes que escribir un nombre de Usuario'),
     body('contrasena').notEmpty().withMessage('Tienes que crear una Contraseña'),
-    body('repitContrasena').notEmpty().withMessage('Tienes que repetir la Contraseña'),
+    body('repitContrasena').notEmpty().withMessage('Tienes que repetir la Contraseña').custom(validatePasswordConfirmation),
     body('avatar').custom((value, {req})=>{
         let file=req.file;
         let aceptExtension=['.png','.jpg','.gif'];
