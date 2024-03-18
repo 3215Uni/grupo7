@@ -34,6 +34,7 @@ const validation= [
             if(!aceptExtension.includes(fileExtension)){
                 throw new Error(`Las extensiones de archivo permitidas son ${aceptExtension.join(', ')}` );
             };
+            return true;
         };
     })
 ];
