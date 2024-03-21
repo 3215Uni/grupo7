@@ -13,15 +13,20 @@
         <br>
         <!--formulario-->
         <div class="formulario">
-            <form action="post">
+            <form action="/users/login" method="POST">
                 <h3 class="formTitulo">Acceder</h3>
                 
                 <div class="input-box">
-                    <input type="text" id="txtUsername" placeholder="Usuario o email" required="true">
+                    <input type="text" id="txtUsername" name="email" placeholder="Usuario o Email" >
                     <i class="fa-solid fa-user"></i>
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%=errors.email.msg  %>
+                        </div>
+                    <% } %>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Contraseña" id="txtPassword" required="true">
+                    <input type="password" placeholder="Contraseña" name="password" id="txtPassword" >
                     <i class="fa-solid fa-lock"></i>
                 </div>
                 

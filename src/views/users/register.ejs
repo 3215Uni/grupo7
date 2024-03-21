@@ -63,7 +63,7 @@
                     <input class="formC" type="text" id="email" name="email" value="<%=locals.oldDate ? oldDate.email : null %>">
                     <% if (locals.errors && errors.email) { %>
                         <div class="text-danger">
-                            <%=errors.email.msg  %>
+                            <%=errors.email.msg %>
                         </div>
                     <% } %>
                 </div>
@@ -90,7 +90,7 @@
                 
                 <div class="campo">
                     <label for="nombre" class="textoCampo">Contraseña: </label>           
-                    <input class="formC" placeholder="Tu contraseña" type="password" id="contrasena" name="contrasena" value="<%=locals.oldDate ? oldDate.contrasena : null %>">
+                    <input class="formC" placeholder="Tu contraseña" type="password" id="contrasena" name="contrasena" >
                     <% if (locals.errors && errors.contrasena) { %>
                         <div class="text-danger">
                             <%=errors.contrasena.msg  %>
@@ -100,7 +100,7 @@
                 
                 <div class="campo">
                     <label for="nombre" class="textoCampo">Repetir Contraseña: </label>           
-                    <input class="formC" placeholder="Repite tu contraseña contrasña" type="password" id="repitContrasena" name="repitContrasena" value="<%=locals.oldDate ? oldDate.repitContrasena : null %>">
+                    <input class="formC" placeholder="Repite tu contraseña contrasña" type="password" id="repitContrasena" name="repitContrasena" >
                     <% if (locals.errors && errors.repitContrasena) { %>
                         <div class="text-danger">
                             <%=errors.repitContrasena.msg  %>

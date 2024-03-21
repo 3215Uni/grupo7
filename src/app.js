@@ -1,5 +1,6 @@
 // ************ Require's ************
 const createError = require('http-errors');
+const session=require('express-session')
 const cookieParser = require('cookie-parser');
 const express = require('express');
 const logger = require('morgan');
@@ -15,6 +16,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(logger('dev'));
 app.use(cookieParser());
+app.use(session({
+    secret: "Shh, I's a secret",
+    resave: false,
+    saveUninitialized: false,
+
+}))
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
 // ************ Template Engine - (don't touch) ************

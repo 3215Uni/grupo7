@@ -10,12 +10,49 @@ const users=JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
 
 const controller = {
-    renderLogin: (req, res) =>{
+    login: (req, res) =>{
         res.render('users/login', {
             title: 'Inicio Sesión - TecnoJuy',
         });
     },
-    renderRegister: ( req, res ) =>{
+    loginProcess: ( req, res ) =>{
+        const userToLogin=users.find((user)=>user.email==req.body.email);
+        if(userToLogin){           
+            let isOkPassword=bcrypt.compareSync(req.body.password, userToLogin.password);
+            if(isOkPassword){
+                delete userToLogin.password;
+                req.session.userLogged=userToLogin;
+                console.log(req.session.userLogged);
+                res.redirect('/')
+            }else{
+                return res.render('users/login', {
+                    errors:{
+                        email:{
+                            msg:'Las credenciales son invalidas'
+                        }
+                    },
+                    title: 'Inicio Sesión - TecnoJuy',
+                });
+            }
+            
+        }else{
+            return res.render('users/login', {
+                errors:{
+                    email:{
+                        msg:'No se encuentra al usuario en la Base de Datos'
+                    }
+                },
+                title: 'Inicio Sesión - TecnoJuy',
+            });
+        }
+        
+    
+    },
+    logout:(req, res)=>{
+        req.session.destroy();
+        return res.redirect('/');
+    },
+    register: ( req, res ) =>{
         res.render('users/register', {
             title: 'Registro - TecnoJuy',
         })
@@ -32,7 +69,19 @@ const controller = {
             try {
                 // Encripta la contraseña antes de guardarla
                 const contrasenaEncriptada = await bcrypt.hash(req.body.contrasena, 10);
-
+                const userInBD=users.find((user)=>user.email==req.body.email);
+                console.log(userInBD);
+                if(userInBD){
+                    return res.render('users/register', {
+                        errors:{
+                            email:{
+                                msg:'Este email ya esta registrado'
+                            }
+                        },
+                        title: 'Registro - TecnoJuy',
+                        oldDate: req.body,
+                    })
+                }
                 const newUser = {
                     id: crypto.randomUUID(),
                     name: req.body.nombre,
