@@ -13,8 +13,22 @@
         </form>
 
         <div  class="button-register">
-            <a href="/users/login"><button class="login"><i class="fa-solid fa-circle-user"></i> Ingresar</button></a>
-            <a href="/users/register"><button class="register" ><i class="fa-regular fa-address-card"></i> Registrarme</i></button></a>
+            <% if (locals.isLogged) { %>
+                <li class="user-info">
+
+                    <div class="photouser">
+                        <img src="/img/users/<%=locals.userLogged.image%>" alt="" class="user-photo">
+                    </div>
+                    
+                    <a href="#" class="user-name"><%= locals.userLogged.userName  %></a>
+                    <a href="/users/logout" class="logout">Cerrar Sesión</a>
+                </li>
+            <% }else { %>
+                <a href="/users/login"><button class="login"><i class="fa-solid fa-circle-user"></i> Ingresar</button></a>
+                <a href="/users/register"><button class="register" ><i class="fa-regular fa-address-card"></i> Registrarme</i></button></a>
+            <% } %>
+            
+            
         </div>
         
     </div>    

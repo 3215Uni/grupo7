@@ -22,8 +22,10 @@ const controller = {
             if(isOkPassword){
                 delete userToLogin.password;
                 req.session.userLogged=userToLogin;
-                console.log(req.session.userLogged);
-                res.redirect('/')
+                if(req.body.remember){
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000*60)*2 })
+                }
+                return res.redirect('/')
             }else{
                 return res.render('users/login', {
                     errors:{
@@ -49,6 +51,7 @@ const controller = {
     
     },
     logout:(req, res)=>{
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
     },

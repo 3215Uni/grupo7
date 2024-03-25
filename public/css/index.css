@@ -58,6 +58,38 @@ body {
     font-size: 18px;
     margin: auto;
 }
+.user-info {
+    display: flex; /* Utilizar flexbox para alinear los elementos */
+    align-items: center; /* Alinear los elementos verticalmente */
+    color: white; /* Color del texto */
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.photouser{
+    
+    width: 100px;
+    height: 90px;
+    display: flex;
+    
+}
+.photouser img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+.user-name,
+.logout {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+    margin-right: 20px; /* Espaciado a la derecha */
+    
+    
+
+}
 
 .main-navbar{
     display: none;
@@ -78,6 +110,9 @@ body {
     font-weight: 540;
 }
 .button-register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 20px;
 
 }
