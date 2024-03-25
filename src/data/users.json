@@ -10,16 +10,7 @@
     "password": "$2a$10$LSVxUQjLg5hwAaI2MfLfueTDfg3.9zxMz0eA3YGr6D4b4HBGCCMhS",
     "image": "avatar-1710971094556.jpg"
   },
-  {
-    "id": "7aeba96d-0bce-44f4-b844-e650564c6333",
-    "name": "Lionel",
-    "lastName": "Messi",
-    "date": "2024-03-13",
-    "email": "hsinson9@netvis.com",
-    "phone": "3885420466",
-    "userName": "Lio10",
-    "image": "avatar-1710976417340.jpg"
-  },
+  
   {
     "id": "5f8e9d52-4883-46b6-90d9-853d09e0d59d",
     "name": "Lionel",
@@ -32,14 +23,14 @@
     "image": "avatar-1711381989402.png"
   },
   {
-    "id": "9340e263-cb38-418f-94d7-4ab80361c463",
-    "name": "Melani",
-    "lastName": "Condori",
-    "date": "2024-03-09",
-    "email": "leo.jr.0809@gmail.com",
+    "id": "9ee08b49-61cf-4edd-a1c5-a34d6b315f9c",
+    "name": "thiago",
+    "lastName": "Jose",
+    "date": "2024-03-06",
+    "email": "leo32@gmail.com",
     "phone": "3885190199",
-    "userName": "Melani13",
-    "password": "$2a$10$uuzH35jOQa1V5I/MWtXvIuhkg0njk6xCwve8gkE.1YZvFejpxpYM6",
-    "image": "avatar-1711382957883.jpg"
+    "userName": "leo1312",
+    "password": "$2a$10$V4WZL6eGhO4ffrIzvu0DR.lTKO9qWs/BrhaZPoJouZKAKn.FNkxNG",
+    "image": "avatar-1711409773646.jpg"
   }
 ]

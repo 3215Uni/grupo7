@@ -17,10 +17,11 @@ const controller = {
     },
     loginProcess: ( req, res ) =>{
         const userToLogin=users.find((user)=>user.email==req.body.email);
+        console.log(userToLogin);
         if(userToLogin){           
             let isOkPassword=bcrypt.compareSync(req.body.password, userToLogin.password);
             if(isOkPassword){
-                delete userToLogin.password;
+                //delete userToLogin.password;
                 req.session.userLogged=userToLogin;
                 if(req.body.remember){
                     res.cookie('userEmail', req.body.email, {maxAge: (1000*60)*2 })
@@ -60,7 +61,7 @@ const controller = {
             title: 'Registro - TecnoJuy',
         })
     },
-    processRegister: async ( req, res ) =>{
+    processRegister: ( req, res ) =>{
         const resultValidation=validationResult(req);
         if(resultValidation.errors.length > 0){
             return res.render('users/register', {
@@ -71,7 +72,7 @@ const controller = {
         }else{
             try {
                 // Encripta la contraseña antes de guardarla
-                const contrasenaEncriptada = await bcrypt.hash(req.body.contrasena, 10);
+                const contrasenaEncriptada = bcrypt.hashSync(req.body.contrasena, 10);
                 const userInBD=users.find((user)=>user.email==req.body.email);
                 console.log(userInBD);
                 if(userInBD){
