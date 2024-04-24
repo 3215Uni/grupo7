@@ -1,3 +1,29 @@
+# Retrospectiva del Sexto Sprint:
+
+#### "Adaptándonos a los Cambios y Manteniendo la Productividad"
+
+### 1. Comenzar a hacer:
+Si no se asignaron las tareas, comenzar a realizar cualquiera de ellas. A medida que se avance y se complete una tarea, informar al grupo qué actividades se realizaron, aunque no se haya autoasignado en el Trello dicha actividad.
+
+### 2. Hacer más:
+Además, fomentar el avance, aunque sea en una parte de la actividad inicialmente. Luego, dividir esa actividad en partes más pequeñas puede generar más interés en avanzar. Esto es importante, ya que aunque no se complete toda la actividad debido a su extensión, se puede avanzar en una parte y luego continuar en otra sección, dividiéndola en diferentes etiquetas o actividades.
+
+### 3. Continuar haciendo:
+Valorar y aprovechar las fortalezas individuales de cada miembro del equipo, incluso en momentos de cambio o transición. Seguir fomentando un ambiente de colaboración donde cada voz sea escuchada y cada contribución sea valorada.Avisar de cada mejora o idea para avanzar más rapido.
+
+### 4. Hacer menos:
+No dividir cada actividad en actividades más pequeñas.
+
+### 5. Dejar de hacer:
+No dividir cada actividad en actividades más pequeñas.
+
+## Recomendación Adicional:
+Considerar dividir las actividades complejas en partes más pequeñas para facilitar su avance. Esto puede ayudar a mantener el impulso y la motivación del equipo, ya que cada avance, por pequeño que sea, contribuye al progreso general del proyecto.Y sobre todo poner un símbolo de que actividad se subdividieron para que el trabajo siga estando proporcionalmente dividido.
+
+_________________________________________________________________________________________________________________
+__________________________________________________________________________________________________________________
+
+
 # Retrospectiva del Quinto Sprint:
 
 #### "Adaptándonos a los Cambios y Manteniendo la Productividad"
