@@ -1,3 +1,12 @@
+/**
+ * 
+ * @param {import('sequelize').Sequelize} sequelize 
+ * @param {import('sequelize/types'.DataTypes)} dataTypes 
+ * 
+ */
+
+
+
 module.exports = function(sequelize, dataTypes){
     let alias="Marca";
     let cols={
@@ -12,8 +21,9 @@ module.exports = function(sequelize, dataTypes){
         
     }  
     let config={
-        tableName: "marcas",
-        timestaps: false
+        timestamps: false,
+        tableName: "marcas"
+        
     }
     
     let Marca=sequelize.define(alias, cols, config);

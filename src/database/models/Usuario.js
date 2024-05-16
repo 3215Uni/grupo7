@@ -1,5 +1,17 @@
+/**
+ * 
+ * @param {import('sequelize').Sequelize} sequelize 
+ * @param {import('sequelize/types'.DataTypes)} dataTypes 
+ * 
+ */
+
+
+
+
+
+
 module.exports = function(sequelize, dataTypes){
-    let alias="Usuarios";
+    let alias="Usuario";
     let cols={
         id: {
             type: dataTypes.INTEGER,
@@ -33,22 +45,22 @@ module.exports = function(sequelize, dataTypes){
     }  
     let config={
         tableName: "usuarios",
-        timestaps: false
+        timestamps: false
     }
     
-    let Usuarios=sequelize.define(alias, cols, config);
+    let Usuario=sequelize.define(alias, cols, config);
     
     Usuario.associate=function(models){
         Usuario.hasMany(models.Producto,{
             as:"productos",
             foreignKey: "id_user"
         })
-        Usuario.hasMany(models.Factura,{
-            as:"facturas",
+        Usuario.hasOne(models.Carrito,{
+            as:"Carrito",
             foreignKey: "id_usuario"
         })
     }
 
 
-    return Usuarios;
+    return Usuario;
 };

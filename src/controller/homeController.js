@@ -1,16 +1,29 @@
 const fs=require('fs');
 const path = require('node:path');
-
+const db=require('../database/models');
+const { Op, where } = require('sequelize');
 const productFilePath=path.join(__dirname,'../data/products.json');
 const products=JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
 
 
 const controller = {
    
-    renderHome: (req, res) =>{
-        const visitedProducts = products.filter((products)=> products.category ==="visited");
-        const inSale = products.filter((products)=> products.category ==="in-sale");
-
+    renderHome: async (req, res) =>{
+        const visitedProducts = await db.Producto.findAll({
+            where:{
+                category:{
+                    [Op.like]: `%${"visited"}%`
+                }
+            }
+        });
+        
+        const inSale = await db.Producto.findAll({
+            where:{
+                category:{
+                    [Op.like]: `%${"in-sale"}%`
+                }
+            }
+        });
         res.render('index', {
             title: 'TecnoJuy - Company',
             visitedProducts: visitedProducts,
@@ -19,18 +32,35 @@ const controller = {
         
     },
 
-    Search:(req, res) =>{
+    Search: (req, res) =>{
         const busqueda = req.query.keywords;
-        // console.log(busqueda)
-        const productSearch=products.filter((prod)=>prod.name.toLowerCase().includes(busqueda.toLowerCase()));
-        // console.log(productSearch)
-        res.render('productSearch',{
-            title: 'Busqueda - TecnoJuy',
-            productSearch: productSearch,
-            busqueda: busqueda
+        db.Producto.findAll({
+            where: {
+                name: {
+                    [Op.like]: `%${busqueda}%`
+                }
+            }
+            
+        }).then(productSearch=>{
+            db.Marca.findAll()
+            .then(marca=>{
+                res.render('productSearch',{
+                    title: 'Busqueda - TecnoJuy',
+                    productSearch: productSearch,
+                    busqueda: busqueda,
+                    marca:marca
+                });
+            })
+            
+        }).catch(error => {
+            console.error('Error al buscar productos:', error);
+            
         });
+        
+        
+        
     }
 
-}
+};
 
 module.exports = controller;

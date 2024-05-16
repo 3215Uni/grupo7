@@ -13,7 +13,9 @@ main .lista-categoria {
 main .lista-categoria .cat{
     display: none;
 }
-
+.etiqueta{
+    text-decoration: none;
+}
 .articulos-venta{
     display: flex;
     flex-direction: column;

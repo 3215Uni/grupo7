@@ -28,43 +28,41 @@
                     </ul>
                     <h3 class="sub-cat">Marca</h3>
                     <ul>
-                        <li><a href="#">Epson</a></li>
-                        <li><a href="#">Redragon</a></li>
-                        <li><a href="#">Samsung</a></li>
-                        <li><a href="#">Logitech</a></li>
-                        <li><a href="#">Lenovo</a></li>
-                        <li><a href="#">Nvidia</a></li>
-                        <li><a href="#">AMD</a></li>
+                        <% marca.map(mar =>{ %>
+                        <li><a href="#"><%= mar.name %></a></li>
+                        <% }) %>
                     </ul>
 
                 </div>
-
-                <section class="articulos-venta">
-
-                    <% if (productSearch.length>0){ %>
-                        
-                        <% productSearch.map(prod =>{ %>
-                            <article class="product">
-                                <div class="caja-imagen">
-                                    <img src="/img/<%=prod.image%>" alt="">
-                                </div>
-                                <i class="fa-regular fa-heart" id="favorite"></i>
-                                <div class="contenido">
-                                    <h2 class="nom-product"><%=prod.name%></h2>
-                                    <div class="prec">
-                                        <p class="monto"><%=prod.price%></p>
-                                        <p class="descuento"><%=prod.discount%> OFF</p>
+                
+                    <section class="articulos-venta">
+                        <% if (productSearch.length>0){ %>
+                            
+                            <% productSearch.map(prod =>{ %>
+                            <a href="/product/detail/<%=prod.id%>" class="etiqueta">    
+                                <article class="product">
+                                    <div class="caja-imagen">
+                                        <img src="/img/<%=prod.image%>" alt="">
                                     </div>
-                                </div>
-                                <i class="fa-solid fa-cart-shopping" id="cart"></i>
-                            </article>
-                        <% }) %>
-                    
-                    <% }else{ %>
-                        <h3>No hay productos que coincidan con tu búsqueda</h3>
-                    <% } %>
-                    
-                </section>
+                                    <i class="fa-regular fa-heart" id="favorite"></i>
+                                    <div class="contenido">
+                                        <h2 class="nom-product"><%=prod.name%></h2>
+                                        <div class="prec">
+                                            <p class="monto"><%=prod.price%></p>
+                                            <p class="descuento"><%=prod.discount%> OFF</p>
+                                        </div>
+                                    </div>
+                                    <i class="fa-solid fa-cart-shopping" id="cart"></i>
+                                </article>
+                            </a>
+                            <% }) %>
+                        
+                        <% }else{ %>
+                            <h3>No hay productos que coincidan con tu búsqueda</h3>
+                        <% } %>
+                        
+                    </section>
+               
 
             </div>
 

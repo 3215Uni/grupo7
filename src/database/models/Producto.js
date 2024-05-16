@@ -1,3 +1,14 @@
+/**
+ * 
+ * @param {import('sequelize').Sequelize} sequelize 
+ * @param {import('sequelize/types'.DataTypes)} dataTypes 
+ * 
+ */
+
+
+
+
+
 module.exports = function(sequelize, dataTypes){
     let alias="Producto";
     let cols={
@@ -38,24 +49,26 @@ module.exports = function(sequelize, dataTypes){
         }
     }  
     let config={
-        tableName: "productos",
-        timestaps: false
+        timestamps: false, 
+        tableName: 'productos'
     }
     
     let Producto=sequelize.define(alias, cols, config);
     Producto.associate=function(models){
-        Producto.hasMany(models.Carrito,{
-            as:"carritos",
-            foreignKey: "id_producto"
-        })
-        Producto.belongsTo(models.Usuario,{
-            as:"usuario",
-            foreignKey: "id_user"
-        })
+        Producto.belongsToMany(models.Carrito, { 
+            through: 'producto_de_carrito', // Nombre de la tabla intermedia
+            foreignKey: 'id_producto', 
+            otherKey: 'id_carrito', 
+            as: 'carritos' // Alias para la relación
+        });
         Producto.belongsTo(models.Marca,{
             as:"marca",
             foreignKey: "id_marca"
-        })
+        });
+        Producto.belongsTo(models.Usuario,{
+            as: "usuario",
+            foreignKey: "id_user"
+        });
     }
     
     return Producto;

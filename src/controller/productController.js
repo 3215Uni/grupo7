@@ -1,5 +1,5 @@
 
-const cryto=require('crypto');
+const db=require('../database/models')
 const fs=require('fs');
 const path = require('node:path');
 const productFilePath=path.join(__dirname,'../data/products.json');
@@ -10,16 +10,21 @@ const products=JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
 const controller = {
 
     Cart: (req, res) =>{
-        res.render('products/productCart', {
-            title: 'Carrito de Compras - TecnoJuy',
-        });
+
+        db.Producto.findAll()
+            .then(function(producto){
+                return res.render('products/productCart', {
+                    title: 'Carrito de Compras - TecnoJuy',
+                    producto:producto
+                });
+            })
     },
 
-    Detail: ( req, res ) =>{
+    Detail: async( req, res ) =>{
 
-        const id=req.params.id;
+        const idRequerida=req.params.id;
         //productDetail constante que almacena la busqueda por id
-        const productDetail=products.find((prod)=>prod.id==id);
+        const productDetail = await db.Producto.findByPk(idRequerida);
 
         res.render('products/productDetail', {
             title: 'Detalle de Producto - TecnoJuy',
