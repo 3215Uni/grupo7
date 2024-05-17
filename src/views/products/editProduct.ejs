@@ -40,9 +40,16 @@
                         </div>
                         <div class="contenido">
                             <label for="name">Marca:</label>
-                            <input type="text" id="brand" name="brand" value="<%=producto.brand%>">
+                            <select name="brand" id="brand">
+                                <option value="" disabled <%= !producto.id_marca ? 'selected' : '' %>>Seleccione Marca</option>
+                                <% marcas.forEach(element => { %>
+                                    <option value="<%= element.id %>" <%= element.id === producto.id_marca ? 'selected' : '' %>><%= element.name %></option>
+                                <% }); %>
+                                <option value="">Otra marca</option>
+                            </select>
+                            
+                            
                         </div>
-                        
         
                         <div class="contenido">
                             <label for="cantidad">Cantidad:</label>
@@ -54,49 +61,49 @@
                                 <label>Categoría:</label>
                                 <div class="checkbox-group">
                                     <div class="chek-caja">
-                                        <input type="checkbox" id="notebook" name="category" value="notebook">
+                                        <input type="checkbox" id="notebook" name="category" value="notebook" <%= producto.category === 'notebook' ? 'checked' : '' %>>
                                         <label for="notebook">Notebook</label>
                                     </div>
                                     
                                     <div class="chek-caja">
-                                        <input type="checkbox" id="tablet" name="category" value="tablet">
+                                        <input type="checkbox" id="tablet" name="category" value="tablet" <%= producto.category === 'tablet' ? 'checked' : '' %>>
                                         <label for="tablet">Tablet</label>
                                     </div>
                                     
                                     <div class="chek-caja">
-                                        <input type="checkbox" id="celulares" name="category" value="celulares">
+                                        <input type="checkbox" id="celulares" name="category" value="celulares" <%= producto.category === 'celulares' ? 'checked' : '' %>>
                                         <label for="celulares">Celulares</label>
                                     </div>
                                     
                                     <div class="chek-caja">
-                                        <input type="checkbox" id="PC-desktop" name="category" value="PC de Escritorio">
+                                        <input type="checkbox" id="PC-desktop" name="category" value="PC de Escritorio" <%= producto.category === 'PC de Escritorio' ? 'checked' : '' %>>
                                         <label for="PC-desktop">PC de Escritorio</label>
                                     </div>
                                     
                                     <div class="chek-caja">
-                                        <input type="checkbox" id="perifericos" name="category" value="Perifericos">
+                                        <input type="checkbox" id="perifericos" name="category" value="Perifericos" <%= producto.category === 'Perifericos' ? 'checked' : '' %>>
                                         <label for="perifericos">Periféricos</label>
                                     </div>
-
+                        
                                     <div class="chek-caja">
-                                        <input type="checkbox" id="consolas" name="category" value="Consolas">
+                                        <input type="checkbox" id="consolas" name="category" value="Consolas" <%= producto.category === 'Consolas' ? 'checked' : '' %>>
                                         <label for="consolas">Consolas</label>
                                     </div>
                                     
                                     <div class="chek-caja">
-                                        <input type="checkbox" id="in-sale" name="category" value="in-sale">
+                                        <input type="checkbox" id="in-sale" name="category" value="in-sale" <%= producto.category === 'in-sale' ? 'checked' : '' %>>
                                         <label for="in-sale">in-sale</label>
                                     </div>
                             
                                     <div class="chek-caja">
-                                        <input type="checkbox" id="visited" name="category" value="visited">
+                                        <input type="checkbox" id="visited" name="category" value="visited" <%= producto.category === 'visited' ? 'checked' : '' %>>
                                         <label for="visited">visited</label>
                                     </div>
                                     
                                 </div>
                             </div>
-                            
                         </div>
+                        
         
         
                         <div class="contenido">

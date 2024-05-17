@@ -1,6 +1,7 @@
 // ************ Require's ************
 const createError = require('http-errors');
-const session=require('express-session')
+const session=require('express-session');
+const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const express = require('express');
 const logger = require('morgan');
@@ -14,6 +15,13 @@ const app = express();
 // ************ Middlewares - (don't touch) ************
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
 app.use(express.urlencoded({ extended: false }));
+
+
+// Middleware para analizar solicitudes con cuerpo en formato JSON
+app.use(bodyParser.json());
+
+// Middleware para analizar solicitudes con cuerpos codificados en URL
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(logger('dev'));
 app.use(cookieParser());

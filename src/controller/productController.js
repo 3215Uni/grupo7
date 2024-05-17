@@ -32,68 +32,71 @@ const controller = {
         });
     },
 
-    Register: ( req, res ) =>{
+    Register: async ( req, res ) =>{
+        const marcas=await db.Marca.findAll();
         res.render('products/registerProduct', {
-            title: 'Añadir Producto - TecnoJuy'
+            title: 'Añadir Producto - TecnoJuy',
+            marcas:marcas
         });
     },
 
-    Create: ( req, res ) =>{
-        const newProd={
-            id: products.length+1,
-            name: req.body.name,
-            brand: req.body.brand,
-            stock: req.body.stock,
-            description: req.body.description,
-            
-            category: req.body.category,
-            price: "$"+req.body.price,
-            colors: [],
-            discount: req.body.discount+'%',
-            favorito: false
+    Create: async ( req, res ) =>{
+        try{
+            const newProd={
+                name: req.body.name,
+                id_marca: req.body.brand,
+                stock: req.body.stock,
+                description: req.body.description,
+                category: req.body.category,
+                price: req.body.price,
+                discount: req.body.discount,
+                favorito: false
+            }
+            newProd.image= req.file?.filename || "default-image.png"
+            await db.Producto.create(newProd);
+            res.redirect('/product/list');
+        }catch{
+            console.log("error");
         }
-
-
-        newProd.image= req.file?.filename || "default-image.png"
-        products.push(newProd);
-        //Sobrescribe el archivo
-        fs.writeFileSync(productFilePath, JSON.stringify(products,null,2));
-        res.redirect('/product/list');
+        
     },
 
-    Edit: ( req, res ) =>{
+    Edit: async( req, res ) =>{
         const id=req.params.id;
-        const producto=products.find((prod)=>prod.id==id);
+        const marcas=await db.Marca.findAll();
+        const producto= await db.Producto.findByPk(id);
         res.render('products/editProduct', {
             title: 'Editar Producto - TecnoJuy',
-            producto: producto
+            producto: producto,
+            marcas:marcas
 
         });
     },
-    Update: ( req, res ) =>{
-        const id=req.params.id;
-        const {name, image, brand, stock, category, price, discount, description}=req.body;
-        products.forEach(e => {
-            if(e.id==id){
-                e.name=name;
-                e.image=image;
-                e.brand=brand;
-                e.stock=stock,
-                e.description=description;
-                e.category=category;
-                e.price=price;
-                e.discount=discount;
-            }
-        });
-
-        fs.writeFileSync(path.join(__dirname, '../data/products.json'), JSON.stringify(products, null, 2),{encoding:'utf-8'})
-        res.redirect('/product/list')
+    Update: async ( req, res ) =>{
+        try {
+            
+            await db.Producto.update({
+                ...req.body
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            });
+           console.log(req.body);
+            
+        } catch (error) {
+            console.log(error);
+            res.status(500).send('Error actualizando el producto');
+        }
+        
+        
     },
 
-    List:( req, res ) =>{
+    List:async( req, res ) =>{
+        const list=await db.Producto.findAll();
         res.render('products/productList', {
             title: 'Lista de Productos - TecnoJuy',
-            products: products
+            products: list
         });
     },
 
