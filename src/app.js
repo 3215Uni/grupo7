@@ -14,7 +14,7 @@ const app = express();
 
 // ************ Middlewares - (don't touch) ************
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
-app.use(express.urlencoded({ extended: false }));
+
 
 
 // Middleware para analizar solicitudes con cuerpo en formato JSON

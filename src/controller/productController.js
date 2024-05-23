@@ -73,21 +73,30 @@ const controller = {
         });
     },
     Update: async ( req, res ) =>{
-        try {
-            
-            await db.Producto.update({
-                ...req.body
-            }, {
-                where: {
-                    id: req.params.id
-                }
-            });
-           console.log(req.body);
-            
-        } catch (error) {
-            console.log(error);
-            res.status(500).send('Error actualizando el producto');
+        
+        const updateProd={
+            name: req.body.name,
+            id_marca: req.body.brand,
+            stock: req.body.stock,
+            description: req.body.description,
+            category: req.body.category,
+            price: req.body.price,
+            discount: req.body.discount,
+            favorito: false,
+            image:req.file?.filename || "default-image.png"
         }
+        
+        console.log(updateProd);
+        
+        await db.Producto.update(
+            updateProd
+        , {
+            where: {
+                id: req.params.id
+            }
+        });
+
+        await res.redirect(`/product/detail/${req.params.id}`);
         
         
     },
@@ -117,28 +126,12 @@ const controller = {
         return res.redirect('/product/list');
     }
     */
-    delete: (req, res) => {
-        let idProduct = req.params.id;
-        console.log("ID del producto a eliminar:", idProduct);
-        
-        // Buscar el índice del producto a eliminar
-        let indexDelete = products.findIndex(product => product.id === parseInt(idProduct));
-        console.log("Índice del producto a eliminar:", indexDelete);
-    
-        // Verificar si se encontró el producto
-        if (indexDelete === -1) {
-            console.log("El producto con el ID proporcionado no existe en la lista.");
-            // Redireccionar a la lista de productos con un mensaje de error
-            return res.redirect('/product/list');
-        }
-    
-        // Eliminar el producto de la lista
-        products.splice(indexDelete, 1);
-    
-        // Sobrescribir el archivo con la lista actualizada de productos
-        fs.writeFileSync(productFilePath, JSON.stringify(products, null, 2));
-    
-        // Redireccionar a la lista de productos después de eliminar un producto
+    delete:async (req, res) => {
+        await db.Producto.destroy({
+            where:{
+                id: req.params.id
+            }
+        })
         return res.redirect('/product/list');
     }
     

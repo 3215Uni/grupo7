@@ -1,7 +1,9 @@
 const path = require('node:path');
 const fs=require('fs');
 const bcrypt = require('bcryptjs');
+const db=require('../database/models')
 const {validationResult}=require('express-validator');
+const { where } = require('sequelize');
 const userFilePath=path.join(__dirname,'../data/users.json');
 const users=JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
@@ -15,8 +17,13 @@ const controller = {
             title: 'Inicio Sesión - TecnoJuy',
         });
     },
-    loginProcess: ( req, res ) =>{
-        const userToLogin=users.find((user)=>user.email==req.body.email);
+    loginProcess: async( req, res ) =>{
+        const userToLogin=await db.Usuario.findOne({
+            where:{
+                email:req.body.email
+            }
+        })
+        //users.find((user)=>user.email==req.body.email);
         console.log(userToLogin);
         if(userToLogin){           
             let isOkPassword=bcrypt.compareSync(req.body.password, userToLogin.password);
@@ -61,7 +68,7 @@ const controller = {
             title: 'Registro - TecnoJuy',
         })
     },
-    processRegister: ( req, res ) =>{
+    processRegister: async( req, res ) =>{
         const resultValidation=validationResult(req);
         if(resultValidation.errors.length > 0){
             return res.render('users/register', {
@@ -73,9 +80,14 @@ const controller = {
             try {
                 // Encripta la contraseña antes de guardarla
                 const contrasenaEncriptada = bcrypt.hashSync(req.body.contrasena, 10);
-                const userInBD=users.find((user)=>user.email==req.body.email);
+                const userInBD=await db.Usuario.findOne({
+                    where:{
+                        email: req.body.email
+                    }
+                });
+                //users.find((user)=>user.email==req.body.email);
                 console.log(userInBD);
-                if(userInBD){
+                if(userInBD.length>0){
                     return res.render('users/register', {
                         errors:{
                             email:{
@@ -87,19 +99,17 @@ const controller = {
                     })
                 }
                 const newUser = {
-                    id: crypto.randomUUID(),
                     name: req.body.nombre,
-                    lastName: req.body.apellido,
-                    date: req.body.fechaNacimiento,
+                    last_name: req.body.apellido,
+                    birthday: req.body.fechaNacimiento,
                     email: req.body.email,
                     phone: req.body.celular,
-                    userName: req.body.nomUsuario,
+                    user_name: req.body.nomUsuario,
                     password: contrasenaEncriptada, // Guarda la contraseña encriptada
+                    image: req.file?.filename || "usuario-defecto.png"
                 };
 
-                newUser.image = req.file?.filename || "default-image.png";
-                users.push(newUser);
-                fs.writeFileSync(userFilePath, JSON.stringify(users, null, 2));
+                await db.Usuario.create(newUser);              
                 res.redirect('/');
             } catch (error) {
                 console.error('Error al procesar el registro:', error);

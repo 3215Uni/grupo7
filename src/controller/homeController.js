@@ -2,6 +2,7 @@ const fs=require('fs');
 const path = require('node:path');
 const db=require('../database/models');
 const { Op, where } = require('sequelize');
+const bcrypt = require('bcryptjs');
 const productFilePath=path.join(__dirname,'../data/products.json');
 const products=JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
 
@@ -16,6 +17,7 @@ const controller = {
                 }
             }
         });
+        
         
         const inSale = await db.Producto.findAll({
             where:{

@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-
-
 const upload=require('../middlewares/multerProduct.js')
 const productController=require('../controller/productController');
 
@@ -20,7 +18,7 @@ router.get('/registerProduct',productController.Register);
 router.post('/registerProduct',upload.single('image'), productController.Create);
 
 router.get('/edit/:id',productController.Edit);
-router.put('/edit/:id',productController.Update);
+router.put('/edit/:id',upload.single('image'),productController.Update);
 
 router.get('/list', productController.List);
 
