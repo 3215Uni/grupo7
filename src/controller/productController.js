@@ -18,6 +18,8 @@ const controller = {
                     producto:producto
                 });
             })
+
+            
     },
 
     Detail: async( req, res ) =>{
@@ -50,10 +52,14 @@ const controller = {
                 category: req.body.category,
                 price: req.body.price,
                 discount: req.body.discount,
-                favorito: false
+                favorito: false,
+                image: req.file?.filename || "default-image.png",
+                id_user: res.locals.userLogged.id
             }
-            newProd.image= req.file?.filename || "default-image.png"
+            console.log(res.locals.userLogged.id)
+            
             await db.Producto.create(newProd);
+           
             res.redirect('/product/list');
         }catch{
             console.log("error");
@@ -83,10 +89,11 @@ const controller = {
             price: req.body.price,
             discount: req.body.discount,
             favorito: false,
-            image:req.file?.filename || "default-image.png"
         }
         
-        console.log(updateProd);
+        if (req.file) {
+            updateProd.image = req.file.filename;
+        }
         
         await db.Producto.update(
             updateProd

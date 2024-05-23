@@ -49,19 +49,19 @@
                             </div>
                                 
                         </div>
-
-                        <div class="acciones">
-                            <form action="/product/delete/<%= productDetail.id %>?_method=DELETE" method="post">
-                                <button type="submit" class="delete">
-                                    <i class="fa-solid fa-trash-can"></i> ELIMINAR
-                                </button>
-                            </form>
-
-                                
-
-                            <a href="/product/edit/<%=productDetail.id%>"><button class="edit"><i class="fa-solid fa-file-pen"></i> EDITAR</button></a>
-                        </div>
-
+                        <% if (locals.isLogged) { %>
+                            <% if (locals.userLogged.id==productDetail.id_user) { %>
+                                <div class="acciones">
+                                    <form action="/product/delete/<%= productDetail.id %>?_method=DELETE" method="post">
+                                        <button type="submit" class="delete">
+                                            <i class="fa-solid fa-trash-can"></i> ELIMINAR
+                                        </button>
+                                    </form>
+                                    <a href="/product/edit/<%=productDetail.id%>"><button class="edit"><i class="fa-solid fa-file-pen"></i> EDITAR</button></a>
+                                </div>
+                            <% } %>
+                        <% } %>
+                        
 
 
                     </div>
