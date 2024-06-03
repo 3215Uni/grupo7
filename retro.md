@@ -1,3 +1,7 @@
+# SPRINT 5
+LINK DE DIAGRAMA DE BASE DE DATOS
+https://dbdiagram.io/d/Copy-of-Untitled-Diagram-66257b6103593b6b6190dc64
+
 # Retrospectiva del Quinto Sprint:
 
 #### "Adaptándonos a los Cambios y Manteniendo la Productividad"
