@@ -5,8 +5,8 @@ const { body } = require('express-validator');
 const path = require('node:path');
 
 const validationMiddleware = [
-    body('nombre').notEmpty().withMessage('Tienes que escribir un Nombre'),
-    body('apellido').notEmpty().withMessage('Tienes que escribir un Apellido'),
+    body('nombre').notEmpty().withMessage('Tienes que escribir un Nombre').isLength({ min: 2 }).withMessage('El nombre debe tener al menos 2 caracteres'),
+    body('apellido').notEmpty().withMessage('Tienes que escribir un Apellido').isLength({ min: 2 }).withMessage('El apellido debe tener al menos 2 caracteres'),
     body('fechaNacimiento').notEmpty().withMessage('Tienes que ingresar tu Fecha de Nacimiento'),
     body('email').notEmpty().withMessage('Tienes que escribir un Email').bail()
         .isEmail().withMessage('Debes escribir un formato de correo valido'),
