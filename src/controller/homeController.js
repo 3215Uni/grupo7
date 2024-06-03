@@ -17,8 +17,7 @@ const controller = {
                 }
             }
         });
-        console.log(res.locals );
-        console.log("aqui")
+        
         
         const inSale = await db.Producto.findAll({
             where:{

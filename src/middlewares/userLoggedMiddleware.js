@@ -4,11 +4,16 @@ const userFilePath=path.join(__dirname,'../data/users.json');
 const users=JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
 
-function userLoggedMiddelware(req, res, next){
+async function userLoggedMiddelware(req, res, next){
     
     res.locals.isLogged=false;
     const emailInCookie=req.cookies.userEmail;
-    let userCokie= users.find((user)=>user.email==emailInCookie); 
+    const userCokie=await db.Usuario.findOne({
+        where:{
+            email:emailInCookie
+        }
+    })
+    //let userCokie= users.find((user)=>user.email==emailInCookie); 
     if(userCokie){
         res.locals.userLogged=userCokie;
     }
