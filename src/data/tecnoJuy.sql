@@ -4,7 +4,10 @@
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.4.32-MariaDB
 USE tecnojuy;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 75a526f70cd1e325c6152b548bab74fcd33bbec7
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
