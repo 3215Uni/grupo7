@@ -26,9 +26,9 @@ const validationMiddleware = [
     }),
     body('avatar').custom((value, { req }) => {
         let file = req.file;
-        let aceptExtension = ['.png', '.jpg', '.gif',,'.jpeg'];
+        let aceptExtension = ['.png', '.jpg', '.gif','.jpeg'];
         if (!file) {
-            throw new Error('Tienes que subir una imagen ');
+            return true;
         } else {
             let fileExtension = path.extname(file.originalname);
             if (!aceptExtension.includes(fileExtension)) {

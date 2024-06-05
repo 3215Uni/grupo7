@@ -4,6 +4,8 @@ const bcrypt = require('bcryptjs');
 const db=require('../database/models')
 const {validationResult}=require('express-validator');
 const { where } = require('sequelize');
+const { Session } = require('node:inspector');
+const { Update } = require('./productController');
 const userFilePath=path.join(__dirname,'../data/users.json');
 const users=JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
@@ -87,7 +89,7 @@ const controller = {
                 });
                 //users.find((user)=>user.email==req.body.email);
                 console.log(userInBD);
-                if(userInBD.length>0){
+                if(userInBD){
                     return res.render('users/register', {
                         errors:{
                             email:{
@@ -97,20 +99,96 @@ const controller = {
                         title: 'Registro - TecnoJuy',
                         oldDate: req.body,
                     })
+                }else{
+                    const newUser = {
+                        name: req.body.nombre,
+                        last_name: req.body.apellido,
+                        birthday: req.body.fechaNacimiento,
+                        email: req.body.email,
+                        phone: req.body.celular,
+                        user_name: req.body.nomUsuario,
+                        password: contrasenaEncriptada, // Guarda la contraseña encriptada
+                        image: req.file?.filename || "usuario-defecto.png"
+                    };
+    
+    
+                    await db.Usuario.create(newUser);              
+                    res.redirect('/');
                 }
-                const newUser = {
-                    name: req.body.nombre,
-                    last_name: req.body.apellido,
-                    birthday: req.body.fechaNacimiento,
-                    email: req.body.email,
-                    phone: req.body.celular,
-                    user_name: req.body.nomUsuario,
-                    password: contrasenaEncriptada, // Guarda la contraseña encriptada
-                    image: req.file?.filename || "usuario-defecto.png"
-                };
+                
+            } catch (error) {
+                console.error('Error al procesar el registro:', error);
+                res.status(500).send('Error interno del servidor');
+            }
+        }
+        
+    },
+    profile: async(req, res) =>{
+        const user=await db.Usuario.findOne({
+            where:{
+                email:req.session.userLogged.email
+            }
+        })
+        res.render('users/profile',{
+            title: 'Profile - TecnoJuy',
+            user: user,
+        });
+    },
+    update: async(req,res)=>{
 
-                await db.Usuario.create(newUser);              
-                res.redirect('/');
+        res.render('users/editUser', {
+            title: 'Editar Usuario - TecnoJuy',
+        })
+    },
+    updateUser: async (req, res)=>{
+        const resultValidation=validationResult(req);
+        if(resultValidation.errors.length > 0){
+            return res.render('/users/editProduct', {
+                errors: resultValidation.mapped(),
+                title: 'Editar Usuario - TecnoJuy',
+                oldDate: req.body,
+            });
+        }else{
+            try {
+                // Encripta la contraseña antes de guardarla
+                const contrasenaEncriptada = bcrypt.hashSync(req.body.contrasena, 10);
+                const userInBD=await db.Usuario.findOne({
+                    where:{
+                        user_name: req.params.userName
+                    }
+                });
+                //users.find((user)=>user.email==req.body.email);
+               
+                if(userInBD){
+                    return res.render('users/register', {
+                        title: 'Registro - TecnoJuy',
+                        oldDate: req.body,
+                    })
+                }else{
+                    const editUser = {
+                        name: req.body.nombre,
+                        last_name: req.body.apellido,
+                        birthday: req.body.fechaNacimiento,
+                        email: req.body.email,
+                        phone: req.body.celular,
+                        user_name: req.body.nomUsuario,
+                        password: contrasenaEncriptada, // Guarda la contraseña encriptada
+                        image: req.file?.filename || "usuario-defecto.png"
+                    };
+                    
+                    if (!req.file) {
+                        editUser.image = req.session.userLogged.image;
+                    }
+            
+    
+                    await db.Usuario.update(editUser,{
+                        where: {
+                            email: req.session.userLogged.email
+                        }
+                    });              
+                    res.redirect(`/users/profile/${req.params.userName}`);
+                }
+                
             } catch (error) {
                 console.error('Error al procesar el registro:', error);
                 res.status(500).send('Error interno del servidor');

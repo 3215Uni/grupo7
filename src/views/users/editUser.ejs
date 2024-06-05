@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include('../partials/head.ejs') %>
+        <link rel="stylesheet" href="/css/register.css">
+    </head>
+    <body>
+        
+    
+        <%- include('../partials/header.ejs') %>
+    
+        <main>
+        <br>
+    <!-- Contenido específico de la página principal -->
+       
+        
+        <div class="container">
+            <h2 class="titulo">Editar</h2>
+            <form class="form-registrosDatos" action="/users/editUser/:<%= locals.userLogged.user_name %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
+                <div class="campo">
+                    <label class="textoCampo" for="image">Subir Imagen:</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*" >
+                    <% if (locals.errors && errors.avatar) { %>
+                        <div class="text-danger">
+                            <%=errors.avatar.msg  %>
+                        </div>
+                    <% } %>
+                </div>
+                
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Nombre: </label>           
+                    <input class="formC" type="text" id="nombre" name="nombre" value="<%= locals.userLogged.name %>">
+                    <% if (locals.errors && errors.nombre) { %>
+                        <div class="text-danger">
+                            <%=errors.nombre.msg  %>
+                        </div>
+                    <% } %>
+                    
+                </div>
+                
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Apellido: </label>           
+                    <input class="formC" type="text" id="apellido" name="apellido" value="<%= locals.userLogged.last_name %>">
+                    <% if (locals.errors && errors.apellido) { %>
+                        <div class="text-danger">
+                            <%=errors.apellido.msg  %>
+                        </div>
+                    <% } %>
+                </div>
+                
+                <div class="campo">
+                    <label for="fechaNacimiento" class="textoCampo">Fecha de Nacimiento</label>
+                    <input class="formC" type="date" id="fechaNacimiento" name="fechaNacimiento" value="<%= locals.userLogged.birthday %>">
+                    <% if (locals.errors && errors.fechaNacimiento) { %>
+                        <div class="text-danger">
+                            <%=errors.fechaNacimiento.msg  %>
+                        </div>
+                    <% } %>
+                </div>
+                
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Email: </label>           
+                    <input class="formC" type="text" id="email" name="email" value="<%= locals.userLogged.email %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%=errors.email.msg %>
+                        </div>
+                    <% } %>
+                </div>
+                
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Numero de Telefono: </label>           
+                    <input class="formC" placeholder="Tu número de celular" type="tel" id="celular" name="celular" value="<%= locals.userLogged.phone %>">
+                    <% if (locals.errors && errors.celular) { %>
+                        <div class="text-danger">
+                            <%=errors.celular.msg  %>
+                        </div>
+                    <% } %>
+                </div>
+                
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Nombre de Usuario: </label>           
+                    <input class="formC" type="text" id="nomUsuario" name="nomUsuario" value="<%= locals.userLogged.user_name %>">
+                    <% if (locals.errors && errors.nomUsuario) { %>
+                        <div class="text-danger">
+                            <%=errors.nomUsuario.msg  %>
+                        </div>
+                    <% } %>
+                </div>
+                
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Contraseña: </label>           
+                    <input class="formC" placeholder="Tu contraseña" type="password" id="contrasena" name="contrasena" >
+                    <% if (locals.errors && errors.contrasena) { %>
+                        <div class="text-danger">
+                            <%=errors.contrasena.msg  %>
+                        </div>
+                    <% } %>
+                </div>
+                
+                <div class="campo">
+                    <label for="nombre" class="textoCampo">Repetir Contraseña: </label>           
+                    <input class="formC" placeholder="Repite tu contraseña contrasña" type="password" id="repitContrasena" name="repitContrasena" >
+                    <% if (locals.errors && errors.repitContrasena) { %>
+                        <div class="text-danger">
+                            <%=errors.repitContrasena.msg  %>
+                        </div>
+                    <% } %>
+                </div>
+                
+                <button class="btn-form-registrar" type="submit">Actualizar</button>
+            </form>
+        </div>
+        <br>
+    
+    </main>
+
+    <%- include('../partials/footer') %>
+</body>
+</html>

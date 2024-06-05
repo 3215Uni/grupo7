@@ -1,9 +1,7 @@
 
 const db=require('../database/models')
 const fs=require('fs');
-const path = require('node:path');
-const productFilePath=path.join(__dirname,'../data/products.json');
-const products=JSON.parse(fs.readFileSync(productFilePath, 'utf-8'));
+const {validationResult}=require('express-validator');
 
 
 
@@ -43,28 +41,38 @@ const controller = {
     },
 
     Create: async ( req, res ) =>{
-        try{
-            const newProd={
-                name: req.body.name,
-                id_marca: req.body.brand,
-                stock: req.body.stock,
-                description: req.body.description,
-                category: req.body.category,
-                price: req.body.price,
-                discount: req.body.discount,
-                favorito: false,
-                image: req.file?.filename || "default-image.png",
-                id_user: res.locals.userLogged.id
-            }
-            console.log(res.locals.userLogged.id)
+        const resultValidation=validationResult(req);
+        if(resultValidation.errors.length > 0){
+            const marcas=await db.Marca.findAll();
+            return res.render('products/registerProduct', {
+                errors: resultValidation.mapped(),
+                title: 'Añadir Producto - TecnoJuy',
+                oldDate: req.body,
+                marcas:marcas
+            });
+        }else{
+            try{
+                const newProd={
+                    name: req.body.name,
+                    id_marca: req.body.brand,
+                    stock: req.body.stock,
+                    description: req.body.description,
+                    category: req.body.category,
+                    price: req.body.price,
+                    discount: req.body.discount,
+                    favorito: false,
+                    image: req.file?.filename || "default-image.png",
+                    id_user: res.locals.userLogged.id
+                }
+                console.log(res.locals.userLogged.id)
+                
+                await db.Producto.create(newProd);
             
-            await db.Producto.create(newProd);
-           
-            res.redirect('/product/list');
-        }catch{
-            console.log("error");
+                res.redirect('/product/list');
+            }catch{
+                console.log("error");
+            }
         }
-        
     },
 
     Edit: async( req, res ) =>{
@@ -79,31 +87,46 @@ const controller = {
         });
     },
     Update: async ( req, res ) =>{
-        
-        const updateProd={
-            name: req.body.name,
-            id_marca: req.body.brand,
-            stock: req.body.stock,
-            description: req.body.description,
-            category: req.body.category,
-            price: req.body.price,
-            discount: req.body.discount,
-            favorito: false,
-        }
-        
-        if (req.file) {
-            updateProd.image = req.file.filename;
-        }
-        
-        await db.Producto.update(
-            updateProd
-        , {
-            where: {
-                id: req.params.id
+        const resultValidation=validationResult(req);
+        if(resultValidation.errors.length > 0){
+            const id=req.params.id;
+            const marcas=await db.Marca.findAll();
+            const producto= await db.Producto.findByPk(id);
+            console.log(resultValidation)
+            return res.render('products/editProduct', {
+                errors: resultValidation.mapped(),
+                producto: producto,
+                title: 'Editar Producto - TecnoJuy',
+                oldDate: req.body,
+                marcas:marcas
+            });
+        }else{
+            const updateProd={
+                name: req.body.name,
+                id_marca: req.body.brand,
+                stock: req.body.stock,
+                description: req.body.description,
+                category: req.body.category,
+                price: req.body.price,
+                discount: req.body.discount,
+                favorito: false,
             }
-        });
-
-        await res.redirect(`/product/detail/${req.params.id}`);
+            
+            if (req.file) {
+                updateProd.image = req.file.filename;
+            }
+            
+            await db.Producto.update(
+                updateProd
+            , {
+                where: {
+                    id: req.params.id
+                }
+            });
+    
+            res.redirect(`/product/detail/${req.params.id}`);
+            
+        }
         
         
     },
@@ -116,23 +139,6 @@ const controller = {
         });
     },
 
-    
-    /**********************/
-    //Delete: borra 1 producto de la base de datos
-
-    /*********************/
-    /*
-    delete: (req, res) => {
-        let idProduct = req.params.id;
-        // Filtrar la lista de productos para excluir el producto que se desea eliminar
-        let indexDelete = products.findIndex(product => product.id === idProduct);
-        products.splice(indexDelete, 1);
-        // Sobrescribe el archivo con la lista actualizada de productos
-        fs.writeFileSync(productFilePath, JSON.stringify(products, null, 2));
-        // Redirecciona a la lista de productos después de eliminar un producto
-        return res.redirect('/product/list');
-    }
-    */
     delete:async (req, res) => {
         await db.Producto.destroy({
             where:{

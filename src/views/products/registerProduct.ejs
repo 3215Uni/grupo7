@@ -25,18 +25,33 @@
                         </div>
                         
                         <label class="textoCampo" for="image">Subir Imagen:</label>
-                        <input type="file" id="image" name="image" accept="image/*">
+                        <input type="file" id="image" name="image" accept="image/*" >
+                        <% if (locals.errors && errors.image) { %>
+                            <div class="text-danger">
+                                <%=errors.image.msg  %>
+                            </div>
+                        <% } %>
                     </div>
                     <div class="cont">
                         <div class="contenido">
                             <label for="image">URL de la Imagen:</label>
-                            <input type="url" id="image" name="url">
+                            <input type="url" id="image" name="url" value="<%=locals.oldDate ? oldDate.url : null %>">
+                            <% if (locals.errors && errors.url) { %>
+                                <div class="text-danger">
+                                    <%=errors.url.msg  %>
+                                </div>
+                            <% } %>
                         </div>
     
     
                         <div class="contenido">
                             <label for="name">Nombre del Producto:</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" value="<%=locals.oldDate ? oldDate.name : null %>">
+                            <% if (locals.errors && errors.name) { %>
+                                <div class="text-danger">
+                                    <%=errors.name.msg  %>
+                                </div>
+                            <% } %>
                         </div>
                         <div class="contenido">
                             <label for="name">Marca:</label>
@@ -46,6 +61,11 @@
                                     <option value="<%= element.id %>"><%= element.name %></option>
                                 <% }); %>
                                 <option value="">Otra marca</option>
+                                <% if (locals.errors && errors.avatar) { %>
+                                    <div class="text-danger">
+                                        <%=errors.avatar.msg  %>
+                                    </div>
+                                <% } %>
                             </select>
                             
                         </div>
@@ -53,7 +73,12 @@
         
                         <div class="contenido">
                             <label for="price">Stock:</label>
-                            <input type="number" id="stock" name="stock" min="1" required>
+                            <input type="number" id="stock" name="stock" min="1" value="<%=locals.oldDate ? oldDate.stock : null %>">
+                            <% if (locals.errors && errors.stock) { %>
+                                <div class="text-danger">
+                                    <%=errors.stock.msg  %>
+                                </div>
+                            <% } %>
                         </div>
                         
                         <div class="contenido">
@@ -99,6 +124,11 @@
                                         <input type="checkbox" id="visited" name="category" value="visited">
                                         <label for="visited">visited</label>
                                     </div>
+                                    <% if (locals.errors && errors.avatar) { %>
+                                        <div class="text-danger">
+                                            <%=errors.avatar.msg  %>
+                                        </div>
+                                    <% } %>
                                     
                                 </div>
                             </div>
@@ -107,16 +137,31 @@
         
                         <div class="contenido">
                             <label for="price">Precio:</label>
-                            <input type="text" id="price" name="price" min="0" step="0.01" required>
+                            <input type="text" id="price" name="price" min="0" step="0.01" value="<%=locals.oldDate ? oldDate.price : null %>">
+                            <% if (locals.errors && errors.price) { %>
+                                <div class="text-danger">
+                                    <%=errors.price.msg  %>
+                                </div>
+                            <% } %>
                         </div>
                         <div class="contenido">
                             <label for="price">Descuento:</label>
-                            <input type="text" id="price" name="discount">
+                            <input type="text" id="price" name="discount" value="<%=locals.oldDate ? oldDate.discount : null %>">
+                            <% if (locals.errors && errors.discount) { %>
+                                <div class="text-danger">
+                                    <%=errors.discount.msg  %>
+                                </div>
+                            <% } %>
                         </div>
     
                         <div class="desc">
                             <label for="description">Descripción:</label>
-                            <textarea id="description" name="description" required></textarea>
+                            <textarea id="description" name="description" value=""><%=locals.oldDate ? oldDate.description : null %></textarea>
+                            <% if (locals.errors && errors.description) { %>
+                                <div class="text-danger">
+                                    <%=errors.description.msg%>
+                                </div>
+                            <% } %>
                         </div>
 
                         <div class="btnDeForm">
