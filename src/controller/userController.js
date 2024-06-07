@@ -143,7 +143,7 @@ const controller = {
     updateUser: async (req, res)=>{
         const resultValidation=validationResult(req);
         if(resultValidation.errors.length > 0){
-            return res.render('/users/editProduct', {
+            return res.render('users/editUser', {
                 errors: resultValidation.mapped(),
                 title: 'Editar Usuario - TecnoJuy',
                 oldDate: req.body,
@@ -160,8 +160,8 @@ const controller = {
                 //users.find((user)=>user.email==req.body.email);
                
                 if(userInBD){
-                    return res.render('users/register', {
-                        title: 'Registro - TecnoJuy',
+                    return res.render('users/editUser', {
+                        title: 'Editar usuario - TecnoJuy',
                         oldDate: req.body,
                     })
                 }else{

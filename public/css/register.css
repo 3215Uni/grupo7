@@ -117,5 +117,11 @@
     .btn-form-registrar:hover {
         background-color: #A774EB; /* Cambiar el color al pasar el mouse */
     }
-
+/*error validacion del front-end*/
+.error-message{
+  color:pink;
+  font-style:italic;
+  margin:0;
+  padding:0;
+}
 }
