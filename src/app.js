@@ -8,6 +8,8 @@ const logger = require('morgan');
 const path = require('path');
 const userLoggedMiddelware=require('./middlewares/userLoggedMiddleware.js');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const usersApiRoutes = require('./routers/api/userRoutes.js');//Para usar la API de usuarios
+const productsApiRoutes = require('./routers/api/productRoutes.js');//Para usar la API de productos
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -53,7 +55,9 @@ app.use('/users', userRouter);
 const productRouter=require('./routers/products.routes.js');
 app.use('/product', productRouter);
 
-
+//uso de la api de usuarios
+app.use('/api/users', usersApiRoutes);
+app.use('/api/products', productsApiRoutes);
 
 
 
