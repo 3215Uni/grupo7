@@ -214,5 +214,9 @@ main {
         margin:0;
         padding:0;
     }
+    .text-danger{
+        text-align: start;
+        color: red;
+      }
 
 }

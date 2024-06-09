@@ -18,23 +18,30 @@ window.addEventListener('load',function(){
         let errors = [];
 
         //Validar campos
-        if(email!=="" && contrasena!==""){
+        if(email=="" && contrasena==""){
+            errors.push("Todos los campos son requeridos");
+            displayErrorMessage('txtUsername',"Debes ingresar tu email o nombre de usuario");
+            displayErrorMessage('txtPassword',"Debes ingresar tu contraseña");
+        }else if(email!==""&& contrasena==""){
+            errors.push("Contraseña vacía");
+            displayErrorMessage('txtPassword',"Debes ingresar tu contraseña");
+        }else{
        // Validar email
             if (!validateEmail(email)) {
                 errors.push("El email ingresado no es válido.");
-                displayErrorMessage('email',"El email ingresado no es válido.");
+                displayErrorMessage('txtUsername',"El email ingresado no es válido.");
             }
 
             // Validar Contrasena
             if (contrasena.length < 8) {
                 errors.push("La contraseña debe tener al menos 8 caracteres.");
-                displayErrorMessage('contrasena',"La contraseña debe tener al menos 8 caracteres.");
+                displayErrorMessage('password',"La contraseña debe tener al menos 8 caracteres.");
             }else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/.test(contrasena)) {
                     errors.push("La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.");
-                    displayErrorMessage('contrasena',"La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.");
+                    displayErrorMessage('txtPassword',"La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.");
                 
             }
-        }                 
+        }             
         // Pregutna si NO hay errores
         if (errors.length === 0) {
             // Si no hay errores, envia el formulario
