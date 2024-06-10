@@ -37,6 +37,11 @@ main {
     text-align: center;
     margin-top: 5px;
 }
+
+.error-message{
+    text-align: start;
+    color: red;
+  }
 .input-box input::placeholder{
     color: #fff;
 }
@@ -146,6 +151,10 @@ main {
     }
 
 
+    .error-message{
+        text-align: start;
+        color: red;
+      }
 }
 
 @media(min-width: 1024px){
@@ -209,11 +218,9 @@ main {
     }
 
     .error-message{
-        color: pink;
-        font-style:italic;
-        margin:0;
-        padding:0;
-    }
+        text-align: start;
+        color: red;
+      }
     .text-danger{
         text-align: start;
         color: red;
