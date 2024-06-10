@@ -11,15 +11,17 @@ const usuarios = {
     async getUsers(req,res){
         try {
             const users = await db.Usuario.findAll();
-            const response = {
-                meta:{
-                    status: 200,
-                    total: users.length,
-                    detail: 'api/users'
-                },
-                data: users
-            }
-            res.send(response);
+            res.json({
+                status:200,
+                count:users.length,
+                users:users.map(user => ({
+                    id: user.id,
+                    name:user.name,
+                    email:user.email,
+                    detail:`/api/users/${user.id}`
+                }))
+            });
+
         } catch (error) {
             res.send(error);
         }
@@ -29,8 +31,18 @@ const usuarios = {
             const user = await db.Usuario.findByPk(req.params.id);
             if(!user){
                 return res.status(404).send({message:'User not found'})
+            }else{
+                const userDetail = {
+                    id: user.id,
+                    name:user.name,
+                    lastName:user.lastName,
+                    date:user.date,
+                    email:user.email,
+                    phone:user.phone,
+                    image:`/api/users/${user.id}/${user.image}`  
+                };
+                res.json(userDetail);
             }
-            res.send(user);
         } catch (error) {
             res.send(error);
         }
