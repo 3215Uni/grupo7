@@ -14,10 +14,12 @@ const usuarios = {
             res.json({
                 status:200,
                 count:users.length,
-                users:users.map(user => ({
+                data:users.map(user => ({
                     id: user.id,
                     name:user.name,
                     email:user.email,
+                    userName: user.user_name,
+                    lastName: user.last_name,
                     detail:`/api/users/${user.id}`
                 }))
             });

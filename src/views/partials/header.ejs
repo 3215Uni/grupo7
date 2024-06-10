@@ -44,6 +44,10 @@
         <ul class="rigth-navbar">
             <li><a href="/"><i class="fa-solid fa-house"></i> Inicio</a>
             <li><a href="/product/list"><i class="fa-solid fa-hand-holding-medical"></i> Productos</a>
+            <% if (locals.isLogged) { %>
+                <li><a href="/product/registerProduct"><i class="fas fa-dollar-sign"></i>
+                    Vender</a>
+            <% } %>
             <li><a href="#"><i class="fa-solid fa-info"></i> Acerca de</a>
             <li><a href="/product/cart"><i class="fa-solid fa-cart-plus"></i> Mis Compras</a>
         </ul>

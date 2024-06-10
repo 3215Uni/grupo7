@@ -64,7 +64,7 @@ const controller = {
                     image: req.file?.filename || "default-image.png",
                     id_user: res.locals.userLogged.id
                 }
-                console.log(res.locals.userLogged.id)
+                
                 
                 await db.Producto.create(newProd);
             

@@ -152,19 +152,10 @@ const controller = {
             try {
                 // Encripta la contraseña antes de guardarla
                 const contrasenaEncriptada = bcrypt.hashSync(req.body.contrasena, 10);
-                const userInBD=await db.Usuario.findOne({
-                    where:{
-                        user_name: req.params.userName
-                    }
-                });
+                
                 //users.find((user)=>user.email==req.body.email);
                
-                if(userInBD){
-                    return res.render('users/editUser', {
-                        title: 'Editar usuario - TecnoJuy',
-                        oldDate: req.body,
-                    })
-                }else{
+                
                     const editUser = {
                         name: req.body.nombre,
                         last_name: req.body.apellido,
@@ -185,9 +176,17 @@ const controller = {
                         where: {
                             email: req.session.userLogged.email
                         }
-                    });              
+                    });
+                    const userInBD=await db.Usuario.findOne({
+                        where:{
+                            user_name: req.params.userName
+                        }
+                    });
+                    req.session.userLogged=userInBD;
+                    console.log( req.session.userLogged);          
+
                     res.redirect(`/users/profile/${req.params.userName}`);
-                }
+                
                 
             } catch (error) {
                 console.error('Error al procesar el registro:', error);

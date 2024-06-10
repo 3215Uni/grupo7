@@ -12,6 +12,7 @@ const validation2=require('../middlewares/validationProductEdit.js');
 
 
 
+
 router.get('/cart', productController.Cart);
 
 router.get('/detail/:id',productController.Detail);

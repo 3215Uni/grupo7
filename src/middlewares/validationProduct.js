@@ -5,7 +5,7 @@ const { body } = require('express-validator');
 const path = require('node:path');
 
 const validationMiddleware = [
-    body('url').isURL().withMessage('La URL debe ser válida'),
+    
     body('name').notEmpty().withMessage('Tienes que escribir el nombre del Producto').isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres'),
     body('brand').notEmpty().withMessage('Tienes que seleccionar una Marca'),
     body('stock').notEmpty().withMessage('Tienes que escribir el stock').isInt({ min: 1 }).withMessage('El stock debe ser un número entero positivo'),

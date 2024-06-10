@@ -13,14 +13,16 @@ const productos = {
                 description: prod.description,
                 category: prod.category,
                 image: prod.image,
+                stock: prod.stock,
+                price: prod.price,
                 marca: marcas.find(marca => marca.id == prod.id_marca).name,
                 detail:`/api/products/${prod.id}`
             }));
             res.json({
                 status:200,
-                count:products.lenght,
+                count:productList.length,
                 count_by_marcas:marcas.lenght,
-                products: productList
+                data: productList
             });
         } catch (error) {
             res.send(error);

@@ -29,20 +29,20 @@ window.addEventListener('load',function(){
             document.getElementById('description').style.background="pink";  
         }    
         // Validar imagen del producto
-        if (!image) {
-            errors.push("Debes subir una imagen.");
-            displayErrorMessage('image',"Debes subir una imagen.");
-            console.log("Debes subir una imagen.");
+        // if (image==null) {
+        //     errors.push("Debes subir una imagen.");
+        //     displayErrorMessage('image',"Debes subir una imagen.");
+        //     console.log("Debes subir una imagen.");
             
-        } else {
-            const validExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-            const fileExtension = image.split('.').pop().toLowerCase();
-            if (!validExtensions.includes(fileExtension)) {
-                errors.push("El archivo debe tener una extensión válida (JPG, JPEG, PNG, GIF).");
-                displayErrorMessage('image',"El archivo debe tener una extensión válida (JPG, JPEG, PNG, GIF).");
-                console.log("El archivo debe tener una extensión válida (JPG, JPEG, PNG, GIF).");
-            }
-        }                     
+        // } else {
+        //     const validExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+        //     const fileExtension = image.split('.').pop().toLowerCase();
+        //     if (!validExtensions.includes(fileExtension)) {
+        //         errors.push("El archivo debe tener una extensión válida (JPG, JPEG, PNG, GIF).");
+        //         displayErrorMessage('image',"El archivo debe tener una extensión válida (JPG, JPEG, PNG, GIF).");
+        //         console.log("El archivo debe tener una extensión válida (JPG, JPEG, PNG, GIF).");
+        //     }
+        // }                     
         // Pregutna si NO hay errores
         if (errors.length === 0) {
             // Si no hay errores, envia el formulario

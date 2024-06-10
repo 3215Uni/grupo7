@@ -6,10 +6,12 @@ const cookieParser = require('cookie-parser');
 const express = require('express');
 const logger = require('morgan');
 const path = require('path');
+const cors = require('cors');
 const userLoggedMiddelware=require('./middlewares/userLoggedMiddleware.js');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const usersApiRoutes = require('./routers/api/userRoutes.js');//Para usar la API de usuarios
 const productsApiRoutes = require('./routers/api/productRoutes.js');//Para usar la API de productos
+const marcaApiRoutes=require('./routers/api/marcaRoutes.js');
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -36,6 +38,8 @@ app.use(session({
 app.use(userLoggedMiddelware)
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
+app.use(cors());
+
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la carpeta de las Vistas
@@ -58,6 +62,8 @@ app.use('/product', productRouter);
 //uso de la api de usuarios
 app.use('/api/users', usersApiRoutes);
 app.use('/api/products', productsApiRoutes);
+app.use('/api/marcas',marcaApiRoutes);
+
 
 
 
