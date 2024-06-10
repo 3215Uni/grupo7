@@ -77,7 +77,11 @@ main{
     margin-top: -10px;
     font-size: 100%;
 }
-
+.error-message{
+    text-align: start;
+    color: red;
+  }
+  
 
 
 .contenido {
@@ -175,7 +179,11 @@ main{
         margin-top: 30px;
         margin-bottom: 30px;
     }
-    
+    .error-message{
+        text-align: start;
+        color: red;
+      }
+      
 }
 
 /* Consulta de medios para pantallas de 1024px o más grandes */
@@ -220,5 +228,9 @@ main{
         background-color: #2ecc71;
     }
     
-
+    .error-message{
+        text-align: start;
+        color: red;
+      }
+      
 }

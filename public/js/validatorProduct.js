@@ -15,7 +15,15 @@ window.addEventListener('load',function(){
             displayErrorMessage('name', "El nombre de producto debe tener al menos 5 caracteres.");  
             console.log("El nombre de producto debe tener al menos 5 caracteres.");   
             document.getElementById('name').style.background="pink"; 
+        }else{
+            if(name.length > 35){
+                errors.push("El nombre de producto no debe superar los 35 caracteres.");
+                displayErrorMessage('name', "El nombre de producto no debe superar los 35 caracteres.");  
+                console.log("El nombre de producto no debe superar 35 caracteres.");   
+                document.getElementById('name').style.background="pink";
+            }
         }
+
 
         //descripcion: deberá tener al menos 20 caracteres
         const description = document.getElementById('description').value.trim();
@@ -59,7 +67,6 @@ window.addEventListener('load',function(){
             const errorMessage = document.createElement('div');
             errorMessage.classList.add('error-message');
             errorMessage.innerText = message;
-            errorMessage.style.color="pink";
             field.parentNode.appendChild(errorMessage);
         }
     });

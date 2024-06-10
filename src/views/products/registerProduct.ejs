@@ -137,7 +137,7 @@
         
                         <div class="contenido">
                             <label for="price">Precio:</label>
-                            <input type="text" id="price" name="price" min="0" step="0.01" value="<%=locals.oldDate ? oldDate.price : null %>">
+                            <input type="number" id="price" name="price" min="1000" step="0.01" value="<%=locals.oldDate ? oldDate.price : null %>">
                             <% if (locals.errors && errors.price) { %>
                                 <div class="text-danger">
                                     <%=errors.price.msg  %>
@@ -146,7 +146,7 @@
                         </div>
                         <div class="contenido">
                             <label for="price">Descuento:</label>
-                            <input type="text" id="price" name="discount" value="<%=locals.oldDate ? oldDate.discount : null %>">
+                            <input type="number" class="descuento" id="price" min="0" name="discount" value="<%=locals.oldDate ? oldDate.discount : null %>">
                             <% if (locals.errors && errors.discount) { %>
                                 <div class="text-danger">
                                     <%=errors.discount.msg  %>
