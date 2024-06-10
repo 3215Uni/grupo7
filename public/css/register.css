@@ -80,6 +80,13 @@
   input[type="checkbox"] {
     margin-right: 5px;
   }
+  /*error validacion del front-end*/
+.error-message{
+  color:pink;
+  font-style:italic;
+  margin:0;
+  padding:0;
+}
 
 /* Consulta de medios para pantallas de 768px o más grandes */
 @media (min-width: 768px) {
@@ -93,6 +100,13 @@
         margin-left: 10%;
         margin-right: 10%;
     }
+    /*error validacion del front-end*/
+.error-message{
+  color:pink;
+  font-style:italic;
+  margin:0;
+  padding:0;
+}
 }
 
 /* Consulta de medios para pantallas de 1024px o más grandes */

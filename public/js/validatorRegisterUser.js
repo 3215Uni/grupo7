@@ -24,36 +24,49 @@ window.addEventListener('load',function(){
         if (nombre.length < 2) {
             errors.push("El nombre debe tener al menos 2 caracteres.");
             displayErrorMessage('nombre', "El nombre debe tener al menos 2 caracteres.");
+            document.getElementById('nombre').style.background="pink";  
+
         }
        // Validar apellido
         if (apellido.length < 2) {
             errors.push("El apellido debe tener al menos 2 caracteres.");
             displayErrorMessage('apellido', "El apellido debe tener al menos 2 caracteres.");
+            document.getElementById('apellido').style.background="pink";  
+
         }
        // Validar email
         if (!validateEmail(email)) {
             errors.push("El email ingresado no es válido.");
             displayErrorMessage('email',"El email ingresado no es válido.");
+            document.getElementById('email').style.background="pink";  
+
         }
 
         // Validar Contrasena
         if (contrasena.length < 8) {
             errors.push("La contraseña debe tener al menos 8 caracteres.");
             displayErrorMessage('contrasena',"La contraseña debe tener al menos 8 caracteres.");
+            document.getElementById('contrasena').style.background="pink";  
+
         }else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/.test(contrasena)) {
                 errors.push("La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.");
                 displayErrorMessage('contrasena',"La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.");
-            
+                document.getElementById('contrasena').style.background="pink";  
+
         }
         
         // Validar Repetir Contraseña
         if (repitContrasena.length < 8) {
             errors.push("La contraseña debe tener al menos 8 caracteres.");
             displayErrorMessage('repitContrasena',"La contraseña debe tener al menos 8 caracteres.");
+            document.getElementById('repitContrasena').style.background="pink";  
+
         }else{
                 if (repitContrasena != contrasena) {
                     errors.push("Las contraseñas no coinciden.");
                     displayErrorMessage('repitContrasena',"Las contraseñas no coinciden.");
+                    document.getElementById('repitContrasena').style.background="pink";  
+
                 }
         }
 

@@ -165,7 +165,14 @@ main{
 .form-Product .cont .btnDeForm .res{
     background-color: crimson;
 }
-
+/*error validacion del front-end*/
+.error-message{
+    color:pink;
+    font-style:italic;
+    margin:0;
+    padding:0;
+  }
+  
 
 /* Consulta de medios para pantallas de 768px o más grandes */
 @media (min-width: 768px) {
@@ -175,7 +182,14 @@ main{
         margin-top: 30px;
         margin-bottom: 30px;
     }
-    
+    /*error validacion del front-end*/
+.error-message{
+    color:pink;
+    font-style:italic;
+    margin:0;
+    padding:0;
+  }
+  
 }
 
 /* Consulta de medios para pantallas de 1024px o más grandes */
@@ -219,6 +233,13 @@ main{
     .checkbox-group input[type="checkbox"]:checked + label {
         background-color: #2ecc71;
     }
-    
+    /*error validacion del front-end*/
+.error-message{
+    color:pink;
+    font-style:italic;
+    margin:0;
+    padding:0;
+  }
+  
 
 }

@@ -36,10 +36,6 @@ window.addEventListener('load',function(){
             if (contrasena.length < 8) {
                 errors.push("La contraseña debe tener al menos 8 caracteres.");
                 displayErrorMessage('password',"La contraseña debe tener al menos 8 caracteres.");
-            }else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/.test(contrasena)) {
-                    errors.push("La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.");
-                    displayErrorMessage('txtPassword',"La contraseña debe contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial.");
-                
             }
         }             
         // Pregutna si NO hay errores

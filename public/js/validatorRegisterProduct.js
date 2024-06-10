@@ -17,6 +17,15 @@ window.addEventListener('load',function(){
             document.getElementById('name').style.background="pink"; 
         }
 
+           //Stock Debera ser al menod de 1
+           const stock = document.getElementById('stock').value.trim();
+                
+           if (stock < 1) {
+              errors.push("El stock debe ser como minimo 1.");
+              displayErrorMessage('stock', "El stock debe ser como minimo 1.");
+              console.log("El stock debe ser como minimo 1.");
+              document.getElementById('stock').style.background="pink";  
+          }    
         //descripcion: deberá tener al menos 20 caracteres
         const description = document.getElementById('description').value.trim();
 
@@ -27,6 +36,17 @@ window.addEventListener('load',function(){
             document.getElementById('description').style.background="pink";  
         }    
 
+        //Precio Debera tener al meno un precio mayor a cero
+        const price = document.getElementById('price').value.trim();
+                
+         if (price < 1000) {
+            errors.push("El precio debe ser como minimo $1000.");
+            displayErrorMessage('price', "El precio debe ser como minimo $1000.");
+            console.log("El precio debe ser como minimo $1000.");
+            document.getElementById('price').style.background="pink";  
+        }    
+
+       
         //Imagen: Deberá ser un archivo válido (JPG, JPEG, PNG, GIF)
         const image = document.getElementById('image').value;
 
