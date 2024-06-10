@@ -28,21 +28,28 @@ window.addEventListener('load',function(){
             console.log("La descripcion debe tener al menos 20 caracteres.");
             document.getElementById('description').style.background="pink";  
         }    
+        
+        const validExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+        const fileExtension = image.split('.').pop().toLowerCase();
+        //var imagenMuestra = document.querySelector('.imagenMuestra');
+        var imagenMuestra = document.querySelector('.imagenMuestra');
         // Validar imagen del producto
-        // if (image==null) {
-        //     errors.push("Debes subir una imagen.");
-        //     displayErrorMessage('image',"Debes subir una imagen.");
-        //     console.log("Debes subir una imagen.");
-            
-        // } else {
-        //     const validExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-        //     const fileExtension = image.split('.').pop().toLowerCase();
-        //     if (!validExtensions.includes(fileExtension)) {
-        //         errors.push("El archivo debe tener una extensión válida (JPG, JPEG, PNG, GIF).");
-        //         displayErrorMessage('image',"El archivo debe tener una extensión válida (JPG, JPEG, PNG, GIF).");
-        //         console.log("El archivo debe tener una extensión válida (JPG, JPEG, PNG, GIF).");
-        //     }
-        // }                     
+        if ((imagenMuestra.src !== "" && imagenMuestra.src !== undefined) || (validExtensions.includes(fileExtension))) {
+            console.log("Ya hay una imagen cargada.");
+        }else{        
+         if (image==null) {
+             errors.push("Debes subir una imagen.");
+             displayErrorMessage('image',"Debes subir una imagen.");
+             console.log("Debes subir una imagen.");            
+         } else {
+             if (!validExtensions.includes(fileExtension)) {
+                 errors.push("_El archivo debe tener una extensión válida (JPG, JPEG, PNG, GIF).");
+                 displayErrorMessage('image',"*El archivo debe tener una extensión válida (JPG, JPEG, PNG, GIF).");
+                 console.log("El archivo debe tener una extensión válida (JPG, JPEG, PNG, GIF).");
+             }
+         }  
+        }
+        
         // Pregutna si NO hay errores
         if (errors.length === 0) {
             // Si no hay errores, envia el formulario
@@ -53,7 +60,7 @@ window.addEventListener('load',function(){
             const errorMessage = document.createElement('div');
             errorMessage.classList.add('error-message');
             errorMessage.innerText = message;
-            errorMessage.style.color="pink";
+            
             field.parentNode.appendChild(errorMessage);
         }
     });

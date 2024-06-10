@@ -177,7 +177,11 @@ main{
         margin-top: 30px;
         margin-bottom: 30px;
     }
-    
+    .error-message{
+        text-align: start;
+        color: red;
+      }
+
 }
 
 /* Consulta de medios para pantallas de 1024px o más grandes */
@@ -221,6 +225,10 @@ main{
     .checkbox-group input[type="checkbox"]:checked + label {
         background-color: #2ecc71;
     }
-    
+    .error-message{
+        text-align: start;
+        color: red;
+      }
+
 
 }

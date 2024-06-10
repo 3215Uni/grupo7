@@ -216,11 +216,11 @@ main {
         color: #fff;
         transform: scale(1.1);
     }
-
     .error-message{
         text-align: start;
         color: red;
       }
+
     .text-danger{
         text-align: start;
         color: red;

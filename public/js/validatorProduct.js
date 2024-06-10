@@ -53,12 +53,7 @@ window.addEventListener('load',function(){
             }
         }
         
-        if (errors.length > 0) {
-            alert("UPS! FALLO LA CARGA DEL PRODUCTO");
-            
-        }
         if (errors.length === 0) {
-            alert("CARGA EXITOSA DE PRODUCTO");
             form.submit();
         }
 
